@@ -27,6 +27,14 @@ ion-content {
   &.activity-cards {
     background-color: #F8F9FB;
   }
+  &.weeplan-splash-bg {
+      background-color: #F8F9FB;
+    background: url(../assets/img/weeplan-splash-bg.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 
@@ -256,6 +264,16 @@ ion-card-header {
   -o-background-size: cover;
   background-size: cover;
 
+}
+
+
+
+// Weeplan Splash with login buttons
+
+.weeplan-splash-content {
+  margin-top: 160px;
+  text-align: center;
+  color: color($colors, medium);
 }
 
 // Weeplan Nunito font

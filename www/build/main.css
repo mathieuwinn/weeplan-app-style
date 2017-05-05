@@ -6038,7 +6038,7 @@ button[disabled],
 }
 
 .button-small-md {
-  padding: 0 0.9em;
+  padding: 1.4em 1.1em;
   height: 2.1em;
   font-size: 1.3rem;
 }
@@ -26969,6 +26969,12 @@ ion-content.activity-cards {
   background-color: #F8F9FB;
 }
 
+ion-content.weeplan-splash-bg {
+  background-color: #F8F9FB;
+  background: url(../assets/img/weeplan-splash-bg.jpg) center center;
+  background-size: cover;
+}
+
 /*
 
 WEEPLAN ANDROID
@@ -27181,6 +27187,12 @@ ion-card-header {
   align-items: center;
   background-image: url(../assets/img/activity-map-bg.png);
   background-size: cover;
+}
+
+.weeplan-splash-content {
+  margin-top: 160px;
+  text-align: center;
+  color: #626262;
 }
 
 @font-face {

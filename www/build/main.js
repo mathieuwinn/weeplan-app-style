@@ -55813,7 +55813,7 @@ var Splash = (function () {
 Splash = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-splash',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/splash/splash.html"*/'<!--\n  Generated template for the Splash page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content>\n\n\n\n\n</ion-content>\n\n<div class="footer-bottom-actions">\n      <div padding-horizontal>\n      <ion-row>\n        <ion-col col-12>\n          <button ion-button outline block>Activité terminée</button>\n        </ion-col>\n      </ion-row>\n    </div>\n\n</div>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/splash/splash.html"*/,
+        selector: 'page-splash',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/splash/splash.html"*/'<!--\n  Generated template for the Splash page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content class="weeplan-splash-bg" padding>\n\n\n\n\n\n</ion-content>\n\n<div class="footer-bottom-actions">\n      <div padding-horizontal>\n      <ion-row>\n        <ion-col col-12>\n          <button ion-button block>Démarrer</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-12>\n          <button ion-button small outline block>J’ai déjà un compte Weeplan</button>\n        </ion-col>\n      </ion-row>\n    </div>\n\n</div>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/splash/splash.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Splash);
@@ -55868,9 +55868,6 @@ var HomePage = (function () {
         this.cardsPage = __WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */];
         this.cardPage = __WEBPACK_IMPORTED_MODULE_5__card_card__["a" /* Card */];
     }
-    HomePage.prototype.ngOnInit = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__splash_splash__["a" /* Splash */]);
-    };
     return HomePage;
 }());
 HomePage = __decorate([
