@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PopoverController } from 'ionic-angular';
 
@@ -11,16 +11,35 @@ import { PopoverController } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-cards',
+  templateUrl: 'menu.html',
+})
+
+export class CardsPopover {
+
+  constructor() {
+  }
+}
+
+
+@Component({
+  selector: 'page-cards',
   templateUrl: 'cards.html',
 })
 
 export class Cards {
-
+  @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
+   @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
   constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Cards');
+  }
+
+  presentPopover() {
+    let popover = this.popoverCtrl.create(CardsPopover);
+
+    popover.present();
   }
 
 

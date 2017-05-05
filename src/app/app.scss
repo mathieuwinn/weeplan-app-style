@@ -20,7 +20,7 @@ body{
 
 ion-app.md {
   font-family: 'Nunito';
-  font-weight: 400;
+  font-weight: 500;
 }
 
 
@@ -45,25 +45,127 @@ WEEPLAN ANDROID
 
 // Android bottom toolbar
 
-.footer-md {
-  &::before {
-    display: none;
-  }
-    box-shadow: none;
-  .toolbar-background-md {
-    background-color: transparent;
-    background-image: $footer-toolbar-gradient;
-
-
-  }
+.footer-activity-actions {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  background: $footer-toolbar-gradient;
 }
 
 .ion-md-yep {
  color: color($colors, primary);
 }
 
-ion-card-header {
+// Alert Boxes
+
+.alertbox {
+  border-radius: $card-md-border-radius;
+  background-color:color($colors,light);
+  color: color($colors,danger);
   font-weight: 600;
+}
+
+// Alert Boxes
+
+.popover-content{
+ background: rgba(215, 0, 54, 0.8) !important;
+ transform-origin: top right !important;
+ top: 10px !important;
+ right: 10px !important;
+ left:auto !important;
+ padding: 0;
+ ion-list {
+   margin: 0;
+ }
+}
+
+// Activity cards
+
+ion-card {
+  height: auto;
+  max-height: calc( 100% - 70px );
+  overflow: hidden;
+
+  .card-image {
+    position: relative;
+    height:140px;
+    overflow: hidden;
+    img {
+      position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    }
+  }
+}
+
+ion-card-header {
+  white-space: normal !important;
+  .card-title {
+      font-weight: 600;
+      font-size: 2rem;
+      color: color($colors,primary);
+      margin-bottom: 6px;
+      overflow-wrap: normal;
+      word-wrap: break-word;
+  }
+
+  .card-subtitle {
+    .card-tag {
+      display: inline-block;
+      margin-right: 6px;
+      background-color: color($colors, light);
+      font-size: 1.2rem;
+      border-radius: 10px;
+      padding: 3px 8px;
+      color: color($colors, medium);
+    }
+  }
+}
+
+ion-card-content{
+  margin-top: 16px;
+  .card-infos {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    li {
+      padding-left: 24px;
+      margin-bottom: 6px;
+      font-size: 1.3rem;
+      &.card-infos__item_price {
+        color: color($colors,primary);
+        ion-icon {
+          color: color($colors,primary);
+        }
+        &.free {
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+      ion-icon {
+        position: absolute;
+        margin-left: -24px;
+        margin-right: 6px;
+        color: color($colors, medium);
+      }
+    }
+  }
+  .card-description {
+    color: color($colors, medium);
+    font-size: 1.3rem;
+  }
+}
+
+
+.card-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  background: $footer-toolbar-gradient;
 }
 
 // Weeplan Nunito font
@@ -114,4 +216,17 @@ ion-card-header {
 .ion-md-nope:before {
   font-family: "weeplanionic-icons" !important;
   content: "\62";
+}
+
+.ion-md-date:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\64";
+}
+.ion-md-euro:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\65";
+}
+.ion-md-location:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\66";
 }

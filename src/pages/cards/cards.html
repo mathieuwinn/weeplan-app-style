@@ -24,20 +24,34 @@
 
   <ion-card>
 
-    <img src="../assets/img/card-img-1.png"/>
+    <div class="card-image">
+      <img src="../assets/img/card-img-1.png"/>
+    </div>
 
     <ion-card-header>
-      <ion-card-title>
-        Danse classique à Pâques
-      </ion-card-title>
-
+        <div class="card-title">
+          Danse classique à Pâques
+        </div>
+        <div class="card-subtitle">
+          <span class="card-tag">Sport</span><span class="card-tag">Famille</span>
+        </div>
     </ion-card-header>
-
     <ion-card-content>
-      <ul class="card-details-list">
-        <li></li>
-
+      <ul class="card-infos">
+        <li class="card-infos__item card-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
+        <li class="card-infos__item card-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
+        <li class="card-infos__item card-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
       </ul>
+      <p class="card-description">
+          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      </p>
+
+      <div class="card-footer" padding-horizontal>
+        <button ion-button>Lire la suite</button>
+      </div>
+
+
 
     </ion-card-content>
 
@@ -47,8 +61,8 @@
 
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
+<div class="footer-activity-actions">
+
 
       <div padding-horizontal>
       <ion-row>
@@ -64,5 +78,4 @@
       </ion-row>
     </div>
 
-  </ion-toolbar>
-</ion-footer>
+</div>

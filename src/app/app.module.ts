@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { Splash } from '../pages/splash/splash';
 import { Signup } from '../pages/signup/signup';
 import { Cards } from '../pages/cards/cards';
+import { CardsPopover } from '../pages/cards/cards';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Cards } from '../pages/cards/cards';
     HomePage,
     Splash,
     Signup,
-    Cards
+    Cards,
+    CardsPopover
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { Cards } from '../pages/cards/cards';
     HomePage,
     Splash,
     Signup,
-    Cards
+    Cards,
+    CardsPopover
   ],
   providers: [
     StatusBar,

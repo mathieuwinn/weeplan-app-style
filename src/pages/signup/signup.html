@@ -14,6 +14,15 @@
 
 
 <ion-content>
+
+  <div margin padding class="alertbox">
+    <ion-col col-10>
+      Il y a une erreur.
+    </ion-col>
+  </div>
+
+
+
   <ion-list>
 
     <ion-item>
@@ -27,11 +36,11 @@
   </ion-list>
 
   <div padding-horizontal text-right>
-    <button ion-button small clear text-right ng-click = "showPrompt()">Mot de passe oublié?</button>
+    <button ion-button small clear text-right (click)="showPrompt()">Mot de passe oublié?</button>
   </div>
 
     <div padding>
-      <button ion-button block>Créer mon compte</button>
+      <button ion-button block (click)="showAlert()">Créer mon compte</button>
     </div>
 
 </ion-content>

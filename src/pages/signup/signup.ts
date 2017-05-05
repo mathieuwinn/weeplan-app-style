@@ -45,4 +45,18 @@ export class Signup {
     prompt.present();
   }
 
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
+
+
+
+
+
 }
