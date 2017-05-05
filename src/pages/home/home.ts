@@ -20,7 +20,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
   }
 
-  //ngOnInit() {
-    //this.navCtrl.push(Splash);
-  //}
+  ngOnInit() {
+    this.navCtrl.push(Splash);
+  }
 }
