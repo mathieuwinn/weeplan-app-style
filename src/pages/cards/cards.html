@@ -10,7 +10,7 @@
     <ion-title>Activités autour de <strong>Bayeux</strong></ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="presentPopover($event)">
+      <button ion-button icon-only>
         <ion-icon name="more"></ion-icon>
       </button>
     </ion-buttons>
@@ -20,43 +20,68 @@
 
 
 
-<ion-content padding>
+<ion-content padding class="activity-cards">
 
-  <ion-card>
+  <ion-card [ngClass]="{'hideLeft': highlightedDiv === 1}" class="activity-card show">
 
     <div class="card-image">
       <img src="../assets/img/card-img-1.png"/>
     </div>
 
     <ion-card-header>
-        <div class="card-title">
+        <div class="activity-title">
           Danse classique à Pâques
         </div>
-        <div class="card-subtitle">
-          <span class="card-tag">Sport</span><span class="card-tag">Famille</span>
+        <div class="activity-subtitle">
+          <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
         </div>
     </ion-card-header>
     <ion-card-content>
-      <ul class="card-infos">
-        <li class="card-infos__item card-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
-        <li class="card-infos__item card-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
-        <li class="card-infos__item card-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
+      <ul class="activity-infos">
+        <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
+        <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
+        <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
+      </ul>
+      <p class="activity-description">
+          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      </p>
+
+
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card [ngClass]="{'show': highlightedDiv === 1}" class="activity-card hideRight">
+
+    <ion-card-header>
+        <div class="activity-title">
+          Super Activité encore mieux
+        </div>
+        <div class="activity-subtitle">
+          <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
+        </div>
+    </ion-card-header>
+    <ion-card-content>
+      <ul class="activity-infos">
+        <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
+        <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
+        <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
       </ul>
       <p class="card-description">
           Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
           Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
       </p>
 
-      <div class="card-footer" padding-horizontal>
-        <button ion-button>Lire la suite</button>
-      </div>
+
 
 
 
     </ion-card-content>
-
   </ion-card>
-
 
 
 </ion-content>
@@ -67,7 +92,7 @@
       <div padding-horizontal>
       <ion-row>
         <ion-col col-6>
-          <button ion-button block>J'y vais</button>
+          <button ion-button block (click)="toggleHighlight(1);">J'y vais</button>
         </ion-col>
         <ion-col col-3>
           <button ion-button outline block><ion-icon name="yep"></ion-icon></button>

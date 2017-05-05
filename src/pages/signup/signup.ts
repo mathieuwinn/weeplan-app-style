@@ -25,8 +25,8 @@ export class Signup {
 
   showPrompt() {
     let prompt = this.alertCtrl.create({
-      title: 'Login',
-      message: "Enter a name for this new album you're so keen on adding",
+      title: 'Mot de passe oublié',
+      message: "Nous vous enverrons un email avec un lien pour remettre à jour votre mot de passe",
       inputs: [
         {
           name: 'email',

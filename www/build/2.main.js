@@ -18,7 +18,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var CardsModule = (function () {
     function CardsModule() {
     }
@@ -27,15 +26,13 @@ var CardsModule = (function () {
 CardsModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__cards__["a" /* Cards */],
-            __WEBPACK_IMPORTED_MODULE_2__cards__["b" /* CardsPopover */]
+            __WEBPACK_IMPORTED_MODULE_2__cards__["a" /* Cards */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cards__["a" /* Cards */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__cards__["a" /* Cards */],
-            __WEBPACK_IMPORTED_MODULE_2__cards__["b" /* CardsPopover */]
+            __WEBPACK_IMPORTED_MODULE_2__cards__["a" /* Cards */]
         ]
     })
 ], CardsModule);

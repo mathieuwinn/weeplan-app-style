@@ -1,6 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PopoverController } from 'ionic-angular';
 
 /**
  * Generated class for the Cards page.
@@ -9,16 +8,6 @@ import { PopoverController } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 @IonicPage()
-@Component({
-  selector: 'page-cards',
-  templateUrl: 'menu.html',
-})
-
-export class CardsPopover {
-
-  constructor() {
-  }
-}
 
 
 @Component({
@@ -27,20 +16,26 @@ export class CardsPopover {
 })
 
 export class Cards {
-  @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
-   @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Cards');
   }
 
-  presentPopover() {
-    let popover = this.popoverCtrl.create(CardsPopover);
+  highlightedDiv: number;
 
-    popover.present();
+  toggleHighlight(newValue: number) {
+    if (this.highlightedDiv === newValue) {
+      this.highlightedDiv = 0;
+    }
+    else {
+      this.highlightedDiv = newValue;
+    }
   }
+
+
 
 
 }

@@ -32,9 +32,12 @@ $colors: (
   dark:       #222
 );
 
-
-$app-gradient:  linear-gradient(-136deg, #FE2459 0%, #FC6A3B 100%);
+$app-gradient:  linear-gradient(16deg, #FE2459 0%, #FC6A3B 100%);
+$app-transparent-gradient: linear-gradient(16deg, rgba(254,36,89,0.9) 0%, rgba(252,106,59,0.42) 100%);
 $footer-toolbar-gradient: linear-gradient(-180deg, rgba(248,249,251,0) 0%, #F8F9FB 50%);
+$footer-card-gradient: linear-gradient(-180deg, rgba(255,255,255,0) 0%, #FFF 50%);
+
+
 
 /* Rectangle 2: */
 // App iOS Variables
@@ -49,7 +52,7 @@ $footer-toolbar-gradient: linear-gradient(-180deg, rgba(248,249,251,0) 0%, #F8F9
 // Material Design only Sass variables can go here
 
 
-$background-color: #F8F9FB;
+$background-color: #FFF;
 
 $toolbar-md-background : $app-gradient;
 

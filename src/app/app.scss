@@ -23,6 +23,12 @@ ion-app.md {
   font-weight: 500;
 }
 
+ion-content {
+  &.activity-cards {
+    background-color: #F8F9FB;
+  }
+}
+
 
 /*
 
@@ -31,14 +37,40 @@ WEEPLAN ANDROID
 */
 
 
+// Android navbar {
+ion-navbar.card-navbar {
+  height: 140px;
+  display: block;
+  .toolbar-background-md {
+    background-image: url(../assets/img/card-img-1.png), $app-gradient;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    &:after {
+      content: "";
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: $app-transparent-gradient;
+    }
+  }
 
-.title-md {
-  color: #FFF;
+  ion-title {
+    position: absolute;
+    bottom: 20px;
+    .toolbar-title {
+      text-overflow: ellipsis;
+      white-space: pre-line;
+    }
+  }
+
 }
 
-.toolbar-background-md {
-  background-color: color($colors, primary);
-}
+
 
 
 
@@ -83,14 +115,28 @@ WEEPLAN ANDROID
 // Activity cards
 
 ion-card {
-  height: auto;
-  max-height: calc( 100% - 70px );
-  overflow: hidden;
+
+
+  &.activity-card {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    height: auto;
+    margin-bottom: 70px;
+    border-radius: 20px;
+    transform-origin: top;
+    transition: all 600ms cubic-bezier(1, 0, 0, 1);
+    -webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+    -moz-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+    transition-property: transform,opacity,visibility;
+  }
+
 
   .card-image {
     position: relative;
     height:140px;
     overflow: hidden;
+    border-radius: $card-md-border-radius 0 0 0;
     img {
       position:absolute;
     top:0;
@@ -102,70 +148,114 @@ ion-card {
 
 ion-card-header {
   white-space: normal !important;
-  .card-title {
-      font-weight: 600;
-      font-size: 2rem;
-      color: color($colors,primary);
-      margin-bottom: 6px;
-      overflow-wrap: normal;
-      word-wrap: break-word;
-  }
+}
 
-  .card-subtitle {
-    .card-tag {
-      display: inline-block;
+
+.activity-title {
+    font-weight: 600;
+    font-size: 2rem;
+    color: color($colors,primary);
+    margin-bottom: 6px;
+    overflow-wrap: normal;
+    word-wrap: break-word;
+}
+
+.activity-subtitle {
+ margin-bottom: 12px;
+}
+
+.activity-infos {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  li {
+    padding-left: 24px;
+    margin-bottom: 6px;
+    font-size: 1.3rem;
+    &.activity-infos__item_price {
+      color: color($colors,primary);
+      ion-icon {
+        color: color($colors,primary);
+      }
+      &.free {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    ion-icon {
+      position: absolute;
+      margin-left: -24px;
       margin-right: 6px;
-      background-color: color($colors, light);
-      font-size: 1.2rem;
-      border-radius: 10px;
-      padding: 3px 8px;
       color: color($colors, medium);
     }
   }
 }
 
-ion-card-content{
-  margin-top: 16px;
-  .card-infos {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
-    li {
-      padding-left: 24px;
-      margin-bottom: 6px;
-      font-size: 1.3rem;
-      &.card-infos__item_price {
-        color: color($colors,primary);
-        ion-icon {
-          color: color($colors,primary);
-        }
-        &.free {
-          text-transform: uppercase;
-          font-weight: 700;
-        }
-      }
-      ion-icon {
-        position: absolute;
-        margin-left: -24px;
-        margin-right: 6px;
-        color: color($colors, medium);
-      }
-    }
-  }
-  .card-description {
-    color: color($colors, medium);
-    font-size: 1.3rem;
+.activity-tag {
+  display: inline-block;
+  margin-right: 6px;
+  background-color: color($colors, light);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 3px 8px;
+  color: color($colors, medium);
+
+  &.activity-tag_dark {
+    background-color: rgba(0,0,0,0.3);
+    color: #FFF;
   }
 }
 
+.activity-description {
+  color: color($colors, medium);
+  font-size: 1.3rem;
+}
 
-.card-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
-  background: $footer-toolbar-gradient;
+
+
+// Swipe left card when ignored
+
+.activity-card.hideRight {
+  transition-delay:0;
+  transform: translate(400px, 100px) rotate(10deg) scale(0.4);
+  opacity: 0;
+}
+
+.activity-card.show {
+  transition-delay:0.4;
+  transform: translate(0, 0) rotate(0) scale(1);
+  opacity: 1;
+}
+
+.activity-card.hideLeft {
+  transition-delay:0;
+  transform: translate(-400px, 100px) rotate(-10deg) scale(0.4);
+  opacity: 0;
+
+}
+
+// Single Activity view
+
+.activity-single {
+  padding-bottom: 70px;
+}
+
+.activity-map-link {
+  position: relative;
+  height: 120px;
+  border-radius: $card-md-border-radius;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/img/activity-map-bg.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 // Weeplan Nunito font
