@@ -26964,7 +26964,7 @@ ion-app.md, ion-app.ios {
   font-weight: 500;
 }
 
-ion-content.activity-cards {
+ion-content.activity-cards-view {
   background-color: #F8F9FB;
 }
 
@@ -27067,11 +27067,12 @@ ion-navbar.card-navbar ion-title .toolbar-title {
   color: #FE2459;
 }
 
-.alertbox {
+.message-box {
   border-radius: 16px;
   background-color: #f4f4f4;
-  color: #f53d3d;
-  font-weight: 600;
+  padding: 20px 14px 6px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .popover-content {

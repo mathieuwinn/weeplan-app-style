@@ -22,70 +22,82 @@
 
 
 
-<ion-content padding class="activity-cards">
+<ion-content padding class="activity-cards-view">
 
-  <ion-card [ngClass]="{'hideLeft': highlightedDiv === 1}" class="activity-card show">
-
-    <div class="card-image">
-      <img src="../assets/img/card-img-1.png"/>
+  <div class="notifications-container">
+    <div class="message-box hide">
+      <h5>Choisissez l'activité qui vous convient.</h5>
+        <p></p>
+        <button ion-button clear small block>Compris</button>
     </div>
+  </div>
 
-    <ion-card-header>
-        <div class="activity-title">
-          Danse classique à Pâques
-        </div>
-        <div class="activity-subtitle">
-          <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
-        </div>
-    </ion-card-header>
-    <ion-card-content>
-      <ul class="activity-infos">
-        <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
-        <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
-        <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
-      </ul>
-      <p class="activity-description">
-          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-      </p>
+  <div class="activity-cards-container">
 
 
 
+    <ion-card [ngClass]="{'hideLeft': highlightedDiv === 1}" class="activity-card show">
 
+      <div class="card-image">
+        <img src="../assets/img/card-img-1.png"/>
+      </div>
 
-    </ion-card-content>
-  </ion-card>
-
-
-  <ion-card [ngClass]="{'show': highlightedDiv === 1}" class="activity-card hideRight">
-
-    <ion-card-header>
-        <div class="activity-title">
-          Super Activité encore mieux
-        </div>
-        <div class="activity-subtitle">
-          <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
-        </div>
-    </ion-card-header>
-    <ion-card-content>
-      <ul class="activity-infos">
-        <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
-        <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
-        <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
-      </ul>
-      <p class="card-description">
-          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-      </p>
+      <ion-card-header>
+          <div class="activity-title">
+            Danse classique à Pâques
+          </div>
+          <div class="activity-subtitle">
+            <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
+          </div>
+      </ion-card-header>
+      <ion-card-content>
+        <ul class="activity-infos">
+          <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
+          <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
+          <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
+        </ul>
+        <p class="activity-description">
+            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </p>
 
 
 
 
 
-    </ion-card-content>
-  </ion-card>
+      </ion-card-content>
+    </ion-card>
 
 
+    <ion-card [ngClass]="{'show': highlightedDiv === 1}" class="activity-card hideRight">
+
+      <ion-card-header>
+          <div class="activity-title">
+            Super Activité encore mieux
+          </div>
+          <div class="activity-subtitle">
+            <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
+          </div>
+      </ion-card-header>
+      <ion-card-content>
+        <ul class="activity-infos">
+          <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
+          <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
+          <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
+        </ul>
+        <p class="card-description">
+            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </p>
+
+
+
+
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>
 
 <div class="footer-bottom-actions">

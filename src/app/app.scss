@@ -24,7 +24,7 @@ ion-app.md, ion-app.ios {
 }
 
 ion-content {
-  &.activity-cards {
+  &.activity-cards-view {
     background-color: #F8F9FB;
   }
   &.weeplan-splash-bg {
@@ -148,13 +148,14 @@ ion-navbar.card-navbar {
  color: color($colors, primary);
 }
 
-// Alert Boxes
+// Message Box
 
-.alertbox {
+.message-box {
   border-radius: $card-md-border-radius;
   background-color:color($colors,light);
-  color: color($colors,danger);
-  font-weight: 600;
+  padding: 20px 14px 6px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 // Alert Boxes
@@ -343,6 +344,9 @@ ion-card-header {
   text-align: center;
   color: color($colors, medium);
 }
+
+
+
 
 // Weeplan Nunito font
 
