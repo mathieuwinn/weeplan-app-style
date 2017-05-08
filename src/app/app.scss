@@ -18,7 +18,7 @@
 body{
 }
 
-ion-app.md {
+ion-app.md, ion-app.ios {
   font-family: 'Nunito';
   font-weight: 500;
 }
@@ -35,6 +35,51 @@ ion-content {
     -o-background-size: cover;
     background-size: cover;
   }
+}
+
+
+
+/*
+Buttons missing css
+*/
+
+.button-ios {
+  font-weight: 600;
+}
+
+.button-default-ios {
+  box-shadow: 0 3px 10px 0 rgba(231,158,171,0.8);
+  &.activated {
+    box-shadow: 0 2px 4px 0 rgba(231,158,171,0.8);
+  }
+}
+
+.button-outline-ios {
+  box-shadow: inset 0 0 0 2px #EEE;
+  &.activated {
+    background-color: #FFF;
+    color: color($colors, dark);
+    box-shadow: inset 0 0 0 2px #DDD;
+  }
+}
+
+.button-outline-md {
+  &.activated {
+    background-color: #FFF;
+    color: color($colors, dark);
+    box-shadow: inset 0 0 0 2px #DDD;
+  }
+}
+
+/*
+
+WEEPLAN IOS
+
+*/
+
+.toolbar-ios {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.06) !important;
+
 }
 
 
@@ -91,9 +136,15 @@ ion-navbar.card-navbar {
   bottom: 0;
   z-index: 100;
   background: $footer-toolbar-gradient;
+
+  & > div {
+    max-width: 580px;
+    margin: auto;
+  }
+
 }
 
-.ion-md-yep {
+.ion-md-yep, .ion-ios-yep {
  color: color($colors, primary);
 }
 
@@ -130,6 +181,8 @@ ion-card {
     left: 20px;
     right: 20px;
     height: auto;
+    max-width: 580px;
+    margin: auto;
     margin-bottom: 70px;
     border-radius: 20px;
     transform-origin: top;
@@ -220,6 +273,21 @@ ion-card-header {
   font-size: 1.3rem;
 }
 
+
+// Single Activity view
+
+.navbar-search {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+}
 
 
 // Swipe left card when ignored
@@ -316,25 +384,25 @@ ion-card-header {
   font-style: normal;
 }
 
-.ion-md-yep:before {
+.ion-md-yep:before, .ion-ios-yep:before {
   font-family: "weeplanionic-icons" !important;
   content: "\61";
 }
 
-.ion-md-nope:before {
+.ion-md-nope:before, .ion-ios-nope:before {
   font-family: "weeplanionic-icons" !important;
   content: "\62";
 }
 
-.ion-md-date:before {
+.ion-md-date:before, .ion-ios-date:before {
   font-family: "weeplanionic-icons" !important;
   content: "\64";
 }
-.ion-md-euro:before {
+.ion-md-euro:before, .ion-ios-euro:before {
   font-family: "weeplanionic-icons" !important;
   content: "\65";
 }
-.ion-md-location:before {
+.ion-md-location:before, .ion-ios-location:before {
   font-family: "weeplanionic-icons" !important;
   content: "\66";
 }

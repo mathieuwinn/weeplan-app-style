@@ -47,8 +47,8 @@ export class Signup {
 
   showAlert() {
     let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      title: 'Creating your profile',
+      subTitle: 'Normalement ici cest un loading component',
       buttons: ['OK']
     });
     alert.present();

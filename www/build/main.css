@@ -1,4 +1,3 @@
-/* Rectangle 2: */
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -4257,7 +4256,7 @@ ion-alert input {
   border-width: 0.55px;
   border-style: solid;
   border-radius: 50%;
-  border-color: #c8c7cc;
+  border-color: #EFEFEF;
   background-color: #FFF;
 }
 
@@ -5713,9 +5712,9 @@ button[disabled],
 
 .button-ios {
   margin: 0.4rem 0.2rem;
-  padding: 0 1em;
+  padding: 1.4em 1.1em;
   height: 2.8em;
-  border-radius: 4px;
+  border-radius: 26px;
   font-size: 1.6rem;
   color: #fff;
   background-color: #FE2459;
@@ -5737,7 +5736,7 @@ button[disabled],
 }
 
 .button-small-ios {
-  padding: 0 0.9em;
+  padding: 1.3em 1.1em;
   height: 2.1em;
   font-size: 1.3rem;
 }
@@ -5760,12 +5759,12 @@ button[disabled],
 }
 
 .button-outline-ios {
-  border-width: 1px;
+  border-width: 0;
   border-style: solid;
-  border-radius: 4px;
+  border-radius: 26px;
   border-color: #FE2459;
-  color: #FE2459;
-  background-color: transparent;
+  color: #626262;
+  background-color: #FFF;
 }
 
 .button-outline-ios.activated {
@@ -5807,7 +5806,7 @@ button[disabled],
 .button-outline-ios-primary {
   border-color: #FE2459;
   color: #FE2459;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .button-outline-ios-primary.activated {
@@ -5841,7 +5840,7 @@ button[disabled],
 .button-outline-ios-secondary {
   border-color: #32db64;
   color: #32db64;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .button-outline-ios-secondary.activated {
@@ -5875,7 +5874,7 @@ button[disabled],
 .button-outline-ios-danger {
   border-color: #f53d3d;
   color: #f53d3d;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .button-outline-ios-danger.activated {
@@ -5909,7 +5908,7 @@ button[disabled],
 .button-outline-ios-light {
   border-color: #f4f4f4;
   color: #f4f4f4;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .button-outline-ios-light.activated {
@@ -5943,7 +5942,7 @@ button[disabled],
 .button-outline-ios-medium {
   border-color: #626262;
   color: #626262;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .button-outline-ios-medium.activated {
@@ -5977,7 +5976,7 @@ button[disabled],
 .button-outline-ios-dark {
   border-color: #222;
   color: #222;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .button-outline-ios-dark.activated {
@@ -6063,7 +6062,7 @@ button[disabled],
 .button-outline-md {
   border-width: 0;
   border-style: solid;
-  border-color: #EEEEEE;
+  border-color: #FE2459;
   color: #626262;
   background-color: #FFF;
   box-shadow: inset 0 0 0 2px #EEE;
@@ -6807,12 +6806,12 @@ ion-card-content {
 }
 
 .card-ios {
-  margin: 12px 12px 12px 12px;
-  width: calc(100% - 24px);
-  border-radius: 2px;
+  margin: 12px 0 12px 0;
+  width: calc(100% - 0);
+  border-radius: 16px;
   font-size: 1.4rem;
   background: #FFF;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
 .card-ios ion-list {
@@ -8305,7 +8304,7 @@ ion-card-content {
   border-width: 1px;
   border-style: solid;
   border-radius: 50%;
-  border-color: #c8c7cc;
+  border-color: #EFEFEF;
   background-color: #FFF;
 }
 
@@ -13683,7 +13682,7 @@ ion-item-sliding.active-swipe-left button[expandable] {
 
 .item-ios.item-block .item-inner {
   padding-right: 8px;
-  border-bottom: 0.55px solid #c8c7cc;
+  border-bottom: 0.55px solid #EFEFEF;
 }
 
 .item-ios [item-left] {
@@ -13749,7 +13748,7 @@ ion-item-sliding.active-swipe-left button[expandable] {
 .item-ios[detail-push] .item-inner,
 button.item-ios:not([detail-none]) .item-inner,
 a.item-ios:not([detail-none]) .item-inner {
-  background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23c8c7cc'/></svg>");
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23EFEFEF'/></svg>");
   padding-right: 32px;
   background-repeat: no-repeat;
   background-position: right 14px center;
@@ -14795,12 +14794,12 @@ ion-list[inset] {
 }
 
 .list-ios > .item-block:first-child {
-  border-top: 0.55px solid #c8c7cc;
+  border-top: 0.55px solid #EFEFEF;
 }
 
 .list-ios > .item-block:last-child,
 .list-ios > .item-wrapper:last-child .item-block {
-  border-bottom: 0.55px solid #c8c7cc;
+  border-bottom: 0.55px solid #EFEFEF;
 }
 
 .list-ios > .item-block:last-child .item-inner,
@@ -14809,7 +14808,7 @@ ion-list[inset] {
 }
 
 .list-ios .item-block .item-inner {
-  border-bottom: 0.55px solid #c8c7cc;
+  border-bottom: 0.55px solid #EFEFEF;
 }
 
 .list-ios .item[no-lines],
@@ -14818,7 +14817,7 @@ ion-list[inset] {
 }
 
 .list-ios ion-item-options {
-  border-bottom: 0.55px solid #c8c7cc;
+  border-bottom: 0.55px solid #EFEFEF;
 }
 
 .list-ios ion-item-options .button {
@@ -14855,7 +14854,7 @@ ion-list[inset] {
 }
 
 .list-ios[inset] .item {
-  border-bottom: 1px solid #c8c7cc;
+  border-bottom: 1px solid #EFEFEF;
 }
 
 .list-ios[inset] .item-inner {
@@ -14886,7 +14885,7 @@ ion-list[inset] {
 .list-header-ios {
   position: relative;
   padding-left: 16px;
-  border-bottom: 0.55px solid #c8c7cc;
+  border-bottom: 0.55px solid #EFEFEF;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
@@ -15533,7 +15532,7 @@ ion-modal {
 }
 
 .note-ios {
-  color: #aeacb4;
+  color: #d6d6d6;
 }
 
 .note-ios-primary {
@@ -15756,7 +15755,7 @@ ion-picker-cmp {
 
 .picker-ios .picker-wrapper {
   height: 260px;
-  border-top: 1px solid #c8c7cc;
+  border-top: 1px solid #EFEFEF;
   background: #FFF;
 }
 
@@ -15765,7 +15764,7 @@ ion-picker-cmp {
   display: -ms-flexbox;
   display: flex;
   height: 44px;
-  border-bottom: 0.55px solid #c8c7cc;
+  border-bottom: 0.55px solid #EFEFEF;
   background: #FFF;
 }
 
@@ -15845,7 +15844,7 @@ ion-picker-cmp {
   display: block;
   width: 100%;
   height: 81px;
-  border-bottom: 1px solid #c8c7cc;
+  border-bottom: 1px solid #EFEFEF;
   background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-transform: translate3d(0, 0, 90px);
   transform: translate3d(0, 0, 90px);
@@ -15859,7 +15858,7 @@ ion-picker-cmp {
   display: block;
   width: 100%;
   height: 119px;
-  border-top: 1px solid #c8c7cc;
+  border-top: 1px solid #EFEFEF;
   background: linear-gradient(to top, white 30%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-transform: translate3d(0, 0, 90px);
   transform: translate3d(0, 0, 90px);
@@ -19668,13 +19667,13 @@ ion-spinner.spinner-paused svg {
 .split-pane-ios.split-pane-visible > .split-pane-side {
   min-width: 270px;
   max-width: 28%;
-  border-right: 0.55px solid #c8c7cc;
+  border-right: 0.55px solid #EFEFEF;
   border-left: 0;
 }
 
 .split-pane-ios.split-pane-visible > .split-pane-side[side=right] {
   border-right: 0;
-  border-left: 0.55px solid #c8c7cc;
+  border-left: 0.55px solid #EFEFEF;
 }
 
 .split-pane-md.split-pane-visible > .split-pane-side {
@@ -20578,7 +20577,7 @@ ion-toast {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  background-color: #e6e6e6;
+  background-color: white;
   transition: background-color 300ms;
   pointer-events: none;
 }
@@ -21090,7 +21089,7 @@ ion-navbar.toolbar {
 .header-ios .toolbar-background-ios,
 .footer-ios .toolbar-background-ios {
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: transparent;
 }
 
 .header-ios .toolbar-ios:last-child .toolbar-background-ios {
@@ -26960,7 +26959,7 @@ ion-navbar.toolbar {
   }
 }
 
-ion-app.md {
+ion-app.md, ion-app.ios {
   font-family: 'Nunito';
   font-weight: 500;
 }
@@ -26973,6 +26972,46 @@ ion-content.weeplan-splash-bg {
   background-color: #F8F9FB;
   background: url(../assets/img/weeplan-splash-bg.jpg) center center;
   background-size: cover;
+}
+
+/*
+Buttons missing css
+*/
+.button-ios {
+  font-weight: 600;
+}
+
+.button-default-ios {
+  box-shadow: 0 3px 10px 0 rgba(231, 158, 171, 0.8);
+}
+
+.button-default-ios.activated {
+  box-shadow: 0 2px 4px 0 rgba(231, 158, 171, 0.8);
+}
+
+.button-outline-ios {
+  box-shadow: inset 0 0 0 2px #EEE;
+}
+
+.button-outline-ios.activated {
+  background-color: #FFF;
+  color: #222;
+  box-shadow: inset 0 0 0 2px #DDD;
+}
+
+.button-outline-md.activated {
+  background-color: #FFF;
+  color: #222;
+  box-shadow: inset 0 0 0 2px #DDD;
+}
+
+/*
+
+WEEPLAN IOS
+
+*/
+.toolbar-ios {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06) !important;
 }
 
 /*
@@ -27019,7 +27058,12 @@ ion-navbar.card-navbar ion-title .toolbar-title {
   background: linear-gradient(-180deg, rgba(248, 249, 251, 0) 0%, #F8F9FB 50%);
 }
 
-.ion-md-yep {
+.footer-bottom-actions > div {
+  max-width: 580px;
+  margin: auto;
+}
+
+.ion-md-yep, .ion-ios-yep {
   color: #FE2459;
 }
 
@@ -27049,6 +27093,8 @@ ion-card.activity-card {
   left: 20px;
   right: 20px;
   height: auto;
+  max-width: 580px;
+  margin: auto;
   margin-bottom: 70px;
   border-radius: 20px;
   -webkit-transform-origin: top;
@@ -27145,6 +27191,18 @@ ion-card-header {
   font-size: 1.3rem;
 }
 
+.navbar-search {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
 .activity-card.hideRight {
   transition-delay: 0;
   -webkit-transform: translate(400px, 100px) rotate(10deg) scale(0.4);
@@ -27230,27 +27288,27 @@ ion-card-header {
   font-style: normal;
 }
 
-.ion-md-yep:before {
+.ion-md-yep:before, .ion-ios-yep:before {
   font-family: "weeplanionic-icons" !important;
   content: "\61";
 }
 
-.ion-md-nope:before {
+.ion-md-nope:before, .ion-ios-nope:before {
   font-family: "weeplanionic-icons" !important;
   content: "\62";
 }
 
-.ion-md-date:before {
+.ion-md-date:before, .ion-ios-date:before {
   font-family: "weeplanionic-icons" !important;
   content: "\64";
 }
 
-.ion-md-euro:before {
+.ion-md-euro:before, .ion-ios-euro:before {
   font-family: "weeplanionic-icons" !important;
   content: "\65";
 }
 
-.ion-md-location:before {
+.ion-md-location:before, .ion-ios-location:before {
   font-family: "weeplanionic-icons" !important;
   content: "\66";
 }

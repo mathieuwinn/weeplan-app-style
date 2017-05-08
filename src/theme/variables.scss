@@ -37,19 +37,47 @@ $app-transparent-gradient: linear-gradient(16deg, rgba(254,36,89,0.9) 0%, rgba(2
 $footer-toolbar-gradient: linear-gradient(-180deg, rgba(248,249,251,0) 0%, #F8F9FB 50%);
 $footer-card-gradient: linear-gradient(-180deg, rgba(255,255,255,0) 0%, #FFF 50%);
 
+$list-border-color : #EFEFEF;
 
 
-/* Rectangle 2: */
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+// Toolbar
+$toolbar-ios-border-color : rgba(0,0,0,0);
+
+// Normal button
+$button-ios-border-radius : 26px;
+$button-ios-text-transform : none;
+$button-ios-font-size : 1.6rem;
+$button-ios-padding : 1.4em 1.1em;
+
+// Small button
+$button-ios-small-font-size :	1.3rem;
+$button-ios-small-padding : 1.3em 1.1em;
+
+// iOS outline button
+$button-ios-outline-border-width: 0;
+$button-ios-outline-text-color: color($colors, medium);
+$button-ios-outline-background-color: #FFF;
+
+// iOS Card
+$card-ios-border-radius : 16px;
+$card-ios-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.16);
+$card-ios-background-color: #FFF;
+$card-ios-margin-left: 0;
+$card-ios-margin-right: 0;
+
+// MD Card header
+$card-md-header-padding: 12px 16px 0;
 
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+
 
 
 $background-color: #FFF;
@@ -59,7 +87,8 @@ $toolbar-md-background : $app-gradient;
 $toolbar-md-title-font-size : 1.6rem;
 $toolbar-md-title-text-color: #FFF;
 
-// MD button
+
+// Normal button
 $button-md-font-weight : 600;
 $button-md-border-radius : 26px;
 $button-md-text-transform : none;
@@ -67,17 +96,18 @@ $button-md-font-size : 1.6rem;
 $button-md-padding : 1.4em 1.1em;
 $button-md-box-shadow : 0 3px 10px 0 rgba(231,158,171,0.8);
 
-// MD SMALL button
+
+// Small button
 $button-md-small-font-size :	1.3rem;
 $button-md-small-padding : 1.4em 1.1em;
 
 // MD outline button
 $button-md-outline-border-width: 0;
-$button-md-outline-border-color: #EEEEEE;
 $button-md-outline-text-color: color($colors, medium);
 $button-md-outline-background-color: #FFF;
 $button-md-outline-ripple-background-color: color($colors, medium);
 $button-md-outline-box-shadow : inset 0 0 0 2px #EEE;
+
 
 // MD Card
 $card-md-border-radius : 16px;
