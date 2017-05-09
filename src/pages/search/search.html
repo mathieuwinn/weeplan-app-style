@@ -1,0 +1,39 @@
+<!--
+  Generated template for the Search page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar hideBackButton>
+
+    <ion-title>Activités autour de <strong>Bayeux</strong></ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<div class="content-location-search" [ngClass]="show ? 'show' : ''">
+  <ion-searchbar class="location-searchbar" placeholder="Caen, Perpignan, Rennes,..."></ion-searchbar>
+    <button ion-button clear (click)="toggle()">show searchbar</button>
+</div>
+
+
+
+<ion-content padding>
+  <button ion-button clear (click)="toggle()">show searchbar</button>
+  <p>Dès .content-location-search affiché (.show), autofocus dans .location-searchbar afin d'afficher directement le clavier.<br/>
+    .content-location-search disparait lors d'un click sur le X de .location-searchbar, ou un lors d'un click sur content-location-search (en dehors de .location-searchbar et de la liste des resultats en autocomplete).<br/>Si ca parait flou demandez-moi :P
+  </p>
+  <p>Dès que vous avez la class pour les resultats en autocomplete filez moi tout ca pour fixer la width etc...</p>
+  <ion-icon name="yep"></ion-icon>
+</ion-content>

@@ -17361,7 +17361,7 @@ ion-searchbar {
 
 .searchbar-ios .searchbar-input {
   padding: 0 28px;
-  height: 3rem;
+  height: 4rem;
   border-radius: 5px;
   font-size: 1.4rem;
   font-weight: 400;
@@ -27144,6 +27144,10 @@ ion-card .card-like-link button.active ion-icon {
   color: white;
 }
 
+ion-card .card-like-link button.button-ios {
+  height: 2em;
+}
+
 ion-card .card-image {
   position: relative;
   height: 140px;
@@ -27283,6 +27287,50 @@ ion-card-header {
   -webkit-transform: translate(-400px, 100px) rotate(-10deg) scale(0.4);
   transform: translate(-400px, 100px) rotate(-10deg) scale(0.4);
   opacity: 0;
+}
+
+.content-location-search {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+.content-location-search .location-searchbar {
+  -webkit-transform: translateY(-200px);
+  transform: translateY(-200px);
+  transition: -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1), -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+.content-location-search .location-searchbar.searchbar-ios {
+  margin-top: 20px;
+}
+
+.content-location-search .location-searchbar.searchbar-ios .searchbar-search-icon {
+  top: 14px;
+}
+
+.content-location-search.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content-location-search.show .location-searchbar {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .activity-single {

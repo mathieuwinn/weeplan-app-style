@@ -55896,6 +55896,7 @@ webpackEmptyContext.id = 102;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__card_card__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__loading_loading__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nosignal_nosignal__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_search__ = __webpack_require__(272);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55914,6 +55915,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
@@ -55922,16 +55924,14 @@ var HomePage = (function () {
         this.cardsPage = __WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */];
         this.cardPage = __WEBPACK_IMPORTED_MODULE_5__card_card__["a" /* Card */];
         this.loadingPage = __WEBPACK_IMPORTED_MODULE_6__loading_loading__["a" /* Loading */];
-        this.noSignal = __WEBPACK_IMPORTED_MODULE_7__nosignal_nosignal__["a" /* Nosignal */];
+        this.noSignalPage = __WEBPACK_IMPORTED_MODULE_7__nosignal_nosignal__["a" /* Nosignal */];
+        this.searchPage = __WEBPACK_IMPORTED_MODULE_8__search_search__["a" /* Search */];
     }
-    HomePage.prototype.ngOnInit = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */]);
-    };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n  <button ion-item [navPush]="noSignal">No Signal/Connexion</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n  <button ion-item [navPush]="noSignalPage">No Signal/Connexion</button>\n  <button ion-item [navPush]="searchPage">Search</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
@@ -74369,27 +74369,31 @@ module.exports = g;
 var map = {
 	"../pages/card/card.module": [
 		263,
-		11
+		13
 	],
 	"../pages/cards/cards.module": [
 		264,
-		10
+		12
 	],
 	"../pages/loading/loading.module": [
 		267,
-		3
+		9
 	],
 	"../pages/nosignal/nosignal.module": [
 		269,
-		0
+		8
+	],
+	"../pages/search/search.module": [
+		271,
+		5
 	],
 	"../pages/signup/signup.module": [
 		265,
-		2
+		7
 	],
 	"../pages/splash/splash.module": [
 		266,
-		1
+		6
 	]
 };
 function webpackAsyncContext(req) {
@@ -74424,6 +74428,7 @@ webpackAsyncContext.id = 196;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_card_card__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_search_search__ = __webpack_require__(272);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -74431,6 +74436,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -74459,7 +74465,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__["a" /* Cards */],
             __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */],
             __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__["a" /* Nosignal */]
+            __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__["a" /* Nosignal */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_search_search__["a" /* Search */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -74470,7 +74477,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/cards/cards.module#CardsModule', name: 'Cards', segment: 'cards', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/card/card.module#CardModule', name: 'Card', segment: 'card', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/loading/loading.module#LoadingModule', name: 'Loading', segment: 'loading', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/nosignal/nosignal.module#NosignalModule', name: 'Nosignal', segment: 'nosignal', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/nosignal/nosignal.module#NosignalModule', name: 'Nosignal', segment: 'nosignal', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/search/search.module#SearchModule', name: 'Search', segment: 'search', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -74483,7 +74491,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__["a" /* Cards */],
             __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */],
             __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__["a" /* Nosignal */]
+            __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__["a" /* Nosignal */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_search_search__["a" /* Search */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -111665,6 +111674,56 @@ Nosignal = __decorate([
 ], Nosignal);
 
 //# sourceMappingURL=nosignal.js.map
+
+/***/ }),
+/* 271 */,
+/* 272 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Search; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Search page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Search = (function () {
+    function Search(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.show = false;
+    }
+    Search.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Search');
+    };
+    Search.prototype.toggle = function () {
+        this.show = !this.show;
+    };
+    return Search;
+}());
+Search = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-search',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/search/search.html"*/'<!--\n  Generated template for the Search page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n\n  <ion-navbar hideBackButton>\n\n    <ion-title>Activités autour de <strong>Bayeux</strong></ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<div class="content-location-search" [ngClass]="show ? \'show\' : \'\'">\n  <ion-searchbar class="location-searchbar" placeholder="Caen, Perpignan, Rennes,..."></ion-searchbar>\n    <button ion-button clear (click)="toggle()">show searchbar</button>\n</div>\n\n\n\n<ion-content padding>\n  <button ion-button clear (click)="toggle()">show searchbar</button>\n  <p>Dès .content-location-search affiché (.show), autofocus dans .location-searchbar afin d\'afficher directement le clavier.<br/>\n    .content-location-search disparait lors d\'un click sur le X de .location-searchbar, ou un lors d\'un click sur content-location-search (en dehors de .location-searchbar et de la liste des resultats en autocomplete).<br/>Si ca parait flou demandez-moi :P\n  </p>\n  <p>Dès que vous avez la class pour les resultats en autocomplete filez moi tout ca pour fixer la width etc...</p>\n  <ion-icon name="yep"></ion-icon>\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/search/search.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], Search);
+
+//# sourceMappingURL=search.js.map
 
 /***/ })
 /******/ ]);

@@ -7,6 +7,7 @@ import { Cards } from '../cards/cards';
 import { Card } from '../card/card';
 import { Loading } from '../loading/loading';
 import { Nosignal } from '../nosignal/nosignal';
+import { Search } from '../search/search';
 
 @Component({
   selector: 'page-home',
@@ -19,12 +20,11 @@ export class HomePage {
   cardsPage = Cards;
   cardPage = Card;
   loadingPage = Loading;
-  noSignal = Nosignal;
+  noSignalPage = Nosignal;
+  searchPage = Search;
 
   constructor(public navCtrl: NavController) {
   }
 
-  ngOnInit() {
-   this.navCtrl.push(Cards);
-  }
+
 }

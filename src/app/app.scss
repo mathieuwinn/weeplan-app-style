@@ -221,6 +221,9 @@ ion-card {
           color: white;
         }
       }
+      &.button-ios {
+        height: 2em;
+      }
     }
   }
 
@@ -371,6 +374,49 @@ ion-card-header {
   opacity: 0;
 
 }
+
+// Location searchbar
+
+.content-location-search {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  left:0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
+
+  .location-searchbar {
+    transform: translateY(-200px);
+    transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+    -webkit-transition:  transform 400ms cubic-bezier(1, 0, 0, 1);
+    -moz-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+
+    &.searchbar-ios {
+      margin-top: 20px;
+      .searchbar-search-icon {
+        top: 14px;
+      }
+    }
+
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    .location-searchbar {
+      transform: translateY(0px);
+    }
+  }
+
+}
+
 
 // Single Activity view
 
