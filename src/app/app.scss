@@ -143,10 +143,22 @@ ion-navbar.card-navbar {
   bottom: 0;
   z-index: 100;
   background: $footer-toolbar-gradient;
+  transform: translateY(0);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
 
   & > div {
     max-width: 580px;
     margin: auto;
+  }
+
+  &.hide {
+    transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+    -webkit-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+    -moz-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+    display: block !important;
+    transform: translateY(600px);
   }
 
 }
