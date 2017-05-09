@@ -55889,6 +55889,7 @@ webpackEmptyContext.id = 102;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cards_cards__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__card_card__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__loading_loading__ = __webpack_require__(268);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55905,6 +55906,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
@@ -55912,19 +55914,21 @@ var HomePage = (function () {
         this.signupPage = __WEBPACK_IMPORTED_MODULE_3__signup_signup__["a" /* Signup */];
         this.cardsPage = __WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */];
         this.cardPage = __WEBPACK_IMPORTED_MODULE_5__card_card__["a" /* Card */];
+        this.loadingPage = __WEBPACK_IMPORTED_MODULE_6__loading_loading__["a" /* Loading */];
     }
     HomePage.prototype.ngOnInit = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__loading_loading__["a" /* Loading */]);
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -74357,19 +74361,23 @@ module.exports = g;
 var map = {
 	"../pages/card/card.module": [
 		263,
-		3
+		9
 	],
 	"../pages/cards/cards.module": [
 		264,
-		2
+		8
+	],
+	"../pages/loading/loading.module": [
+		267,
+		5
 	],
 	"../pages/signup/signup.module": [
 		265,
-		1
+		7
 	],
 	"../pages/splash/splash.module": [
 		266,
-		0
+		6
 	]
 };
 function webpackAsyncContext(req) {
@@ -74402,6 +74410,7 @@ webpackAsyncContext.id = 196;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_card_card__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__ = __webpack_require__(268);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -74409,6 +74418,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -74433,7 +74443,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_splash_splash__["a" /* Splash */],
             __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__["a" /* Signup */],
             __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__["a" /* Cards */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */]
+            __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -74442,7 +74453,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/splash/splash.module#SplashModule', name: 'Splash', segment: 'splash', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupModule', name: 'Signup', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/cards/cards.module#CardsModule', name: 'Cards', segment: 'cards', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/card/card.module#CardModule', name: 'Card', segment: 'card', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/card/card.module#CardModule', name: 'Card', segment: 'card', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/loading/loading.module#LoadingModule', name: 'Loading', segment: 'loading', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -74453,7 +74465,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_splash_splash__["a" /* Splash */],
             __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__["a" /* Signup */],
             __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__["a" /* Cards */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */]
+            __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -111494,6 +111507,82 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Loading; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the Loading page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Loading = (function () {
+    function Loading(navCtrl, navParams, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+    }
+    Loading.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Loading');
+    };
+    Loading.prototype.showPrompt = function () {
+        var prompt = this.alertCtrl.create({
+            message: "Weeplan aimerait utiliser votre position actuelle pour vous proposer des activités autour.",
+            buttons: [
+                {
+                    text: 'Refuser',
+                    handler: function (data) {
+                        console.log('refuser clicked');
+                    }
+                },
+                {
+                    text: 'Autoriser',
+                    handler: function (data) {
+                        console.log('autoriser clicked');
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
+    Loading.prototype.ngOnInit = function () {
+        this.showPrompt();
+    };
+    return Loading;
+}());
+Loading = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-loading',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/loading/loading.html"*/'<!--\n  Generated template for the Loading page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar hideBackButton>\n\n    <ion-title>Activités autour de <strong>Bayeux</strong></ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div class="content-loading" padding>\n\n    <ion-spinner></ion-spinner>\n    <p>Recherche d’activités...</p>\n\n\n\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/loading/loading.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]) === "function" && _c || Object])
+], Loading);
+
+var _a, _b, _c;
+//# sourceMappingURL=loading.js.map
 
 /***/ })
 /******/ ]);

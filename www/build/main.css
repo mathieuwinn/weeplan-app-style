@@ -4128,7 +4128,7 @@ ion-alert input {
 .alert-ios .alert-wrapper {
   overflow: hidden;
   max-width: 270px;
-  border-radius: 13px;
+  border-radius: 14px;
   background-color: #f8f8f8;
   box-shadow: none;
 }
@@ -4154,7 +4154,7 @@ ion-alert input {
   padding: 0 16px 21px;
   font-size: 13px;
   text-align: center;
-  color: inherit;
+  color: #222;
 }
 
 .alert-ios .alert-message {
@@ -4314,7 +4314,7 @@ ion-alert input {
 
 .alert-md .alert-wrapper {
   max-width: 280px;
-  border-radius: 2px;
+  border-radius: 14px;
   background-color: #fafafa;
   box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
 }
@@ -4335,7 +4335,7 @@ ion-alert input {
 .alert-md .alert-message,
 .alert-md .alert-input-group {
   padding: 0 24px 24px 24px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #222;
 }
 
 .alert-md .alert-message {
@@ -15248,23 +15248,23 @@ ion-loading {
 
 .loading-ios .spinner-ios line,
 .loading-ios .spinner-ios-small line {
-  stroke: #69717d;
+  stroke: #FE2459;
 }
 
 .loading-ios .spinner-bubbles circle {
-  fill: #69717d;
+  fill: #FE2459;
 }
 
 .loading-ios .spinner-circles circle {
-  fill: #69717d;
+  fill: #FE2459;
 }
 
 .loading-ios .spinner-crescent circle {
-  stroke: #69717d;
+  stroke: #FE2459;
 }
 
 .loading-ios .spinner-dots circle {
-  fill: #69717d;
+  fill: #FE2459;
 }
 
 .loading-md .loading-wrapper {
@@ -15272,7 +15272,7 @@ ion-loading {
   max-width: 280px;
   max-height: 90%;
   border-radius: 2px;
-  color: rgba(0, 0, 0, 0.5);
+  color: red;
   background: #fafafa;
   box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
 }
@@ -15283,23 +15283,23 @@ ion-loading {
 
 .loading-md .spinner-ios line,
 .loading-md .spinner-ios-small line {
-  stroke: #FE2459;
+  stroke: red;
 }
 
 .loading-md .spinner-bubbles circle {
-  fill: #FE2459;
+  fill: red;
 }
 
 .loading-md .spinner-circles circle {
-  fill: #FE2459;
+  fill: red;
 }
 
 .loading-md .spinner-crescent circle {
-  stroke: #FE2459;
+  stroke: red;
 }
 
 .loading-md .spinner-dots circle {
-  fill: #FE2459;
+  fill: red;
 }
 
 .loading-wp .loading-wrapper {
@@ -19404,7 +19404,7 @@ ion-spinner.spinner-paused svg {
 }
 
 .spinner-md-circles circle {
-  fill: #69717d;
+  fill: red;
 }
 
 .spinner-md-crescent circle {
@@ -23067,7 +23067,7 @@ ion-navbar.toolbar {
 
 .toolbar-background-md {
   border-color: #b2b2b2;
-  background: linear-gradient(16deg, #FE2459 0%, #FC6A3B 100%);
+  background: linear-gradient(16deg, #FE2424 0%, #FE2459 100%);
 }
 
 .header-md::after,
@@ -27025,7 +27025,7 @@ ion-navbar.card-navbar {
 }
 
 ion-navbar.card-navbar .toolbar-background-md {
-  background-image: url(../assets/img/card-img-1.png), linear-gradient(16deg, #FE2459 0%, #FC6A3B 100%);
+  background-image: url(../assets/img/card-img-1.png), linear-gradient(16deg, #FE2424 0%, #FE2459 100%);
   background-size: cover;
   background-position: center center;
 }
@@ -27252,6 +27252,24 @@ ion-card-header {
   margin-top: 160px;
   text-align: center;
   color: #626262;
+}
+
+.content-loading {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+  margin: auto;
+}
+
+.content-loading p {
+  color: #626262;
+}
+
+ion-spinner {
+  width: 44px;
+  height: 44px;
 }
 
 @font-face {
