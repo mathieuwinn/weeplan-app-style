@@ -18209,7 +18209,7 @@ ion-segment {
 
 .segment-md.segment-disabled,
 .segment-md .segment-button-disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -27003,6 +27003,13 @@ Buttons missing css
   background-color: #FFF;
   color: #222;
   box-shadow: inset 0 0 0 2px #DDD;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+  color: #626262;
+  box-shadow: none;
 }
 
 /*

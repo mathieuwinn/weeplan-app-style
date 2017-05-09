@@ -71,6 +71,13 @@ Buttons missing css
   }
 }
 
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: color($colors, medium);
+  box-shadow: none;
+}
+
 /*
 
 WEEPLAN IOS

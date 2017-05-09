@@ -39,7 +39,10 @@
   </div>
 
     <div padding>
-      <button ion-button block (click)="showAlert()">Créer mon compte</button>
+      <button ion-button block disabled (click)="presentLoading()">Créer mon compte</button>
+    </div>
+    <div padding>
+      <button ion-button block (click)="presentLoading()">Créer mon compte</button>
     </div>
 
 </ion-content>

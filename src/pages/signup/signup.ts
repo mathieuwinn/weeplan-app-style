@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the Signup page.
@@ -15,7 +16,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class Signup {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -45,13 +46,12 @@ export class Signup {
     prompt.present();
   }
 
-  showAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'Creating your profile',
-      subTitle: 'Normalement ici cest un loading component',
-      buttons: ['OK']
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Veuillez patienter...",
+      duration: 3000
     });
-    alert.present();
+    loader.present();
   }
 
 
