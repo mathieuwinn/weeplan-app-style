@@ -27108,6 +27108,35 @@ ion-card.activity-card {
   transition-property: transform,opacity,visibility,-webkit-transform;
 }
 
+ion-card .card-like-link {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+}
+
+ion-card .card-like-link button {
+  font-size: 1.6em;
+  padding: 4px 8px;
+  margin: 0;
+}
+
+ion-card .card-like-link button ion-icon {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+ion-card .card-like-link button.active {
+  -webkit-animation: scaleUp 400ms normal forwards;
+  animation: scaleUp 400ms normal forwards;
+}
+
+ion-card .card-like-link button.active ion-icon {
+  color: white;
+}
+
 ion-card .card-image {
   position: relative;
   height: 140px;
@@ -27120,6 +27149,28 @@ ion-card .card-image img {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+ion-card.no-card-image .card-image {
+  display: none;
+}
+
+ion-card.no-card-image .card-like-link button ion-icon {
+  color: #FE2459;
+  text-shadow: none;
+}
+
+ion-card.no-card-image .card-like-link button.active {
+  -webkit-animation: scaleUp 400ms normal forwards;
+  animation: scaleUp 400ms normal forwards;
+}
+
+ion-card.no-card-image .card-like-link button.active ion-icon {
+  color: #FE2459;
+}
+
+ion-card.no-card-image .activity-title {
+  width: calc(100% - 40px);
 }
 
 ion-card-header {
@@ -27330,4 +27381,44 @@ ion-spinner {
 .ion-md-location:before, .ion-ios-location:before {
   font-family: "weeplanionic-icons" !important;
   content: "\66";
+}
+
+.ion-md-like:before, .ion-ios-like:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\68";
+}
+
+.ion-md-liked:before, .ion-ios-liked:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\67";
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
 }

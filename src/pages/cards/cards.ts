@@ -35,6 +35,12 @@ export class Cards {
     }
   }
 
+  active = false;
+    toggle() {
+     this.active = !this.active;
+    }
+
+
 
 
 

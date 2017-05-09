@@ -38,6 +38,11 @@
 
     <ion-card [ngClass]="{'hideLeft': highlightedDiv === 1}" class="activity-card show">
 
+
+      <div class="card-like-link">
+        <button ion-button clear (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
+      </div>
+
       <div class="card-image">
         <img src="../assets/img/card-img-1.png"/>
       </div>
@@ -68,12 +73,15 @@
       </ion-card-content>
     </ion-card>
 
+    <ion-card [ngClass]="{'show': highlightedDiv === 1}" class="activity-card hideRight no-card-image">
 
-    <ion-card [ngClass]="{'show': highlightedDiv === 1}" class="activity-card hideRight">
+      <div class="card-like-link">
+        <button ion-button clear (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
+      </div>
 
       <ion-card-header>
           <div class="activity-title">
-            Super Activité encore mieux
+            Super Activité encore mieux etff puis c'esy tout nanana
           </div>
           <div class="activity-subtitle">
             <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
@@ -108,12 +116,9 @@
         <ion-col col-6>
           <button ion-button block>J'y vais</button>
         </ion-col>
-        <ion-col col-3>
-          <button ion-button outline block (click)="toggleHighlight(2);"><ion-icon name="yep"></ion-icon></button>
-        </ion-col>
-        <ion-col col-3>
-          <button ion-button outline block (click)="toggleHighlight(1);"><ion-icon name="nope"></ion-icon></button>
-        </ion-col>
+        <ion-col col-6>
+          <button ion-button outline block (click)="toggleHighlight(1);">J'y vais pas</button>
+          </ion-col>
       </ion-row>
     </div>
 

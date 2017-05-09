@@ -23,6 +23,6 @@ export class HomePage {
   }
 
   ngOnInit() {
-   this.navCtrl.push(Loading);
+   this.navCtrl.push(Cards);
   }
 }
