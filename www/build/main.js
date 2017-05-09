@@ -55820,10 +55820,9 @@ Signup = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-signup',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/signup/signup.html"*/'<!--\n  Generated template for the Signup page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Créer un compte Weeplan</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <div margin padding class="alertbox" style="display:none;">\n    <ion-col col-10>\n      Il y a une erreur.\n    </ion-col>\n  </div>\n\n\n  <ion-list no-margin>\n\n    <ion-item>\n      <ion-input type="email" placeholder="Adresse email"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-input type="password" placeholder="Mot de passe"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding-horizontal text-right>\n    <button ion-button small clear text-right (click)="showPrompt()">Mot de passe oublié?</button>\n  </div>\n\n    <div padding>\n      <button ion-button block disabled (click)="presentLoading()">Créer mon compte</button>\n    </div>\n    <div padding>\n      <button ion-button block (click)="presentLoading()">Créer mon compte</button>\n    </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/signup/signup.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]])
 ], Signup);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=signup.js.map
 
 /***/ }),
@@ -55896,6 +55895,7 @@ webpackEmptyContext.id = 102;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cards_cards__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__card_card__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__loading_loading__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nosignal_nosignal__ = __webpack_require__(270);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55913,6 +55913,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
@@ -55921,12 +55922,16 @@ var HomePage = (function () {
         this.cardsPage = __WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */];
         this.cardPage = __WEBPACK_IMPORTED_MODULE_5__card_card__["a" /* Card */];
         this.loadingPage = __WEBPACK_IMPORTED_MODULE_6__loading_loading__["a" /* Loading */];
+        this.noSignal = __WEBPACK_IMPORTED_MODULE_7__nosignal_nosignal__["a" /* Nosignal */];
     }
+    HomePage.prototype.ngOnInit = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */]);
+    };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n  <button ion-item [navPush]="noSignal">No Signal/Connexion</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
@@ -74364,23 +74369,27 @@ module.exports = g;
 var map = {
 	"../pages/card/card.module": [
 		263,
-		9
+		11
 	],
 	"../pages/cards/cards.module": [
 		264,
-		8
+		10
 	],
 	"../pages/loading/loading.module": [
 		267,
-		5
+		3
+	],
+	"../pages/nosignal/nosignal.module": [
+		269,
+		0
 	],
 	"../pages/signup/signup.module": [
 		265,
-		7
+		2
 	],
 	"../pages/splash/splash.module": [
 		266,
-		6
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -74414,6 +74423,7 @@ webpackAsyncContext.id = 196;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_card_card__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__ = __webpack_require__(270);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -74421,6 +74431,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -74447,7 +74458,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__["a" /* Signup */],
             __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__["a" /* Cards */],
             __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */]
+            __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__["a" /* Nosignal */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -74457,7 +74469,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/signup/signup.module#SignupModule', name: 'Signup', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/cards/cards.module#CardsModule', name: 'Cards', segment: 'cards', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/card/card.module#CardModule', name: 'Card', segment: 'card', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/loading/loading.module#LoadingModule', name: 'Loading', segment: 'loading', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/loading/loading.module#LoadingModule', name: 'Loading', segment: 'loading', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/nosignal/nosignal.module#NosignalModule', name: 'Nosignal', segment: 'nosignal', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -74469,7 +74482,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__["a" /* Signup */],
             __WEBPACK_IMPORTED_MODULE_9__pages_cards_cards__["a" /* Cards */],
             __WEBPACK_IMPORTED_MODULE_10__pages_card_card__["a" /* Card */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */]
+            __WEBPACK_IMPORTED_MODULE_11__pages_loading_loading__["a" /* Loading */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_nosignal_nosignal__["a" /* Nosignal */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -111585,6 +111599,72 @@ Loading = __decorate([
 ], Loading);
 
 //# sourceMappingURL=loading.js.map
+
+/***/ }),
+/* 269 */,
+/* 270 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Nosignal; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the Nosignal page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Nosignal = (function () {
+    function Nosignal(navCtrl, navParams, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+    }
+    Nosignal.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Nosignal');
+    };
+    Nosignal.prototype.showPrompt = function () {
+        var prompt = this.alertCtrl.create({
+            title: "Pas de connexion",
+            message: "Veuillez vérifier votre connexion internet.",
+            buttons: [
+                {
+                    text: 'Ok',
+                    handler: function (data) {
+                        console.log('ok clicked');
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
+    Nosignal.prototype.ngOnInit = function () {
+        this.showPrompt();
+    };
+    return Nosignal;
+}());
+Nosignal = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-nosignal',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/nosignal/nosignal.html"*/'<!--\n  Generated template for the Nosignal page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar hideBackButton>\n\n    <ion-title>Activités autour de <strong>Bayeux</strong></ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div class="content-nosignal" padding>\n\n    <ion-icon name="nosignal"></ion-icon>\n    <p>Pas de connexion. Veuillez vérifier votre connexion internet.</p>\n    <button ion-button clear>Réessayer</button>\n\n\n\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/nosignal/nosignal.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]])
+], Nosignal);
+
+//# sourceMappingURL=nosignal.js.map
 
 /***/ })
 /******/ ]);

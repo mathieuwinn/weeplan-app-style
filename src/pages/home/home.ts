@@ -6,6 +6,7 @@ import { Signup } from '../signup/signup';
 import { Cards } from '../cards/cards';
 import { Card } from '../card/card';
 import { Loading } from '../loading/loading';
+import { Nosignal } from '../nosignal/nosignal';
 
 @Component({
   selector: 'page-home',
@@ -18,9 +19,12 @@ export class HomePage {
   cardsPage = Cards;
   cardPage = Card;
   loadingPage = Loading;
+  noSignal = Nosignal;
 
   constructor(public navCtrl: NavController) {
   }
 
-
+  ngOnInit() {
+   this.navCtrl.push(Cards);
+  }
 }

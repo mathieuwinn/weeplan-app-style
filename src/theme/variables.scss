@@ -44,7 +44,8 @@ $list-border-color : #EFEFEF;
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$loading-ios-spinner-color: color($colors, primary);
+$loading-ios-spinner-color: color($colors, primary); //not working for ion-spinner alone...
+
 
 // Toolbar
 $toolbar-ios-border-color : rgba(0,0,0,0);
@@ -76,6 +77,9 @@ $card-md-header-padding: 12px 16px 0;
 
 // iOS alerts
 $alert-ios-border-radius: 14px;
+$loading-ios-border-radius: 14px;
+$alert-ios-head-padding: 24px 24px 10px 24px;
+$alert-ios-message-padding: 0 24px 16px 24px;
 $alert-ios-message-text-color: color($colors, dark);
 
 
@@ -133,6 +137,9 @@ $card-md-header-padding: 12px 16px 0;
 
 // MD alerts
 $alert-md-border-radius: 14px;
+$loading-md-border-radius: 14px;
+$alert-md-head-padding: 24px 24px 10px 24px;
+$alert-md-message-padding: 0 24px 16px 24px;
 $alert-md-message-text-color: color($colors, dark);
 
 

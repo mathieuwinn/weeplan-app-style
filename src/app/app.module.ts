@@ -11,6 +11,7 @@ import { Signup } from '../pages/signup/signup';
 import { Cards } from '../pages/cards/cards';
 import { Card } from '../pages/card/card';
 import { Loading } from '../pages/loading/loading';
+import { Nosignal } from '../pages/nosignal/nosignal';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Loading } from '../pages/loading/loading';
     Signup,
     Cards,
     Card,
-    Loading
+    Loading,
+    Nosignal
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { Loading } from '../pages/loading/loading';
     Signup,
     Cards,
     Card,
-    Loading
+    Loading,
+    Nosignal
   ],
   providers: [
     StatusBar,

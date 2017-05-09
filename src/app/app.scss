@@ -246,11 +246,13 @@ ion-card {
       button {
         ion-icon {
           color: color($colors,primary);
+          opacity: 0.6;
           text-shadow: none;
         }
         &.active {
           animation: scaleUp 400ms normal forwards;
           ion-icon {
+            opacity: 1;
             color: color($colors,primary);
           }
         }
@@ -406,15 +408,24 @@ ion-card-header {
 // Weeplan spinner
 
 // Spinner in content, absolute positionning
-.content-loading {
+.content-loading, .content-nosignal {
     text-align: center;
     position: absolute;
     left: 0;
     right: 0;
     top: 30%;
+    max-width: 260px;
     margin: auto;
+    h4 {
+
+    }
     p {
       color: color($colors, medium);
+    }
+
+    .ion-md-nosignal, .ion-ios-nosignal {
+      font-size: 3em;
+      color: color($colors, primary);
     }
 }
 
@@ -499,6 +510,12 @@ ion-spinner {
   font-family: "weeplanionic-icons" !important;
   content: "\67";
 }
+
+.ion-md-nosignal:before, .ion-ios-nosignal:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\69";
+}
+
 
 
 // ScaleUp animation for liking activities
