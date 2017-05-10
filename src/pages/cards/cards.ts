@@ -42,6 +42,7 @@ export class Cards {
 
     ngOnInit(){
       console.log("hello");
+
      }
 
 
