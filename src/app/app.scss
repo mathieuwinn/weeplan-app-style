@@ -212,6 +212,36 @@ ion-card {
     transition-property: transform,opacity,visibility;
   }
 
+  &.activity-card.activity-card_small {
+    position: relative;
+    left:auto;
+    right: auto;
+    height: auto;
+    width: 212px;
+    margin: auto;
+    margin-bottom: 0;
+    .card-image {
+      height:84px;
+    }
+    .card-like-link {
+      right: 6px;
+      top: 6px;
+      button.btn-like {
+          font-size: 1.2em;
+          padding: 8px 12px;
+      }
+    }
+    .activity-title {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height:1.7rem;
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+  }
+
   .card-like-link {
     position: absolute;
     right: 12px;
@@ -219,23 +249,13 @@ ion-card {
     z-index: 100;
     padding: 0;
     margin: 0;
-    button {
-      font-size: 1.6em;
-      padding: 4px 8px;
-      margin: 0;
-      ion-icon {
-        color: white;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-      }
-      &.active {
-        animation: scaleUp 400ms normal forwards;
+    button.btn-like {
+        font-size: 1.6em;
+        padding: 4px 8px;
         ion-icon {
           color: white;
+          text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
-      }
-      &.button-ios {
-        height: 2em;
-      }
     }
   }
 
@@ -258,7 +278,7 @@ ion-card {
       display: none;
     }
     .card-like-link {
-      button {
+      .btn-like {
         ion-icon {
           color: color($colors,primary);
           opacity: 0.6;
@@ -272,6 +292,7 @@ ion-card {
           }
         }
       }
+
     }
 
     .activity-title {
@@ -283,6 +304,19 @@ ion-card {
 
 }
 
+//Like heart button with animation
+
+button.btn-like {
+  font-size: 1.2em;
+    margin: 0;
+    &.active {
+      animation: scaleUp 400ms normal forwards;
+    }
+    &.button-ios {
+      height: 2em;
+    }
+  }
+
 ion-card-header {
   white-space: normal !important;
 }
@@ -291,6 +325,7 @@ ion-card-header {
 .activity-title {
     font-weight: 600;
     font-size: 2rem;
+    line-height: 2.3rem;
     color: color($colors,primary);
     margin-bottom: 6px;
     overflow-wrap: normal;
@@ -298,7 +333,10 @@ ion-card-header {
 }
 
 .activity-subtitle {
- margin-bottom: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .activity-infos {
@@ -349,8 +387,6 @@ ion-card-header {
   font-size: 1.3rem;
 }
 
-
-// Single Activity view
 
 .navbar-search {
   position: absolute;
@@ -404,12 +440,13 @@ ion-card-header {
   -webkit-transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
   -moz-transition: opacity 400ms cubic-bezier(1, 0, 0, 1);
 
+
+  //old ion-searchbar
   .location-searchbar {
     transform: translateY(-200px);
     transition: transform 400ms cubic-bezier(1, 0, 0, 1);
     -webkit-transition:  transform 400ms cubic-bezier(1, 0, 0, 1);
     -moz-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
-
     &.searchbar-ios {
       margin-top: 20px;
       .searchbar-search-icon {
@@ -419,10 +456,38 @@ ion-card-header {
 
   }
 
+  // new custom search input
+
+  .searchbar-input-container {
+    position: relative;
+    margin-top: 4px;
+    transform: translateY(-200px);
+    transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+    -webkit-transition:  transform 400ms cubic-bezier(1, 0, 0, 1);
+    -moz-transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+
+    .searchbar-input {
+      padding: 12px 16px !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      border-radius: 3px;
+    }
+    .search-current-location-btn {
+      position: absolute;
+      top:0;
+      right: 0;
+      font-size: 1.2rem;
+      color: color($colors, medium);
+    }
+  }
+
+
+
+
+
   &.show {
     visibility: visible;
     opacity: 1;
-    .location-searchbar {
+    .searchbar-input-container {
       transform: translateY(0px);
     }
   }
@@ -450,7 +515,29 @@ ion-card-header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
 
+// Horizontal Slider for related activity small Cards
+
+.hscroll-container {
+  height: 260px;
+  background-color: #F8F9FB;
+  .hscroll-content {
+    width: 1200px;
+    white-space: nowrap;
+
+    ion-card.activity-card {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+}
+
+// h6 section title on top of containers, uppercase, small size
+.section-title {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 
@@ -572,6 +659,11 @@ ion-spinner {
 .ion-md-nosignal:before, .ion-ios-nosignal:before {
   font-family: "weeplanionic-icons" !important;
   content: "\69";
+}
+
+.ion-md-position:before, .ion-ios-position:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6a";
 }
 
 

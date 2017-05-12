@@ -25,11 +25,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
   }
-/**
+
   ngOnInit(){
-    this.navCtrl.push(Cards);
+    this.navCtrl.push(Card);
    }
 
-  **/
+
 
 }

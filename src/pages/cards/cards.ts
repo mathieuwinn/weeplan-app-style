@@ -40,10 +40,6 @@ export class Cards {
      this.active = !this.active;
     }
 
-    ngOnInit(){
-      console.log("hello");
-
-     }
 
 
 

@@ -10,6 +10,7 @@
     <ion-title>Activité commencée</ion-title>
 
     <ion-buttons end>
+      <button ion-button clear class="btn-like" (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
       <button ion-button icon-only>
         <ion-icon name="more"></ion-icon>
       </button>
@@ -19,12 +20,12 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <div class="activity-single">
+  <div class="activity-single" padding>
 
     <div class="activity-title">
-      Super Activité encore mieux
+      Super Activité encore mieux et Vraiment Cool
     </div>
     <div class="activity-subtitle">
       <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
@@ -48,6 +49,40 @@
 
 
   </div>
+
+  <h6 class="section-title" padding-horizontal text-uppercase>Activités à suivre</h6>
+  <ion-scroll class="activity-related hscroll-container" scrollX="true">
+
+    <div class="hscroll-content" padding>
+
+      <ion-card class="activity-card activity-card_small show" *ngFor="let card of cards">
+
+
+
+        <div class="card-like-link">
+          <button ion-button clear class="btn-like" (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
+        </div>
+
+        <div class="card-image" ng-if="card.img!==undefined">
+          <img src="{{ card.img }}"/>
+        </div>
+
+        <ion-card-header>
+            <div class="activity-title">
+              {{ card.title }}
+            </div>
+            <div class="activity-subtitle">
+              <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
+            </div>
+        </ion-card-header>
+      </ion-card>
+
+
+
+    </div>
+
+  </ion-scroll>
+
 
 </ion-content>
 
