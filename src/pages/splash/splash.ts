@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,12 +14,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'splash.html',
 })
 export class Splash {
+  show= false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Splash');
+
+        setTimeout(() => {
+            this.show = true;
+        }, 2000);
+
   }
+
 
 }

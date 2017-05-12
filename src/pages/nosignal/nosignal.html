@@ -20,12 +20,24 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="activity-cards-view">
 
-  <div class="content-nosignal" padding>
+  <!-- Quand il n'y a pas de signal-->
+  <div class="content-nosignal hide" padding>
 
     <ion-icon name="nosignal"></ion-icon>
     <p>Pas de connexion. Veuillez vérifier votre connexion internet.</p>
+    <button ion-button clear>Réessayer</button>
+
+
+
+  </div>
+
+  <!-- Quand il n'y a pas d'activités trouvées'-->
+  <div class="content-noactivity" padding>
+
+    <div class="noactivity-img"></div>
+    <p>Aucune activité trouvée...</p>
     <button ion-button clear>Réessayer</button>
 
 
