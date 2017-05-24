@@ -27297,8 +27297,19 @@ ion-card.no-card-image .activity-title {
   width: calc(100% - 40px);
 }
 
-.activity-avatar {
+ion-avatar.activity-avatar {
+  overflow: hidden;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 10px;
+}
+
+ion-avatar.activity-avatar img {
+  position: relative;
   border-radius: 0;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 button.btn-like {

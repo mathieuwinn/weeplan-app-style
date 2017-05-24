@@ -373,8 +373,18 @@ ion-card {
 
 // Activity lists
 
-.activity-avatar {
-  border-radius: 0;
+ion-avatar.activity-avatar {
+  overflow: hidden;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 10px;
+  img {
+    position: relative;
+    border-radius: 0;
+    display: block;
+   width: 100%;
+   height: auto;
+  }
 }
 
 //Like heart button with animation
