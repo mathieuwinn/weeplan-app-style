@@ -17,10 +17,10 @@ export class Sidemenu {
   }
 
 
-   //ngOnInit(){
-     //this.menuCtrl.open();
+   ngOnInit(){
+     this.menuCtrl.open();
 
-   //}
+   }
 
 
 }

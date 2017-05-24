@@ -55971,6 +55971,9 @@ var Sidemenu = (function () {
         this.navParams = navParams;
         this.menuCtrl = menuCtrl;
     }
+    Sidemenu.prototype.ngOnInit = function () {
+        this.menuCtrl.open();
+    };
     return Sidemenu;
 }());
 Sidemenu = __decorate([
@@ -74977,7 +74980,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/app/app.html"*/'<ion-menu persistent="true" [content]="content" id="myMenu">\n  <ion-header padding>\n    <ion-icon class="profile-settings" name="settings"></ion-icon>\n    <div class="profile-pic profile-pic-menu" style="background-image:url(../assets/img/avatar1.jpg);">\n    </div>\n    <ion-title>Mathieu Robert</ion-title>\n  </ion-header>\n\n  <ion-content>\n      <ion-list>\n\n      <ion-item class="active"><ion-icon name="search" item-start></ion-icon> Rechercher des activités</ion-item>\n      <ion-item><ion-icon name="liked" item-start></ion-icon> 5 activités sauvegardées</ion-item>\n      <ion-item><ion-icon name="history" item-start></ion-icon>Mon historique d’activités</ion-item>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/app/app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/app/app.html"*/'<ion-menu persistent="true" [content]="content" id="myMenu">\n  <ion-header padding>\n    <ion-icon class="profile-settings" name="settings"></ion-icon>\n    <div class="profile-pic profile-pic-menu" style="background-image:url(../assets/img/avatar1.jpg);">\n    </div>\n    <ion-title>Mathieu Robert</ion-title>\n  </ion-header>\n\n  <ion-content>\n      <ion-list>\n\n      <button ion-item class="active"><ion-icon name="search" item-start></ion-icon> Rechercher des activités</button>\n      <button ion-item><ion-icon name="liked" item-start></ion-icon> 5 activités sauvegardées</button>\n      <button ion-item><ion-icon name="history" item-start></ion-icon>Mon historique d’activités</button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

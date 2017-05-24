@@ -177,6 +177,9 @@ ion-menu ion-content {
     .item {
       font-size: 1.4rem;
       opacity: 0.6;
+      &[detail-push] .item-inner, &:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+        background-image: none;
+      }
       &.active {
         background-color: #F8F9FB;
         opacity: 1;

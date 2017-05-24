@@ -27108,6 +27108,10 @@ ion-menu ion-content ion-list .item {
   opacity: 0.6;
 }
 
+ion-menu ion-content ion-list .item[detail-push] .item-inner, ion-menu ion-content ion-list .item:not([detail-none]) .item-inner, ion-menu ion-content ion-list .item a.item-ios:not([detail-none]) .item-inner {
+  background-image: none;
+}
+
 ion-menu ion-content ion-list .item.active {
   background-color: #F8F9FB;
   opacity: 1;
