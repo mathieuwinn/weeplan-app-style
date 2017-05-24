@@ -24,7 +24,7 @@ ion-app.md, ion-app.ios {
 }
 
 ion-content {
-  &.activity-cards-view {
+  &.activity-cards-view, &.blue-bg {
     background-color: #F8F9FB;
   }
   &.weeplan-splash-bg {
@@ -372,20 +372,28 @@ ion-card {
 }
 
 // Activity lists
-
-ion-avatar.activity-avatar {
-  overflow: hidden;
-  max-width: 40px;
-  max-height: 40px;
-  border-radius: 10px;
-  img {
-    position: relative;
-    border-radius: 0;
-    display: block;
-   width: 100%;
-   height: auto;
+.activity-item {
+  h2 {
+    font-weight: 500;
   }
+
+
+  ion-avatar{
+    overflow: hidden;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 10px;
+    img {
+      position: relative;
+      border-radius: 0;
+      display: block;
+     width: 100%;
+     height: auto;
+    }
+  }
+
 }
+
 
 //Like heart button with animation
 
@@ -814,11 +822,55 @@ ion-card-header {
 }
 
 
+// Profile page
+
+.profile-header {
+  background-color: #F8F9FB;
+  text-align: center;
+  .profile-pic {
+    margin: auto;
+    position: relative;
+    .profile-pic-add {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      right: -4px;
+      bottom: -4px;
+      border-radius: 15px;
+      background: url(../assets/img/profile-pic-add.png) no-repeat;
+      background-size: 30px 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+  }
+}
+
+.profile-list-email {
+  color: color($colors, medium);
+  max-width: 160px;
+}
+
+
+.profile-list-deco-button {
+  color: color($colors, danger);
+}
+
+
 
 // Change ion-spinner color later...
 ion-spinner {
   width: 44px;
   height: 44px;
+}
+
+.action-sheet-group {
+  ion-icon {
+    color: color($colors, medium);
+    opacity: 0.8;
+    font-size: 0.8em;
+    &.icon-ios {
+      display: none;
+    }
+  }
 }
 
 
@@ -917,6 +969,22 @@ ion-spinner {
 .ion-md-history:before, .ion-ios-history:before {
   font-family: "weeplanionic-icons" !important;
   content: "\6d";
+}
+.ion-md-close:before, .ion-ios-close:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6e";
+}
+.ion-md-add:before, .ion-ios-add:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6f";
+}
+.ion-md-camera:before, .ion-ios-camera:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\70";
+}
+.ion-md-library:before, .ion-ios-library:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\71";
 }
 
 

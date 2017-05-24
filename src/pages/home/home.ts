@@ -9,7 +9,7 @@ import { Loading } from '../loading/loading';
 import { Nosignal } from '../nosignal/nosignal';
 import { Search } from '../search/search';
 import { Sidemenu } from '../sidemenu/sidemenu';
-
+import { Profile } from '../profile/profile';
 
 @Component({
   selector: 'page-home',
@@ -25,12 +25,13 @@ export class HomePage {
   noSignalPage = Nosignal;
   searchPage = Search;
   menuPage = Sidemenu;
+  profilePage = Profile;
 
   constructor(public navCtrl: NavController) {
   }
 
  ngOnInit(){
-  this.navCtrl.push(Sidemenu);
+  this.navCtrl.push(Profile);
 
  }
 

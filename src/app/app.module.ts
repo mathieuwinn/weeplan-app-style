@@ -14,6 +14,7 @@ import { Loading } from '../pages/loading/loading';
 import { Nosignal } from '../pages/nosignal/nosignal';
 import { Search } from '../pages/search/search';
 import { Sidemenu } from '../pages/sidemenu/sidemenu';
+import { Profile } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Sidemenu } from '../pages/sidemenu/sidemenu';
     Loading,
     Nosignal,
     Search,
-    Sidemenu
+    Sidemenu,
+    Profile
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { Sidemenu } from '../pages/sidemenu/sidemenu';
     Loading,
     Nosignal,
     Search,
-    Sidemenu
+    Sidemenu,
+    Profile
   ],
   providers: [
     StatusBar,
