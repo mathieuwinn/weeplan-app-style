@@ -1,1 +1,19 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu persistent="true" [content]="content" id="myMenu">
+  <ion-header padding>
+    <ion-icon class="profile-settings" name="settings"></ion-icon>
+    <div class="profile-pic profile-pic-menu" style="background-image:url(../assets/img/avatar1.jpg);">
+    </div>
+    <ion-title>Mathieu Robert</ion-title>
+  </ion-header>
+
+  <ion-content>
+      <ion-list>
+
+      <ion-item class="active"><ion-icon name="search" item-start></ion-icon> Rechercher des activités</ion-item>
+      <ion-item><ion-icon name="liked" item-start></ion-icon> 5 activités sauvegardées</ion-item>
+      <ion-item><ion-icon name="history" item-start></ion-icon>Mon historique d’activités</ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

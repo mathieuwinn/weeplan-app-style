@@ -125,7 +125,76 @@ ion-navbar.card-navbar {
 
 }
 
+// Side Menu
 
+
+.navbar-menu-btn {
+  order: 1;
+}
+
+ion-menu ion-header {
+  width: 100%;
+  background-image: $app-gradient;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 82px;
+  width: 82px;
+  background-image: url(../assets/img/profile-pic-default.png);
+  background-size: 82px 82px;
+  &.profile-pic-menu {
+    height: 60px;
+    width: 60px;
+    background-size: 50px 50px;
+  }
+}
+
+ion-menu ion-header {
+  .profile-pic-menu {
+    position: relative;
+    margin: 12px 0;
+  }
+  .toolbar-title {
+    padding: 0;
+    text-align: left;
+    color: white;
+  }
+  .profile-settings {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: black;
+    opacity: 0.4;
+    &.ion-ios-settings {
+      top: 30px;
+    }
+  }
+}
+
+ion-menu ion-content {
+  ion-list {
+    .item {
+      font-size: 1.4rem;
+      opacity: 0.6;
+      &.active {
+        background-color: #F8F9FB;
+        opacity: 1;
+        font-weight: 500;
+        color: color($colors, primary);
+        ion-icon {
+          color: color($colors, primary);
+          opacity: 1;
+        }
+      }
+      ion-icon {
+        width: 22px;
+        font-size: 1.4rem;
+        opacity: 0.6;
+      }
+    }
+  }
+}
 
 
 
@@ -297,6 +366,12 @@ ion-card {
   }
 
 
+}
+
+// Activity lists
+
+.activity-avatar {
+  border-radius: 0;
 }
 
 //Like heart button with animation
@@ -531,7 +606,7 @@ ion-card-header {
 
 // h6 section title on top of containers, uppercase, small size
 .section-title {
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -582,7 +657,7 @@ ion-card-header {
   .splash-char {
     position: absolute;
     bottom: 60px;
-    transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
     &.splash-char1 {
       transition-delay: 0.2s;
       transform: translateY(400px);
@@ -597,14 +672,14 @@ ion-card-header {
     }
   }
   .splash-bg {
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.6s cubic-bezier(0.86, 0, 0.07, 1);
     &.splash-bg1 {
-      transition-delay: 0.5s;
+      transition-delay: 0.3s;
       transform: translateY(400px) scale(0.8);
       opacity: 0;
     }
     &.splash-bg2 {
-      transition-delay: 0.6s;
+      transition-delay: 0.4s;
       transform: translateY(400px) scale(0.8);
       opacity: 0;
     }
@@ -818,6 +893,18 @@ ion-spinner {
   content: "\6a";
 }
 
+.ion-md-search:before, .ion-ios-search:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6b";
+}
+.ion-md-settings:before, .ion-ios-settings:before  {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6c";
+}
+.ion-md-history:before, .ion-ios-history:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6d";
+}
 
 
 // ScaleUp animation for liking activities

@@ -8,6 +8,8 @@ import { Card } from '../card/card';
 import { Loading } from '../loading/loading';
 import { Nosignal } from '../nosignal/nosignal';
 import { Search } from '../search/search';
+import { Sidemenu } from '../sidemenu/sidemenu';
+
 
 @Component({
   selector: 'page-home',
@@ -22,10 +24,15 @@ export class HomePage {
   loadingPage = Loading;
   noSignalPage = Nosignal;
   searchPage = Search;
+  menuPage = Sidemenu;
 
   constructor(public navCtrl: NavController) {
   }
 
+ ngOnInit(){
+  this.navCtrl.push(Sidemenu);
+
+ }
 
 
 

@@ -13,6 +13,7 @@ import { Card } from '../pages/card/card';
 import { Loading } from '../pages/loading/loading';
 import { Nosignal } from '../pages/nosignal/nosignal';
 import { Search } from '../pages/search/search';
+import { Sidemenu } from '../pages/sidemenu/sidemenu';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Search } from '../pages/search/search';
     Card,
     Loading,
     Nosignal,
-    Search
+    Search,
+    Sidemenu
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { Search } from '../pages/search/search';
     Card,
     Loading,
     Nosignal,
-    Search
+    Search,
+    Sidemenu
   ],
   providers: [
     StatusBar,

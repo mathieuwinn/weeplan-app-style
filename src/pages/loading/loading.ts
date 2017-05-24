@@ -33,7 +33,7 @@ export class Loading {
           }
         },
         {
-          text: 'Autoriser',
+          text: 'OK',
           handler: data => {
             console.log('autoriser clicked');
           }

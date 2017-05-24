@@ -27055,6 +27055,77 @@ ion-navbar.card-navbar ion-title .toolbar-title {
   white-space: pre-line;
 }
 
+.navbar-menu-btn {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+ion-menu ion-header {
+  width: 100%;
+  background-image: linear-gradient(16deg, #FE2424 0%, #FE2459 100%);
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 82px;
+  width: 82px;
+  background-image: url(../assets/img/profile-pic-default.png);
+  background-size: 82px 82px;
+}
+
+.profile-pic.profile-pic-menu {
+  height: 60px;
+  width: 60px;
+  background-size: 50px 50px;
+}
+
+ion-menu ion-header .profile-pic-menu {
+  position: relative;
+  margin: 12px 0;
+}
+
+ion-menu ion-header .toolbar-title {
+  padding: 0;
+  text-align: left;
+  color: white;
+}
+
+ion-menu ion-header .profile-settings {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: black;
+  opacity: 0.4;
+}
+
+ion-menu ion-header .profile-settings.ion-ios-settings {
+  top: 30px;
+}
+
+ion-menu ion-content ion-list .item {
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+ion-menu ion-content ion-list .item.active {
+  background-color: #F8F9FB;
+  opacity: 1;
+  font-weight: 500;
+  color: #FF1E45;
+}
+
+ion-menu ion-content ion-list .item.active ion-icon {
+  color: #FF1E45;
+  opacity: 1;
+}
+
+ion-menu ion-content ion-list .item ion-icon {
+  width: 22px;
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
 .footer-bottom-actions {
   width: 100%;
   position: absolute;
@@ -27220,6 +27291,10 @@ ion-card.no-card-image .card-like-link .btn-like.active ion-icon {
 
 ion-card.no-card-image .activity-title {
   width: calc(100% - 40px);
+}
+
+.activity-avatar {
+  border-radius: 0;
 }
 
 button.btn-like {
@@ -27453,7 +27528,7 @@ ion-card-header {
 }
 
 .section-title {
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -27501,9 +27576,9 @@ ion-card-header {
 .splash-anim-container .splash-char {
   position: absolute;
   bottom: 60px;
-  transition: -webkit-transform 0.6s cubic-bezier(1, 0, 0, 1);
-  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
-  transition: transform 0.6s cubic-bezier(1, 0, 0, 1), -webkit-transform 0.6s cubic-bezier(1, 0, 0, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .splash-anim-container .splash-char.splash-char1 {
@@ -27525,18 +27600,18 @@ ion-card-header {
 }
 
 .splash-anim-container .splash-bg {
-  transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+  transition: all 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .splash-anim-container .splash-bg.splash-bg1 {
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
   -webkit-transform: translateY(400px) scale(0.8);
   transform: translateY(400px) scale(0.8);
   opacity: 0;
 }
 
 .splash-anim-container .splash-bg.splash-bg2 {
-  transition-delay: 0.6s;
+  transition-delay: 0.4s;
   -webkit-transform: translateY(400px) scale(0.8);
   transform: translateY(400px) scale(0.8);
   opacity: 0;
@@ -27735,6 +27810,21 @@ ion-spinner {
 .ion-md-position:before, .ion-ios-position:before {
   font-family: "weeplanionic-icons" !important;
   content: "\6a";
+}
+
+.ion-md-search:before, .ion-ios-search:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6b";
+}
+
+.ion-md-settings:before, .ion-ios-settings:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6c";
+}
+
+.ion-md-history:before, .ion-ios-history:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\6d";
 }
 
 @-webkit-keyframes scaleUp {

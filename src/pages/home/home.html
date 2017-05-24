@@ -1,5 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar *navbar>
+
+    <ion-buttons start>
+      <button class="navbar-menu-btn">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
     <ion-title>
       Weeplan Android App
     </ion-title>
@@ -16,6 +23,7 @@
   <button ion-item [navPush]="loadingPage">Loading activities</button>
   <button ion-item [navPush]="noSignalPage">No Signal/Connexion</button>
   <button ion-item [navPush]="searchPage">Search</button>
+  <button ion-item [navPush]="menuPage">SideMenu</button>
 </ion-list>
 
 
