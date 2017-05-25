@@ -15,6 +15,7 @@ import { Nosignal } from '../pages/nosignal/nosignal';
 import { Search } from '../pages/search/search';
 import { Sidemenu } from '../pages/sidemenu/sidemenu';
 import { Profile } from '../pages/profile/profile';
+import { Filtersmodal } from '../pages/filtersmodal/filtersmodal';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { Profile } from '../pages/profile/profile';
     Nosignal,
     Search,
     Sidemenu,
-    Profile
+    Profile,
+    Filtersmodal
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { Profile } from '../pages/profile/profile';
     Nosignal,
     Search,
     Sidemenu,
-    Profile
+    Profile,
+    Filtersmodal
   ],
   providers: [
     StatusBar,

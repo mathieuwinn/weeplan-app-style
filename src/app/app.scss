@@ -123,6 +123,11 @@ ion-navbar.card-navbar {
     }
   }
 
+
+}
+
+.navbar-search-icon {
+  font-size: 1.4em !important;
 }
 
 // Side Menu
@@ -587,6 +592,47 @@ ion-card-header {
 }
 
 
+// Activity Filter Dropdown v1
+
+
+.activity-filter-input {
+  position: relative;
+  ion-label {
+    width: 20px;
+    min-width: 20px;
+    flex: 0 0 20px;
+    text-overflow: initial;
+    color: color($colors, medium);
+    ion-icon {
+      &.ion-md-search, &.ion-ios-search {
+        font-size: 1.2em;
+      }
+    }
+  }
+  ion-input {
+
+  }
+  .close-input-btn {
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    color: color($colors, medium);
+    opacity: 0.8;
+  }
+
+}
+
+.activity-filter-tag {
+  list-style-type: none;
+  display: inline-block;
+  &.active {
+    background-color: color($colors, primary);
+    color: white;
+    box-shadow: 0 3px 10px 0 rgba(231,158,171,0.8);
+  }
+}
+
+
 // Single Activity view
 
 .activity-single {
@@ -986,6 +1032,34 @@ ion-spinner {
   font-family: "weeplanionic-icons" !important;
   content: "\71";
 }
+.ion-md-menu:before, .ion-ios-menu:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\72";
+}
+.ion-md-menu-notif:before, .ion-ios-menu-notif:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\74";
+}
+.ion-md-menu-notif:after, .ion-ios-menu-notif:after{
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(255,255,255,0.8);
+  animation: pulse 1.2s normal infinite;
+}
+.ion-md-dropdown:before, .ion-ios-dropdown:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\73";
+}
+.ion-md-check:before, .ion-ios-dcheck:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\75";
+}
 
 
 // ScaleUp animation for liking activities
@@ -995,6 +1069,18 @@ ion-spinner {
   }
   50% {
       transform: scale(1.2, 1.2);
+  }
+  to {
+      transform: scale(1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+      transform: scale(1, 1);
+  }
+  50% {
+      transform: scale(1.4, 1.4);
   }
   to {
       transform: scale(1, 1);

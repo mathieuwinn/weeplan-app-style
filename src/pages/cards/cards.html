@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar hideBackButton>
-
-    <ion-title>Activités autour de <strong>Bayeux</strong></ion-title>
+    <ion-buttons start class="navbar-menu-btn">
+         <button ion-button >
+           <ion-icon name="menu"></ion-icon>
+         </button>
+    </ion-buttons>
+    <ion-title>Activités "<strong>Rodin</strong>" à <strong>Bayeux</strong></ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="more"></ion-icon>
+      <button ion-button (click)="openModal()">
+        <ion-icon name="search" class="navbar-search-icon"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -108,18 +112,11 @@
   </div>
 </ion-content>
 
-<div class="footer-bottom-actions hide">
+<div class="footer-bottom-actions">
 
 
       <div padding-horizontal>
-      <ion-row>
-        <ion-col col-6>
-          <button ion-button block>J'y vais</button>
-        </ion-col>
-        <ion-col col-6>
           <button ion-button outline block (click)="toggleHighlight(1);">Suivant</button>
-          </ion-col>
-      </ion-row>
     </div>
 
 </div>

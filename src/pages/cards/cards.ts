@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, ModalController, ViewController } from 'ionic-angular';
+import { Filtersmodal } from '../filtersmodal/filtersmodal';
 
 /**
  * Generated class for the Cards page.
@@ -17,12 +18,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 export class Cards {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, public modalCtrl: ModalController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Cards');
-  }
+
+  openModal() {
+      let myModal = this.modalCtrl.create(Filtersmodal);
+      myModal.present();
+    }
 
   highlightedDiv: number;
 
@@ -39,8 +42,6 @@ export class Cards {
     toggle() {
      this.active = !this.active;
     }
-
-
 
 
 

@@ -27055,6 +27055,10 @@ ion-navbar.card-navbar ion-title .toolbar-title {
   white-space: pre-line;
 }
 
+.navbar-search-icon {
+  font-size: 1.4em !important;
+}
+
 .navbar-menu-btn {
   -webkit-order: 1;
   -ms-flex-order: 1;
@@ -27508,6 +27512,43 @@ ion-card-header {
   transform: translateY(0px);
 }
 
+.activity-filter-input {
+  position: relative;
+}
+
+.activity-filter-input ion-label {
+  width: 20px;
+  min-width: 20px;
+  -webkit-flex: 0 0 20px;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  text-overflow: initial;
+  color: #626262;
+}
+
+.activity-filter-input ion-label ion-icon.ion-md-search, .activity-filter-input ion-label ion-icon.ion-ios-search {
+  font-size: 1.2em;
+}
+
+.activity-filter-input .close-input-btn {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  color: #626262;
+  opacity: 0.8;
+}
+
+.activity-filter-tag {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.activity-filter-tag.active {
+  background-color: #FF1E45;
+  color: white;
+  box-shadow: 0 3px 10px 0 rgba(231, 158, 171, 0.8);
+}
+
 .activity-single {
   padding-bottom: 70px;
 }
@@ -27907,6 +27948,40 @@ ion-spinner {
   content: "\71";
 }
 
+.ion-md-menu:before, .ion-ios-menu:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\72";
+}
+
+.ion-md-menu-notif:before, .ion-ios-menu-notif:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\74";
+}
+
+.ion-md-menu-notif:after, .ion-ios-menu-notif:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+  -webkit-animation: pulse 1.2s normal infinite;
+  animation: pulse 1.2s normal infinite;
+}
+
+.ion-md-dropdown:before, .ion-ios-dropdown:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\73";
+}
+
+.ion-md-check:before, .ion-ios-dcheck:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\75";
+}
+
 @-webkit-keyframes scaleUp {
   from {
     -webkit-transform: scale(0, 0);
@@ -27930,6 +28005,36 @@ ion-spinner {
   50% {
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.4, 1.4);
+    transform: scale(1.4, 1.4);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.4, 1.4);
+    transform: scale(1.4, 1.4);
   }
   to {
     -webkit-transform: scale(1, 1);

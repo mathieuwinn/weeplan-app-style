@@ -30,10 +30,10 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
   }
 
- ngOnInit(){
-  this.navCtrl.push(Profile);
+ //ngOnInit(){
+  //this.navCtrl.push(Cards);
 
- }
+ //}
 
 
 
