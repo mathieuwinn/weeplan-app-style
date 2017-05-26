@@ -29,10 +29,12 @@
 <ion-content padding class="activity-cards-view">
 
   <div class="notifications-container">
-    <div class="message-box hide">
-      <h5>Choisissez l'activité qui vous convient.</h5>
-        <p></p>
-        <button ion-button clear small block>Compris</button>
+    <div class="message-box message-box-chat">
+      <div class="chat-weeplan-container">
+        <div class="chat-bubble chat-bubble-weeplan show" (click)="toggleHighlight(1);">
+          Voilà mes suggestions! Tu peux cliquer sur l’activité pour en savoir plus, la <strong>sauvegarder</strong> ❤️ ou la <strong>passer</strong>…
+        </div>
+      </div>
     </div>
   </div>
 

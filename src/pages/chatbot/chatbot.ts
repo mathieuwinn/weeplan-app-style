@@ -17,6 +17,17 @@ export class Chatbot {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  highlightedDiv: number;
+
+  toggleHighlight(newValue: number) {
+    if (this.highlightedDiv === newValue) {
+      this.highlightedDiv = 0;
+    }
+    else {
+      this.highlightedDiv = newValue;
+    }
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad Chatbot');
   }

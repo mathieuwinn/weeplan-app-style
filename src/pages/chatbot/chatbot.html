@@ -8,21 +8,81 @@
 <ion-content padding class="blue-bg">
 
 
-  <div class="chat-wraper">
+  <div class="chat-wrapper" padding>
+
     <div class="chat-weeplan-container">
-      <div class="chat-bubble chat-bubble-weeplan">
+      <div class="chat-bubble chat-bubble-weeplan show" (click)="toggleHighlight(1);">
         Hello! je suis <strong>Weeplan</strong> ! Ton compagnon de voyage intelligent.
       </div>
-      <div class="chat-bubble chat-bubble-weeplan">
-        Je peux t'aider à préparer ton séjour et t'accompagner pendant ton voyage
+        <br/>
+
+
+      <div class="chat-bubble chat-bubble-weeplan show">
+        Je peux t'aider à préparer ton séjour et t'accompagner pendant ton voyage 💨🚀
       </div>
-      <div class="chat-bubble chat-bubble-weeplan">
+        <br/>
+      <div class="chat-bubble chat-bubble-weeplan show">
         Avant de commencer, comment puis-je t'appeler ?
       </div>
-      
+        <br/>
+    </div>
+
+    <div class="chat-user-container">
+      <div class="chat-bubble chat-bubble-user chat-bubble-input show">
+        <ion-input type="text" value="" placeholder="Entre ton nom"></ion-input>
+      </div>
+        <br/>
+
+      <div class="chat-bubble chat-bubble-user show">
+        Mathieu
+      </div>
+        <br/>
 
     </div>
+
+    <div class="chat-weeplan-container">
+      <div class="chat-bubble chat-bubble-weeplan show">
+        Enchanté  <strong>Mathieu!</strong> 😊
+      </div>
+        <br/>
+      <div class="chat-bubble chat-bubble-weeplan show">
+        Quels types d’activités te plaisent le plus?
+      </div>
+        <br/>
+    </div>
+
+    <div class="chat-user-container">
+      <div class="chat-bubble chat-bubble-user chat-bubble-select show">
+        <button ion-button outline small class="activity-filter-tag">Incontournables</button>
+        <button ion-button outline small class="activity-filter-tag active">Restauration/Bars</button>
+        <button ion-button outline small class="activity-filter-tag">Concerts/Spectacle</button>
+        <button ion-button outline small class="activity-filter-tag">Plein Air</button>
+        <button ion-button outline small class="activity-filter-tag">Exposition/Musées</button>
+        <button ion-button outline small class="activity-filter-tag">Événements</button>
+      </div>
+    </div>
+
+    <div class="chat-weeplan-container">
+      <div class="chat-bubble chat-bubble-weeplan show">
+        Super 👍  Allons trouver des idées de sortie!
+      </div>
+      <br/>
+      <div class="chat-bubble chat-bubble-weeplan chat-bubble-weeplan-loading show">
+      </div>
+        <br/>
+    </div>
+
   </div>
 
 
 </ion-content>
+
+
+<div class="footer-bottom-actions hide">
+
+
+      <div padding-horizontal>
+          <button ion-button primary block (click)="toggleHighlight(1);">Continuer</button>
+    </div>
+
+</div>
