@@ -10,6 +10,7 @@ import { Nosignal } from '../nosignal/nosignal';
 import { Search } from '../search/search';
 import { Sidemenu } from '../sidemenu/sidemenu';
 import { Profile } from '../profile/profile';
+import { Chatbot } from '../chatbot/chatbot';
 
 @Component({
   selector: 'page-home',
@@ -26,14 +27,14 @@ export class HomePage {
   searchPage = Search;
   menuPage = Sidemenu;
   profilePage = Profile;
+  chatbotPage = Chatbot;
 
   constructor(public navCtrl: NavController) {
   }
 
  //ngOnInit(){
-  //this.navCtrl.push(Cards);
-
- //}
+  //this.navCtrl.push(Profile);
+// }
 
 
 

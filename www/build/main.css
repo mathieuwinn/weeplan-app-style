@@ -27075,13 +27075,14 @@ ion-menu ion-header {
   height: 82px;
   width: 82px;
   background-image: url(../assets/img/profile-pic-default.png);
-  background-size: 82px 82px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .profile-pic.profile-pic-menu {
   height: 60px;
   width: 60px;
-  background-size: 50px 50px;
+  background-size: 60px 60px;
 }
 
 ion-menu ion-header .profile-pic-menu {
@@ -27130,8 +27131,12 @@ ion-menu ion-content ion-list .item.active ion-icon {
 
 ion-menu ion-content ion-list .item ion-icon {
   width: 22px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   opacity: 0.6;
+}
+
+ion-menu ion-content ion-list .item ion-icon.ion-md-search, ion-menu ion-content ion-list .item ion-icon.ion-ios-search {
+  font-size: 1.7rem;
 }
 
 .footer-bottom-actions {
@@ -27816,6 +27821,35 @@ ion-card-header {
 
 .profile-list-deco-button {
   color: #f53d3d;
+}
+
+.chat-weeplan-container {
+  position: relative;
+}
+
+.chat-weeplan-container:before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  bottom: 0px;
+  height: 32px;
+  width: 32px;
+  background: url(../assets/img/chat-weeplan-avatar.png) no-repeat;
+  background-size: 32px 32px;
+  border-radius: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.chat-bubble {
+  padding: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+}
+
+.chat-bubble.chat-bubble-weeplan {
+  margin-left: 40px;
+  background-color: white;
+  border-radius: 22px 22px 22px 6px;
 }
 
 ion-spinner {

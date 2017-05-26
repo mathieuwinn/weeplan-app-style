@@ -55756,10 +55756,9 @@ Cards = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-cards',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/cards/cards.html"*/'<!--\n  Generated template for the Cards page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar hideBackButton>\n    <ion-buttons start class="navbar-menu-btn">\n         <button ion-button >\n           <ion-icon name="menu"></ion-icon>\n         </button>\n    </ion-buttons>\n    <ion-title>Activités "<strong>Rodin</strong>" à <strong>Bayeux</strong></ion-title>\n\n    <ion-buttons end>\n      <button ion-button (click)="openModal()">\n        <ion-icon name="search" class="navbar-search-icon"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n<ion-content padding class="activity-cards-view">\n\n  <div class="notifications-container">\n    <div class="message-box hide">\n      <h5>Choisissez l\'activité qui vous convient.</h5>\n        <p></p>\n        <button ion-button clear small block>Compris</button>\n    </div>\n  </div>\n\n  <div class="activity-cards-container">\n\n\n\n    <ion-card [ngClass]="{\'hideLeft\': highlightedDiv === 1}" class="activity-card show">\n\n\n      <div class="card-like-link">\n        <button ion-button clear class="btn-like" (click)="toggle()" [ngClass]="active ? \'active\' : \'\'"><ion-icon [name]="active ? \'liked\' : \'like\'"></ion-icon></button>\n      </div>\n\n      <div class="card-image">\n        <img src="../assets/img/card-img-3.png"/>\n      </div>\n\n      <ion-card-header>\n          <div class="activity-title">\n            Danse classique à Pâques\n          </div>\n          <div class="activity-subtitle">\n            <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>\n          </div>\n      </ion-card-header>\n      <ion-card-content>\n        <ul class="activity-infos">\n          <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>\n          <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>\n          <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>\n        </ul>\n        <p class="activity-description">\n            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.\n            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.\n        </p>\n\n\n\n\n\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card [ngClass]="{\'show\': highlightedDiv === 1}" class="activity-card hideRight no-card-image">\n\n      <div class="card-like-link">\n        <button ion-button clear (click)="toggle()" [ngClass]="active ? \'active\' : \'\'"><ion-icon [name]="active ? \'liked\' : \'like\'"></ion-icon></button>\n      </div>\n\n      <ion-card-header>\n          <div class="activity-title">\n            Super Activité encore mieux etff puis c\'esy tout nanana\n          </div>\n          <div class="activity-subtitle">\n            <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>\n          </div>\n      </ion-card-header>\n      <ion-card-content>\n        <ul class="activity-infos">\n          <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>\n          <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>\n          <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>\n        </ul>\n        <p class="card-description">\n            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.\n            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.\n        </p>\n\n\n\n\n\n      </ion-card-content>\n    </ion-card>\n\n  </div>\n</ion-content>\n\n<div class="footer-bottom-actions">\n\n\n      <div padding-horizontal>\n          <button ion-button outline block (click)="toggleHighlight(1);">Suivant</button>\n    </div>\n\n</div>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/cards/cards.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */]])
 ], Cards);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=cards.js.map
 
 /***/ }),
@@ -56147,6 +56146,7 @@ webpackEmptyContext.id = 106;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_search__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sidemenu_sidemenu__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__profile_profile__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__chatbot_chatbot__ = __webpack_require__(280);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56157,6 +56157,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -56180,12 +56181,13 @@ var HomePage = (function () {
         this.searchPage = __WEBPACK_IMPORTED_MODULE_8__search_search__["a" /* Search */];
         this.menuPage = __WEBPACK_IMPORTED_MODULE_9__sidemenu_sidemenu__["a" /* Sidemenu */];
         this.profilePage = __WEBPACK_IMPORTED_MODULE_10__profile_profile__["a" /* Profile */];
+        this.chatbotPage = __WEBPACK_IMPORTED_MODULE_11__chatbot_chatbot__["a" /* Chatbot */];
     }
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar *navbar>\n\n    <ion-buttons start>\n      <button class="navbar-menu-btn">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n  <button ion-item [navPush]="noSignalPage">No Signal/Connexion</button>\n  <button ion-item [navPush]="searchPage">Search</button>\n  <button ion-item [navPush]="menuPage">SideMenu</button>\n  <button ion-item [navPush]="profilePage">Profile</button>\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar *navbar>\n\n    <ion-buttons start>\n      <button class="navbar-menu-btn">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n  <button ion-item [navPush]="noSignalPage">No Signal/Connexion</button>\n  <button ion-item [navPush]="searchPage">Search</button>\n  <button ion-item [navPush]="menuPage">SideMenu</button>\n  <button ion-item [navPush]="profilePage">Profile</button>\n  <button ion-item [navPush]="chatbotPage">ChatBot</button>\n\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
@@ -74623,39 +74625,43 @@ module.exports = g;
 var map = {
 	"../pages/card/card.module": [
 		267,
-		17
+		19
 	],
 	"../pages/cards/cards.module": [
 		268,
-		16
+		18
+	],
+	"../pages/chatbot/chatbot.module": [
+		279,
+		0
 	],
 	"../pages/filtersmodal/filtersmodal.module": [
 		277,
-		9
+		7
 	],
 	"../pages/loading/loading.module": [
 		269,
-		15
+		6
 	],
 	"../pages/nosignal/nosignal.module": [
 		270,
-		14
+		5
 	],
 	"../pages/profile/profile.module": [
 		275,
-		13
+		4
 	],
 	"../pages/search/search.module": [
 		271,
-		12
+		3
 	],
 	"../pages/signup/signup.module": [
 		273,
-		11
+		2
 	],
 	"../pages/splash/splash.module": [
 		274,
-		10
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -74694,6 +74700,7 @@ webpackAsyncContext.id = 200;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_sidemenu_sidemenu__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_filtersmodal_filtersmodal__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_chatbot_chatbot__ = __webpack_require__(280);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -74701,6 +74708,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -74737,7 +74745,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__pages_search_search__["a" /* Search */],
             __WEBPACK_IMPORTED_MODULE_14__pages_sidemenu_sidemenu__["a" /* Sidemenu */],
             __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__["a" /* Profile */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_filtersmodal_filtersmodal__["a" /* Filtersmodal */]
+            __WEBPACK_IMPORTED_MODULE_16__pages_filtersmodal_filtersmodal__["a" /* Filtersmodal */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_chatbot_chatbot__["a" /* Chatbot */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -74751,7 +74760,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/nosignal/nosignal.module#NosignalModule', name: 'Nosignal', segment: 'nosignal', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/search/search.module#SearchModule', name: 'Search', segment: 'search', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile/profile.module#ProfileModule', name: 'Profile', segment: 'profile', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/filtersmodal/filtersmodal.module#FiltersmodalModule', name: 'Filtersmodal', segment: 'filtersmodal', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/filtersmodal/filtersmodal.module#FiltersmodalModule', name: 'Filtersmodal', segment: 'filtersmodal', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/chatbot/chatbot.module#ChatbotModule', name: 'Chatbot', segment: 'chatbot', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -74768,7 +74778,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__pages_search_search__["a" /* Search */],
             __WEBPACK_IMPORTED_MODULE_14__pages_sidemenu_sidemenu__["a" /* Sidemenu */],
             __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__["a" /* Profile */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_filtersmodal_filtersmodal__["a" /* Filtersmodal */]
+            __WEBPACK_IMPORTED_MODULE_16__pages_filtersmodal_filtersmodal__["a" /* Filtersmodal */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_chatbot_chatbot__["a" /* Chatbot */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -111929,6 +111940,52 @@ Filtersmodal = __decorate([
 ], Filtersmodal);
 
 //# sourceMappingURL=filtersmodal.js.map
+
+/***/ }),
+/* 279 */,
+/* 280 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Chatbot; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Chatbot page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Chatbot = (function () {
+    function Chatbot(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Chatbot.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Chatbot');
+    };
+    return Chatbot;
+}());
+Chatbot = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-chatbot',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/chatbot/chatbot.html"*/'<!--\n  Generated template for the Chatbot page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding class="blue-bg">\n\n\n  <div class="chat-wraper">\n    <div class="chat-weeplan-container">\n      <div class="chat-bubble chat-bubble-weeplan">\n        Hello! je suis <strong>Weeplan</strong> ! Ton compagnon de voyage intelligent.\n      </div>\n      <div class="chat-bubble chat-bubble-weeplan">\n        Je peux t\'aider à préparer ton séjour et t\'accompagner pendant ton voyage\n      </div>\n      <div class="chat-bubble chat-bubble-weeplan">\n        Avant de commencer, comment puis-je t\'appeler ?\n      </div>\n      \n\n    </div>\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/chatbot/chatbot.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], Chatbot);
+
+//# sourceMappingURL=chatbot.js.map
 
 /***/ })
 /******/ ]);
