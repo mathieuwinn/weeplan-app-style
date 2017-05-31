@@ -56305,7 +56305,7 @@ var HomePage = (function () {
         this.chatbotPage = __WEBPACK_IMPORTED_MODULE_11__chatbot_chatbot__["a" /* Chatbot */];
     }
     HomePage.prototype.ngOnInit = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cards_cards__["a" /* Cards */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__card_card__["a" /* Card */]);
     };
     return HomePage;
 }());
@@ -56313,9 +56313,10 @@ HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-home',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar *navbar>\n\n    <ion-buttons start>\n      <button class="navbar-menu-btn">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title>\n      Weeplan Android App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n  <button ion-item [navPush]="splashPage">Splash</button>\n  <button ion-item [navPush]="signupPage">Sign Up</button>\n  <button ion-item [navPush]="cardsPage">Activity Cards</button>\n  <button ion-item [navPush]="cardPage">Activity Started</button>\n  <button ion-item [navPush]="loadingPage">Loading activities</button>\n  <button ion-item [navPush]="noSignalPage">No Signal/Connexion</button>\n  <button ion-item [navPush]="searchPage">Search</button>\n  <button ion-item [navPush]="menuPage">SideMenu</button>\n  <button ion-item [navPush]="profilePage">Profile</button>\n  <button ion-item [navPush]="chatbotPage">ChatBot</button>\n\n</ion-list>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),

@@ -27190,20 +27190,20 @@ ion-menu ion-content ion-list .item ion-icon.ion-md-search, ion-menu ion-content
   text-align: left;
 }
 
-/*
-.popover-content{
- background: rgba(215, 0, 54, 0.8) !important;
- transform-origin: top right !important;
- top: 10px !important;
- right: 10px !important;
- left:auto !important;
- padding: 0;
- ion-list {
-   margin: 0;
- }
+ion-popover:not(.select-popover) .popover-content {
+  background: rgba(215, 0, 54, 0.8) !important;
+  -webkit-transform-origin: top right !important;
+  transform-origin: top right !important;
+  top: 10px !important;
+  right: 10px !important;
+  left: auto !important;
+  padding: 0;
 }
 
-*/
+ion-popover:not(.select-popover) .popover-content ion-list {
+  margin: 0;
+}
+
 ion-card.activity-card {
   position: absolute;
   left: 20px;

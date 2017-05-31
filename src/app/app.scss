@@ -261,20 +261,23 @@ ion-menu ion-content {
 }
 
 // Alert Boxes
-/*
-.popover-content{
- background: rgba(215, 0, 54, 0.8) !important;
- transform-origin: top right !important;
- top: 10px !important;
- right: 10px !important;
- left:auto !important;
- padding: 0;
- ion-list {
-   margin: 0;
- }
+
+ion-popover:not(.select-popover) {
+  .popover-content {
+   background: rgba(215, 0, 54, 0.8) !important;
+   transform-origin: top right !important;
+   top: 10px !important;
+   right: 10px !important;
+   left:auto !important;
+   padding: 0;
+   ion-list {
+     margin: 0;
+   }
+  }
 }
 
-*/
+
+
 
 
 // Activity cards
