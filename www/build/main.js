@@ -56305,7 +56305,7 @@ var HomePage = (function () {
         this.chatbotPage = __WEBPACK_IMPORTED_MODULE_11__chatbot_chatbot__["a" /* Chatbot */];
     }
     HomePage.prototype.ngOnInit = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__card_card__["a" /* Card */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__sidemenu_sidemenu__["a" /* Sidemenu */]);
     };
     return HomePage;
 }());
@@ -56357,7 +56357,7 @@ var Sidemenu = (function () {
 }());
 Sidemenu = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-sidemenu',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/sidemenu/sidemenu.html"*/'\n\n<ion-header>\n  <ion-navbar hideBackButton>\n    <ion-buttons start class="navbar-menu-btn">\n         <button ion-button >\n           <ion-icon name="menu"></ion-icon>\n         </button>\n    </ion-buttons>\n         <ion-title>Historique personnel</ion-title>\n\n     </ion-navbar>\n</ion-header>\n\n\n\n<ion-content>\n\n\n  <ion-list>\n\n    <button ion-item class="activity-item">\n      <ion-avatar item-left>\n      <img src="../assets/img/card-img-2.png">\n    </ion-avatar>\n    <h2>Danse classique à Paques</h2>\n    <p>le 12/01/2017 à 12:45</p>\n\n  </button>\n\n  <button ion-item class="activity-item">\n    <ion-avatar item-left>\n      <img src="../assets/img/card-img-3.png">\n    </ion-avatar>\n    <h2>Danse classique à Paques</h2>\n    <p>le 12/01/2017 à 12:45</p>\n\n  </button>\n\n</ion-list>\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/sidemenu/sidemenu.html"*/,
+        selector: 'page-sidemenu',template:/*ion-inline-start:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/sidemenu/sidemenu.html"*/'\n\n<ion-header>\n  <ion-navbar hideBackButton>\n    <ion-buttons start class="navbar-menu-btn">\n         <button ion-button >\n           <ion-icon name="menu"></ion-icon>\n         </button>\n    </ion-buttons>\n         <ion-title>Historique personnel</ion-title>\n\n     </ion-navbar>\n</ion-header>\n\n\n\n<ion-content>\n\n\n  <ion-list>\n\n    <button ion-item class="activity-item">\n      <ion-avatar item-left>\n      <img src="../assets/img/card-img-2.png">\n    </ion-avatar>\n    <h2>Danse classique à Paques Nulla vitae elit libero, a pharetra augue.</h2>\n    <p>le 12/01/2017 à 12:45</p>\n\n  </button>\n\n  <button ion-item class="activity-item">\n    <ion-avatar item-left>\n      <img src="../assets/img/card-img-3.png">\n    </ion-avatar>\n    <h2>Danse classique à Paques</h2>\n    <p>le 12/01/2017 à 12:45</p>\n\n  </button>\n\n</ion-list>\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mathieu/Documents/Work/Weeplan/Code/ionic/WeeplanUI/src/pages/sidemenu/sidemenu.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */]])
 ], Sidemenu);

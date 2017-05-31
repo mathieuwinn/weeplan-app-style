@@ -397,6 +397,9 @@ ion-card {
 .activity-item {
   h2 {
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
 
