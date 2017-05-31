@@ -27178,8 +27178,10 @@ ion-menu ion-content ion-list .item ion-icon.ion-md-search, ion-menu ion-content
   border-radius: 16px;
   background-color: #f4f4f4;
   padding: 20px 14px 6px;
-  margin-bottom: 20px;
   text-align: center;
+  max-width: 580px;
+  margin: auto;
+  margin-bottom: 14px;
 }
 
 .message-box.message-box-chat {
@@ -27188,20 +27190,20 @@ ion-menu ion-content ion-list .item ion-icon.ion-md-search, ion-menu ion-content
   text-align: left;
 }
 
-.popover-content {
-  background: rgba(215, 0, 54, 0.8) !important;
-  -webkit-transform-origin: top right !important;
-  transform-origin: top right !important;
-  top: 10px !important;
-  right: 10px !important;
-  left: auto !important;
-  padding: 0;
+/*
+.popover-content{
+ background: rgba(215, 0, 54, 0.8) !important;
+ transform-origin: top right !important;
+ top: 10px !important;
+ right: 10px !important;
+ left:auto !important;
+ padding: 0;
+ ion-list {
+   margin: 0;
+ }
 }
 
-.popover-content ion-list {
-  margin: 0;
-}
-
+*/
 ion-card.activity-card {
   position: absolute;
   left: 20px;
@@ -27560,6 +27562,34 @@ ion-card-header {
   box-shadow: 0 3px 10px 0 rgba(231, 158, 171, 0.8);
 }
 
+.custom-input .custom-input-label {
+  width: 30px;
+  float: left;
+  padding-top: 3px;
+  color: #626262;
+  opacity: 0.8;
+}
+
+.custom-input input {
+  float: left;
+  width: calc(100% - 30px);
+  border: none;
+}
+
+.custom-input .custom-input-close-btn {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  color: #626262;
+  font-size: 1.2rem;
+  opacity: 0.5;
+  padding: 6px !important;
+}
+
+.custom-input .custom-input-close-btn:hover {
+  opacity: 0.8;
+}
+
 .activity-single {
   padding-bottom: 70px;
 }
@@ -27837,7 +27867,7 @@ ion-card-header {
   right: 0;
   height: auto;
   max-height: 100%;
-  max-width: 600px;
+  max-width: 580px;
   margin: auto;
 }
 

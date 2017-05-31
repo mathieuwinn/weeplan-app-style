@@ -30,23 +30,52 @@
 
   <ion-list no-margin>
 
-    <ion-item class="activity-filter-input">
 
-      <ion-label fixed>
-        <ion-icon name="location"></ion-icon>
-        <button ion-button clear small class="close-input-btn"><ion-icon name="close"></ion-icon></button>
-      </ion-label>
-      <ion-input type="text" value="Paris, France" placeholder="Changer la localisation"></ion-input>
-
+    <ion-item class="custom-input">
+      <ion-icon class="custom-input-label" name="search"></ion-icon>
+      <input placeholder="Rechercher par mots clés" type="text" [(ngModel)]="searchQuery" (setAddress)="getAddress($event)" googleplacefrance>
+      <button ion-button small clear icon-only class="custom-input-close-btn" *ngIf="searchQuery != undefined" ngClick="searchLocation = ''">
+        <ion-icon name="close"></ion-icon>
+      </button>
     </ion-item>
 
-
-
-  <ion-item class="activity-filter-input">
-    <ion-label fixed><ion-icon name="search"></ion-icon></ion-label>
-    <ion-input type="text" value="" placeholder="Rechercher par mots clés"></ion-input>
-
+    <ion-item class="custom-input">
+      <ion-icon class="custom-input-label" name="location"></ion-icon>
+      <input placeholder="Changer la localisation" type="text" [(ngModel)]="searchLocation" (setAddress)="getAddress($event)" googleplacefrance>
+      <button ion-button small clear icon-only class="custom-input-close-btn" *ngIf="searchLocation != undefined" ngClick="searchLocation = ''">
+        <ion-icon name="close"></ion-icon>
+      </button>
   </ion-item>
+
+
+
+
+  <ion-item>
+  <ion-label>Dans un rayon de...</ion-label>
+  <ion-select [(ngModel)]="searchRadius" interface="popover">
+    <ion-option value="5">5km</ion-option>
+    <ion-option value="10">10km</ion-option>
+    <ion-option value="20" selected>20km</ion-option>
+    <ion-option value="50">50km</ion-option>
+    <ion-option value="100">100km</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Date</ion-label>
+   <ion-datetime displayFormat="DDDD DD/MM/YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate" dayNames="Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche" doneText="Ok" cancelText="Annuler" placeholder="Non spécifiée"></ion-datetime>
+</ion-item>
+
+
+<ion-item>
+  <ion-label>Budget max.
+    <span text-end *ngIf="searchBudget == undefined">Non spécifié</span>
+    <span text-end *ngIf="searchBudget != undefined">{{searchBudget}}€</span>
+  </ion-label>
+
+  <ion-range [(ngModel)]="searchBudget" min="0" max="1000">
+  </ion-range>
+</ion-item>
 
   </ion-list>
 

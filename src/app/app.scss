@@ -249,8 +249,10 @@ ion-menu ion-content {
   border-radius: $card-md-border-radius;
   background-color:color($colors,light);
   padding: 20px 14px 6px;
-  margin-bottom: 20px;
   text-align: center;
+  max-width: 580px;
+  margin: auto;
+  margin-bottom: 14px;
   &.message-box-chat {
     background-color: transparent;
     padding: 0;
@@ -259,7 +261,7 @@ ion-menu ion-content {
 }
 
 // Alert Boxes
-
+/*
 .popover-content{
  background: rgba(215, 0, 54, 0.8) !important;
  transform-origin: top right !important;
@@ -271,6 +273,9 @@ ion-menu ion-content {
    margin: 0;
  }
 }
+
+*/
+
 
 // Activity cards
 
@@ -642,6 +647,34 @@ ion-card-header {
 }
 
 
+.custom-input {
+  .custom-input-label {
+    width: 30px;
+    float: left;
+    padding-top: 3px;
+    color: color($colors, medium);
+    opacity: 0.8;
+  }
+  input {
+    float: left;
+    width: calc(100% - 30px);
+    border: none;
+  }
+  .custom-input-close-btn {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    color: color($colors, medium);
+    font-size: 1.2rem;
+    opacity: 0.5;
+    padding: 6px!important;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
 // Single Activity view
 
 .activity-single {
@@ -920,7 +953,7 @@ ion-card-header {
     right: 0;
     height: auto;
     max-height: 100%;
-    max-width: 600px;
+    max-width: 580px;
     margin: auto;
 }
 

@@ -43,6 +43,10 @@ export class Cards {
      this.active = !this.active;
     }
 
+    ngOnInit(){
+     this.openModal();
+   }
+
 
 
 

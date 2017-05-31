@@ -21,4 +21,8 @@ export class Filtersmodal {
     this.viewCtrl.dismiss();
   }
 
+
+
+
+
 }
