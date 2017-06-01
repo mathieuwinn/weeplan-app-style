@@ -17,6 +17,7 @@ import { Sidemenu } from '../pages/sidemenu/sidemenu';
 import { Profile } from '../pages/profile/profile';
 import { Filtersmodal } from '../pages/filtersmodal/filtersmodal';
 import { Chatbot } from '../pages/chatbot/chatbot';
+import { Map } from '../pages/map/map';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Chatbot } from '../pages/chatbot/chatbot';
     Sidemenu,
     Profile,
     Filtersmodal,
-    Chatbot
+    Chatbot,
+    Map
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { Chatbot } from '../pages/chatbot/chatbot';
     Sidemenu,
     Profile,
     Filtersmodal,
-    Chatbot
+    Chatbot,
+    Map
   ],
   providers: [
     StatusBar,
