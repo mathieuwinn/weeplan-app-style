@@ -29754,6 +29754,7 @@ ion-menu ion-content ion-list .item ion-icon.ion-md-search, ion-menu ion-content
 }
 
 .dashboard-profile .dashboard-profile-text h6 {
+  font-size: 1.4rem;
   margin: 4px 0 2px;
 }
 
