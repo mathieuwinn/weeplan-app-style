@@ -6,13 +6,133 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>dashboard</ion-title>
+  <ion-navbar hideBackButton>
+    <ion-buttons start class="navbar-menu-btn">
+         <button ion-button >
+           <ion-icon name="menu"></ion-icon>
+         </button>
+    </ion-buttons>
+    <ion-title>Weeplan</ion-title>
+
+
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="dashboard-content">
+
+<div class="blue-bg dashboard-profile">
+
+  <ion-grid>
+  <ion-row>
+    <ion-col col-2>
+      <img class="profile-pic profile-pic-dashboard" src="../assets/img/profile-pic-default.png" alt="">
+    </ion-col>
+    <ion-col col-10 class="dashboard-profile-text">
+      <h6>Bienvenue sur Weeplan Mathieu!</h6>
+      <p>Votre profil est presque complet!</p>
+      <button ion-button small clear>Finir de compléter mon profil</button>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</div>
+
+<div padding class="dashboard-cards">
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-7>
+
+      <ion-card class="activity-card activity-card_small dashboard-activity-suggest" *ngFor="let card of cards" [ngClass]="show ? 'show' : ''">
+
+
+
+        <div class="card-image" ng-if="card.img!==undefined">
+          <img src="{{ card.img }}"/>
+        </div>
+
+        <ion-card-header>
+            <div class="activity-title">
+              {{ card.title }}
+            </div>
+            <div class="activity-subtitle">
+              <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
+            </div>
+        </ion-card-header>
+      </ion-card>
+
+
+
+    </ion-col>
+    <ion-col col-5 class="dashboard-cards-text">
+      <ion-icon name="cards"></ion-icon>
+      <h6>Activités Flash</h6>
+      <button ion-button small outline block>En voir plus</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+</div>
+
+
+<div class="dashboard-search">
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-7>
+        <div class="dashboard-search-form">
+          <ion-icon name="search"></ion-icon>
+          <ion-input class="dark-input" type="email" placeholder="Rechercher par mots clés"></ion-input>
+          <button ion-button small block>Lancer la recherche</button>
+        </div>
+
+
+
+      </ion-col>
+      <ion-col col-5>
+        <div class="map-marker-position">
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</div>
+
+
+<div class="dashboard-activity-notation hide">
+  <h6 class="section-title" padding-horizontal>Noter mes activités</h6>
+  <div class="activity-notation-comingsoon">
+    BIENTÔT DISPONIBLE
+  </div>
+
+  <ion-list>
+
+      <button ion-item class="activity-item">
+        <ion-avatar item-left>
+        <img src="../assets/img/card-img-2.png">
+      </ion-avatar>
+      <h2>Danse classique à Paques</h2>
+      <p>Terminée le 12/06/2017</p>
+    </button>
+
+  </ion-list>
+  <div class="activity-notation-placeholder">
+
+  </div>
+
+
+
+
+</div>
+
 
 </ion-content>

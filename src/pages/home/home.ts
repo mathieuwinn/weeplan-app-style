@@ -12,6 +12,7 @@ import { Sidemenu } from '../sidemenu/sidemenu';
 import { Profile } from '../profile/profile';
 import { Chatbot } from '../chatbot/chatbot';
 import { Map } from '../map/map';
+import { Dashboard } from '../dashboard/dashboard';
 
 @Component({
   selector: 'page-home',
@@ -30,12 +31,13 @@ export class HomePage {
   profilePage = Profile;
   chatbotPage = Chatbot;
   mapPage = Map;
+  dashboardPage = Dashboard;
 
   constructor(public navCtrl: NavController) {
   }
 
  ngOnInit(){
-  this.navCtrl.push(Map);
+  this.navCtrl.push(Dashboard);
 }
 
 

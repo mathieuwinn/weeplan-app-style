@@ -24,12 +24,16 @@ ion-app.md, ion-app.ios {
 }
 
 ion-content {
-  &.activity-cards-view, &.blue-bg {
+  &.activity-cards-view {
     background-color: color($colors,lightbg);
   }
   &.weeplan-splash-bg {
       background-color: #FFF;
   }
+}
+
+.blue-bg {
+  background-color: color($colors,lightbg);
 }
 
 
@@ -72,6 +76,28 @@ button[disabled]{
   color: color($colors, medium);
   box-shadow: none;
 }
+
+.dark-input {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 16px !important;
+  color: white;
+  padding: 0 6px;
+  input {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(255,255,255,0.5);
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(255,255,255,0.5);
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: rgba(255,255,255,0.5);
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: rgba(255,255,255,0.5);
+    }
+  }
+}
+
 
 /*
 
@@ -149,10 +175,16 @@ ion-menu ion-header {
   background-image: url(../assets/img/profile-pic-default.png);
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10);
   &.profile-pic-menu {
     height: 60px;
     width: 60px;
     background-size: 60px 60px;
+  }
+  &.profile-pic-dashboard {
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
   }
 }
 
@@ -180,6 +212,7 @@ ion-menu ion-header {
 
 ion-menu ion-content {
   ion-list {
+    padding-top: 4px;
     .item {
       font-size: 1.4rem;
       opacity: 0.6;
@@ -208,6 +241,117 @@ ion-menu ion-content {
   }
 }
 
+// Dashboard
+
+.dashboard-content {
+  max-width: 580px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.dashboard-profile {
+  padding: 6px;
+  .profile-pic-dashboard {
+    margin-left: 0 !important;
+  }
+  .dashboard-profile-text {
+    h6 {
+      margin: 4px 0 2px;
+    }
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+      color: color($colors, medium);
+    }
+    button {
+      margin-left: -14px;
+    }
+  }
+}
+
+.dashboard-cards {
+  .dashboard-cards-text {
+    margin-top: 10px;
+    text-align: center;
+    ion-icon {
+      font-size: 2.2rem;
+      margin: 0;
+      transform: rotate(2deg);
+    }
+    h6 {
+      margin: 8px 0;
+    }
+  }
+}
+
+
+.dashboard-activity-search {
+  position: relative;
+  height: 186px;
+}
+
+.dashboard-search {
+  position: relative;
+  margin-top: 0px;
+  height: 200px;
+  background-image: url(../assets/img/dashboard-map-bg.png);
+  background-size: cover;
+  .map-marker-position {
+    top: 40px;
+    right: 70px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left:0;
+    right: 0;
+    height: 100%;
+    background-image: linear-gradient(-119deg, rgba(1,80,73,0.55) 9%, rgba(2,80,73,0.86) 88%);
+  }
+  .dashboard-search-form {
+    margin-top: 20px;
+    text-align: center;
+    ion-icon {
+      font-size: 2.6rem;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+
+  }
+}
+
+
+.dashboard-search-form {
+  margin-top: 30px;
+}
+
+.dashboard-activity-notation {
+  position: relative;
+  .activity-notation-comingsoon {
+    position: absolute;
+    height: 100px;
+    margin-top:0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.86);
+    z-index: 100;
+    padding: 40px 20px;
+    text-align: center;
+    font-weight: 600;
+    color: color($colors,primary);
+  }
+  .activity-notation-placeholder {
+    position: relative;
+    margin-top: -28px;
+    margin-left: 70px;
+    height: 34px;
+    width: 154px;
+    background-size: 154px 34px;
+    background-image: url(../assets/img/activity-notation-placeholder.png);
+  }
+
+}
 
 
 
@@ -309,12 +453,52 @@ ion-card {
     width: 212px;
     margin: auto;
     margin-bottom: 0;
+
+    &.dashboard-activity-suggest {
+      position: absolute;
+      width: 100%;
+      max-width: 200px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transform: translate(-100px, 100px) rotate(-10deg) scale(0.8);
+      opacity: 0;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+      &.show {
+        transition-delay:0.4;
+        transform: translate(-10px, 0) rotate(-2deg) scale(1);
+        opacity: 1;
+      }
+      .activity-title {
+        font-size: 1.4rem;
+      }
+    }
+
+
     .card-image {
       height:84px;
     }
     .card-like-link {
       right: 6px;
       top: 6px;
+      button.btn-like {
+          font-size: 1.2em;
+          padding: 8px 12px;
+      }
+    }
+    .card-img-text {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      position: absolute;
+      z-index: 100;
+      color: white;
+      font-weight: 500;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 18px;
+      padding: 4px 10px;
       button.btn-like {
           font-size: 1.2em;
           padding: 8px 12px;
@@ -422,8 +606,9 @@ ion-card {
       position: relative;
       border-radius: 0;
       display: block;
-     width: 100%;
-     height: auto;
+      width:100%;
+      height: auto;
+      object-fit: contain;
     }
   }
 
@@ -1132,6 +1317,8 @@ ion-spinner {
 
 // MAP
 
+
+
 #map{
   position: fixed;
   top:56px;
@@ -1140,6 +1327,29 @@ ion-spinner {
   right: 0;
    width: 100%;
    height: 460px;
+}
+
+// map marker
+.map-marker-position {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #0DFFEB;
+  border: 2px solid #0DE3D1;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.20);
+  &:before {
+    content: "";
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    left: -19px;
+    top: -19px;
+    border-radius: 50%;
+    background: rgba(13,255,235,0.16);
+    animation: pulsate 2s normal infinite;
+
+  }
 }
 
 
@@ -1304,9 +1514,13 @@ ion-spinner {
   font-family: "weeplanionic-icons" !important;
   content: "\73";
 }
-.ion-md-check:before, .ion-ios-dcheck:before {
+.ion-md-check:before, .ion-ios-check:before {
   font-family: "weeplanionic-icons" !important;
   content: "\75";
+}
+.ion-md-cards:before, .ion-ios-cards:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\76";
 }
 
 
@@ -1333,4 +1547,9 @@ ion-spinner {
   to {
       transform: scale(1, 1);
   }
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
