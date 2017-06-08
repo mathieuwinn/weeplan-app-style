@@ -16,7 +16,13 @@
 <ion-content>
 
   <div class="profile-header" padding-vertical>
-    <img class="profile-pic profile-pic-empty" (click)="presentActionSheet()" src="../assets/img/profile-pic-default.png" alt="">
+    <div class="profile-pic-container" (click)="presentActionSheet()">
+      <img class="profile-pic" src="../assets/img/profile-pic-default.png" alt="">
+      <div class="profile-pic-add">
+        <ion-icon name="add"></ion-icon>
+      </div>
+    </div>
+
     <h3>Mathieu Robert</h3>
   </div>
 

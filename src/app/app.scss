@@ -1118,23 +1118,35 @@ ion-card-header {
 .profile-header {
   background-color: color($colors, lightbg);
   text-align: center;
-  .profile-pic {
-    margin: auto;
+  .profile-pic-container {
     position: relative;
-    &:after {
-      content: "";
+    width: 82px;
+    margin: auto;
+    .profile-pic {
+      position: relative;
+      }
+    .profile-pic-add {
       position: absolute;
       z-index: 200;
       height: 30px;
       width: 30px;
+      padding: 4px;
       right: -4px;
       bottom: -4px;
       border-radius: 15px;
-      background: url(../assets/img/profile-pic-add.png) no-repeat;
-      background-size: 30px 30px;
+      background-color: white;
+      text-align: center;
       box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ion-icon {
+        color: color($colors, primary);
+      }
     }
+
   }
+
 }
 
 .profile-list-email {

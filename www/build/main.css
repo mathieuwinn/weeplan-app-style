@@ -30604,23 +30604,41 @@ ion-card-header {
   text-align: center;
 }
 
-.profile-header .profile-pic {
+.profile-header .profile-pic-container {
+  position: relative;
+  width: 82px;
   margin: auto;
+}
+
+.profile-header .profile-pic-container .profile-pic {
   position: relative;
 }
 
-.profile-header .profile-pic:after {
-  content: "";
+.profile-header .profile-pic-container .profile-pic-add {
   position: absolute;
   z-index: 200;
   height: 30px;
   width: 30px;
+  padding: 4px;
   right: -4px;
   bottom: -4px;
   border-radius: 15px;
-  background: url(../assets/img/profile-pic-add.png) no-repeat;
-  background-size: 30px 30px;
+  background-color: white;
+  text-align: center;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.profile-header .profile-pic-container .profile-pic-add ion-icon {
+  color: #FF1E45;
 }
 
 .profile-list-email {
