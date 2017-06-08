@@ -204,6 +204,7 @@ ion-menu ion-header {
     top: 16px;
     color: black;
     opacity: 0.4;
+    font-size: 1.8rem;
     &.ion-ios-settings {
       top: 30px;
     }
@@ -873,6 +874,17 @@ ion-card-header {
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+
+ion-range {
+  margin-top: -2  0px;
+}
+
+.custom-select {
+  h6 {
+    font-weight: 400;
   }
 }
 

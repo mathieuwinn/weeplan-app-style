@@ -1,0 +1,81 @@
+<!--
+  Generated template for the Tripmodal page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button (click)="closeModal()" showWhen="ios">
+        <span ion-text color="medium">Annuler</span>
+      </button>
+    </ion-buttons>
+    <ion-title>Créer un nouveau trip</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="closeModal()">
+        <span ion-text color="primary" showWhen="ios">Ok</span>
+        <ion-icon name="check" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list no-margin>
+
+
+
+
+
+<ion-item>
+  <ion-label>Budget max.
+    <span text-end *ngIf="searchBudget == undefined">Non spécifié</span>
+    <span text-end *ngIf="searchBudget != undefined">{{searchBudget}}€</span>
+  </ion-label>
+
+  <ion-range [(ngModel)]="searchBudget" min="0" max="1000">
+  </ion-range>
+</ion-item>
+
+<ion-item>
+  <ion-label>Date</ion-label>
+   <ion-datetime displayFormat="DDDD DD/MM/YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate" dayNames="Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche" doneText="Ok" cancelText="Annuler" placeholder="Optionnel"></ion-datetime>
+</ion-item>
+
+<ion-item>
+<ion-label>Type de trip</ion-label>
+<ion-select [(ngModel)]="searchRadius" interface="popover">
+  <ion-option value="type-none" selected>Non spécifié</ion-option>
+  <ion-option value="type-friends">Entre amis</ion-option>
+  <ion-option value="type-family">En famille</ion-option>
+  <ion-option value="type-couple">En couple</ion-option>
+  <ion-option value="type-work">Entre collègues</ion-option>
+  <ion-option value="type-other">Autre</ion-option>
+</ion-select>
+</ion-item>
+
+
+
+<div class="custom-select" no-margin padding>
+  <h6>Mode(s) de transport</h6>
+      <button ion-button outline small class="activity-filter-tag">Piéton</button>
+      <button ion-button outline small class="activity-filter-tag active">Voiture</button>
+      <button ion-button outline small class="activity-filter-tag">Vélo</button>
+</div>
+
+<div class="custom-select" no-margin padding>
+  <h6>Mode(s) de transport</h6>
+      <button ion-button outline small class="activity-filter-tag">Piéton</button>
+      <button ion-button outline small class="activity-filter-tag active">Voiture</button>
+      <button ion-button outline small class="activity-filter-tag">Vélo</button>
+</div>
+
+
+  </ion-list>
+
+</ion-content>

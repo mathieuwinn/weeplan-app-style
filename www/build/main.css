@@ -29697,6 +29697,7 @@ ion-menu ion-header .profile-settings {
   top: 16px;
   color: black;
   opacity: 0.4;
+  font-size: 1.8rem;
 }
 
 ion-menu ion-header .profile-settings.ion-ios-settings {
@@ -30358,6 +30359,14 @@ ion-card-header {
 
 .custom-input .custom-input-close-btn:hover {
   opacity: 0.8;
+}
+
+ion-range {
+  margin-top: -2  0px;
+}
+
+.custom-select h6 {
+  font-weight: 400;
 }
 
 .activity-single {

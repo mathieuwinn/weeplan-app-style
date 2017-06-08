@@ -19,6 +19,8 @@ import { Filtersmodal } from '../pages/filtersmodal/filtersmodal';
 import { Chatbot } from '../pages/chatbot/chatbot';
 import { Map } from '../pages/map/map';
 import { Dashboard } from '../pages/dashboard/dashboard';
+import { Trips } from '../pages/trips/trips';
+import { Tripmodal } from '../pages/tripmodal/tripmodal';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { Dashboard } from '../pages/dashboard/dashboard';
     Filtersmodal,
     Chatbot,
     Map,
-    Dashboard
+    Dashboard,
+    Trips,
+    Tripmodal
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,9 @@ import { Dashboard } from '../pages/dashboard/dashboard';
     Filtersmodal,
     Chatbot,
     Map,
-    Dashboard
+    Dashboard,
+    Trips,
+    Tripmodal
   ],
   providers: [
     StatusBar,
