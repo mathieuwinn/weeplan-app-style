@@ -233,8 +233,8 @@ ion-menu ion-content {
         width: 22px;
         font-size: 1.5rem;
         opacity: 0.6;
-        &.ion-md-search, &.ion-ios-search {
-          font-size: 1.7rem;
+        &.ion-md-location, &.ion-ios-location {
+          font-size: 2rem;
         }
       }
     }
@@ -296,7 +296,7 @@ ion-menu ion-content {
   position: relative;
   margin-top: 0px;
   height: 200px;
-  background-image: url(../assets/img/dashboard-map-bg.png);
+  background-image: url(../assets/img/dashboard-map-bg.jpg);
   background-size: cover;
   .map-marker-position {
     top: 40px;
@@ -892,7 +892,7 @@ ion-card-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/img/activity-map-bg.png);
+  background-image: url(../assets/img/dashboard-map-bg.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1016,37 +1016,37 @@ ion-card-header {
 }
 
 .splash-char1 {
-  height: 166px;
-  width: 85px;
+  height: 180px;
+  width: 96px;
   left: 0;
   right: 0;
   margin: auto;
   z-index: 102;
-  background: url(../assets/img/splash-char1.svg) no-repeat;
-  background-size: 85px 166px;
+  background: url(../assets/img/splash-char1.png) no-repeat;
+  background-size: 96px 180px;
 }
 
 
 .splash-char2 {
-  height: 146px;
-  width: 77px;
+  height: 166px;
+  width: 89px;
   left: -160px;
   right: 0;
   margin: auto;
   z-index: 101;
-  background: url(../assets/img/splash-char2.svg) no-repeat;
-  background-size: 77px 146px;
+  background: url(../assets/img/splash-char2.png) no-repeat;
+  background-size: 89px 166px;
 }
 
 .splash-char3 {
-  height: 146px;
-  width: 77px;
+  height: 166px;
+  width: 89px;
   left: 0;
   right: -160px;
   margin: auto;
   z-index: 100;
-  background: url(../assets/img/splash-char3.svg) no-repeat;
-  background-size: 77px 146px;
+  background: url(../assets/img/splash-char3.png) no-repeat;
+  background-size: 89px 166px;
 }
 
 .splash-bg1 {
@@ -1106,7 +1106,7 @@ ion-card-header {
       height: 144px;
       width: 144px;
       margin: auto;
-      background: url(../assets/img/no-activity-found.svg) no-repeat;
+      background: url(../assets/img/no-activity-found.png) no-repeat;
       background-size: 144px 144px;
     }
 
@@ -1523,6 +1523,24 @@ ion-spinner {
   font-family: "weeplanionic-icons" !important;
   content: "\76";
 }
+
+.ion-md-edit:before, .ion-ios-edit:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\77";
+}
+.ion-md-chat:before, .ion-ios-chat:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\78";
+}
+.ion-md-map:before, .ion-ios-map:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\79";
+}
+.ion-md-home:before, .ion-ios-home:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\7a";
+}
+
 
 
 // ScaleUp animation for liking activities

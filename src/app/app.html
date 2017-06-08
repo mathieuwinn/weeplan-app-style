@@ -1,17 +1,16 @@
 <ion-menu persistent="true" [content]="content" id="myMenu">
   <ion-header padding>
-    <ion-icon class="profile-settings" name="settings"></ion-icon>
     <img class="profile-pic profile-pic-menu" src="../assets/img/profile-pic-default.png" alt="">
     <ion-title>Mathieu Robert</ion-title>
   </ion-header>
 
   <ion-content>
       <ion-list>
-
+      <button ion-item><ion-icon name="home" item-start></ion-icon> Accueil</button>
       <button ion-item><ion-icon name="cards" item-start></ion-icon> Activités Flash</button>
-      <button ion-item class="active"><ion-icon name="search" item-start></ion-icon> Recherche d'activités</button>
+      <button ion-item class="active"><ion-icon name="map" item-start></ion-icon> Recherche d'activités</button>
       <button ion-item><ion-icon name="liked" item-start></ion-icon> 5 activités sauvegardées</button>
-      <button ion-item><ion-icon name="history" item-start></ion-icon>Mon historique d’activités</button>
+      <button ion-item><ion-icon name="history" item-start></ion-icon> Mon historique d’activités</button>
     </ion-list>
   </ion-content>
 

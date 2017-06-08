@@ -37,7 +37,7 @@ export class HomePage {
   }
 
  ngOnInit(){
-  this.navCtrl.push(Dashboard);
+  this.navCtrl.push(Card);
 }
 
 
