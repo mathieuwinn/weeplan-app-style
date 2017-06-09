@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController} from 'ionic-angular';
 
 /**
  * Generated class for the Card page.
@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Card {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
   }
 
   public cards = [
@@ -29,6 +29,34 @@ export class Card {
     active = false;
       toggle() {
        this.active = !this.active;
+      }
+show= false;
+
+  ionViewDidLoad() {
+      setTimeout(() => {
+          this.show = true;
+      }, 1000);
+}
+      presentActionSheet() {
+        let actionSheet = this.actionSheetCtrl.create({
+          title: 'Ajouter une photo',
+          buttons: [
+            {
+              text: 'Prendre une photo',
+              icon: 'camera',
+              handler: () => {
+                console.log('Destructive clicked');
+              }
+            },{
+              text: 'Accéder à la gallerie',
+              icon: 'library',
+              handler: () => {
+                console.log('Archive clicked');
+              }
+            }
+          ]
+        });
+        actionSheet.present();
       }
 
 

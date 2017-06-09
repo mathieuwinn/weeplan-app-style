@@ -29536,6 +29536,11 @@ ion-content.weeplan-splash-bg {
 /*
 Buttons missing css
 */
+p.small {
+  font-size: 1.1rem;
+  color: #626262;
+}
+
 .button-ios {
   font-weight: 600;
 }
@@ -29598,6 +29603,10 @@ button[disabled] {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.btn-icon-left ion-icon {
+  margin-right: 10px;
+}
+
 /*
 
 WEEPLAN IOS
@@ -29607,11 +29616,32 @@ WEEPLAN IOS
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06) !important;
 }
 
+.back-button-ios {
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.back-button-icon-ios {
+  margin: 0;
+  margin-right: 8px;
+  font-size: 2rem;
+}
+
 /*
 
 WEEPLAN ANDROID
 
 */
+.back-button-md {
+  margin: 0;
+  padding-right: 0;
+  font-size: 2rem;
+}
+
+.back-button-icon-md {
+  font-size: 2rem;
+}
+
 ion-navbar.card-navbar {
   height: 140px;
   display: block;
@@ -30104,6 +30134,11 @@ ion-card.no-card-image .activity-title {
   object-fit: contain;
 }
 
+.navbar-btn-share {
+  font-size: 0.8em;
+  margin-right: 4px;
+}
+
 button.btn-like {
   font-size: 1.2em;
   margin: 0;
@@ -30369,8 +30404,239 @@ ion-range {
   font-weight: 400;
 }
 
+ion-header.header-dark {
+  background: transparent;
+  background-image: none;
+}
+
+ion-header.header-dark .toolbar-background {
+  background: none;
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border: none;
+  color: white;
+}
+
+ion-header.header-dark .bar-button-default-ios, ion-header.header-dark .bar-button-clear-ios {
+  color: white;
+  opacity: 1;
+}
+
+.content-hasphoto {
+  margin-top: -56px;
+}
+
+.content-hasphoto.content-ios {
+  margin-top: -68px;
+}
+
 .activity-single {
-  padding-bottom: 70px;
+  padding-top: 20px;
+}
+
+.activity-single .activity-title {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.activity-photo {
+  position: relative;
+  height: 234px;
+  background-color: #39000A;
+}
+
+.activity-photo .slide-add-photo-btn {
+  position: absolute;
+  bottom: -7px;
+  right: 0px;
+  z-index: 20;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.activity-photo ion-slides .swiper-pagination-bullets {
+  bottom: 24px;
+}
+
+.activity-photo ion-slides .swiper-pagination-bullets .swiper-pagination-bullet {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.activity-photo ion-slides .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.activity-photo ion-slides ion-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.activity-photo ion-slides ion-slide .activity-photo-info {
+  font-size: 1.3rem;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  text-align: left;
+  background-image: linear-gradient(-180deg, transparent 0%, rgba(0, 0, 0, 0.6) 98%);
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.activity-photo ion-slides ion-slide .activity-photo-info .photo-author-name {
+  opacity: 0.8;
+}
+
+.activity-photo ion-slides ion-slide .activity-photo-info .slide-photo-vote-btn {
+  position: relative;
+  top: -4px;
+  left: -16px;
+  font-size: 1.2rem;
+  margin-right: -19px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+}
+
+.activity-photo ion-slides ion-slide .activity-photo-info .slide-photo-vote-btn .photo-vote-count {
+  margin-right: 5px;
+}
+
+.activity-photo ion-slides ion-slide .activity-photo-info .slide-photo-vote-btn.active {
+  opacity: 1;
+}
+
+.activity-photo.no-activity-photo {
+  height: auto;
+}
+
+.publish-photo-char {
+  position: absolute;
+  left: 0px;
+  bottom: -6px;
+  height: 111px;
+  width: 70px;
+  background: url(../assets/img/publish-photo-char.png);
+  background-size: 70px 111px;
+  -webkit-transform: translateX(-100px) translateY(200px) rotate(-20deg);
+  transform: translateX(-100px) translateY(200px) rotate(-20deg);
+  opacity: 0;
+  transition: -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.publish-photo-char.show {
+  opacity: 1;
+  -webkit-transform: translateX(0) translateY(0) rotate(0deg);
+  transform: translateX(0) translateY(0) rotate(0deg);
+}
+
+.published-photo-char {
+  position: absolute;
+  left: 8px;
+  bottom: -40px;
+  height: 111px;
+  width: 70px;
+  background: url(../assets/img/published-photo-char.png);
+  background-size: 70px 111px;
+  -webkit-transform: translateX(-100px) translateY(200px) rotate(-20deg);
+  transform: translateX(-100px) translateY(200px) rotate(-20deg);
+  opacity: 0;
+  transition: -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.published-photo-char.show {
+  opacity: 1;
+  -webkit-transform: translateX(0) translateY(0) rotate(0deg);
+  transform: translateX(0) translateY(0) rotate(0deg);
+}
+
+.instructions-container {
+  background-color: #F8F9FB;
+  padding-top: 8px;
+  overflow: hidden;
+}
+
+.instructions-container.photo-published-instructions {
+  background-color: transparent;
+  padding: 20px 0;
+}
+
+.instructions-container h6 {
+  font-size: 1.4rem;
+  margin: 4px 0 2px;
+}
+
+.instructions-container p.tagline {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #626262;
+}
+
+.instructions-container button {
+  margin-left: -14px;
+}
+
+.activity-single-list ion-item, .activity-single-list button {
+  font-size: 1.3rem;
+}
+
+.activity-single-list ion-item ion-icon, .activity-single-list button ion-icon {
+  margin-right: 6px;
+  color: #626262;
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 2px;
+}
+
+.activity-map {
+  position: relative;
+  height: 180px;
+}
+
+.activity-map .map-marker-location {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: 40px;
+  margin: auto;
+}
+
+.activity-map #activity-map {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+}
+
+.activity-map #activity-map.map-container-demo {
+  background-image: url(../assets/img/dashboard-map-bg.jpg);
+  background-size: cover;
+}
+
+.activity-map .activity-map-card {
+  position: relative;
+  width: calc(100% - 24px);
+  margin: 70px auto 0 auto;
+  padding: 14px 10px 5px;
+  max-width: 580px;
+  background-color: white;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  text-align: center;
+}
+
+span.primary {
+  color: #FF1E45;
 }
 
 .activity-map-link {
@@ -30388,8 +30654,44 @@ ion-range {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url(../assets/img/dashboard-map-bg.jpg);
+}
+
+.hscroll-container.activity-photo-upload-container {
+  height: 200px;
+}
+
+.activity-photo-upload-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: left;
+  position: relative;
+  left: auto;
+  right: auto;
+  height: auto;
+  width: 212px;
+  margin: auto;
+  margin-right: 20px;
+  margin-bottom: 0;
+  background-color: white;
+  height: 159px;
   background-size: cover;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+}
+
+.activity-photo-upload-card .remove-photo-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.activity-photo-upload-card ion-spinner {
+  margin: auto;
 }
 
 .hscroll-container {
@@ -30896,6 +31198,29 @@ ion-spinner {
   animation: pulsate 2s normal infinite;
 }
 
+.map-marker-location {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #FF1E45;
+  border: 2px solid #D91234;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.map-marker-location:before {
+  content: "";
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  left: -19px;
+  top: -19px;
+  border-radius: 50%;
+  background: rgba(255, 30, 69, 0.1);
+  -webkit-animation: pulsate 2s normal infinite;
+  animation: pulsate 2s normal infinite;
+}
+
 .map-list-container {
   position: relative;
   width: 100%;
@@ -30962,6 +31287,11 @@ ion-spinner {
 .ion-md-nope:before, .ion-ios-nope:before {
   font-family: "weeplanionic-icons" !important;
   content: "\62";
+}
+
+.ion-md-arrow-back:before, .ion-ios-arrow-back:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\63";
 }
 
 .ion-md-date:before, .ion-ios-date:before {
@@ -31091,6 +31421,31 @@ ion-spinner {
 .ion-md-home:before, .ion-ios-home:before {
   font-family: "weeplanionic-icons" !important;
   content: "\7a";
+}
+
+.ion-md-time:before, .ion-ios-time:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\41";
+}
+
+.ion-md-thumb:before, .ion-ios-thumb:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\42";
+}
+
+.ion-md-share:before, .ion-ios-share:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\43";
+}
+
+.ion-md-flag:before, .ion-ios-flag:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\44";
+}
+
+.ion-md-addphoto:before, .ion-ios-addphoto:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\45";
 }
 
 @-webkit-keyframes scaleUp {

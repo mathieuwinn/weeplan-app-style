@@ -14,7 +14,7 @@ import { Chatbot } from '../chatbot/chatbot';
 import { Map } from '../map/map';
 import { Dashboard } from '../dashboard/dashboard';
 import { Trips } from '../trips/trips';
-
+import { Review } from '../review/review';
 
 @Component({
   selector: 'page-home',
@@ -35,13 +35,14 @@ export class HomePage {
   mapPage = Map;
   dashboardPage = Dashboard;
   tripsPage = Trips;
+  reviewPage = Review;
 
   constructor(public navCtrl: NavController) {
   }
 
- ngOnInit(){
-  this.navCtrl.push(Card);
-}
+ //ngOnInit(){
+//  this.navCtrl.push(Review);
+//}
 
 
 

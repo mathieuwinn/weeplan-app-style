@@ -4,12 +4,14 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="header-dark">
 
-  <ion-navbar hideBackButton>
-    <ion-title>Activité commencée</ion-title>
+  <ion-navbar >
 
     <ion-buttons end>
+      <button ion-button icon-only class="navbar-btn-share">
+        <ion-icon name="share"></ion-icon>
+      </button>
       <button ion-button clear class="btn-like" (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
       <button ion-button icon-only>
         <ion-icon name="more"></ion-icon>
@@ -19,33 +21,104 @@
 
 </ion-header>
 
+<ion-content class="content-hasphoto">
 
-<ion-content>
+  <div class="activity-photo">
 
-  <div class="activity-single" padding>
+    <button ion-button clear class="slide-add-photo-btn">
+    <ion-icon name="addphoto" (click)="presentActionSheet()"></ion-icon>
+    </button>
 
-    <div class="activity-title">
+    <ion-slides pager>
+
+      <ion-slide style="background-image: url(../assets/img/card-img-2.png)">
+      <div class="activity-photo-info" padding>
+        <button ion-button clear small class="slide-photo-vote-btn active">
+          <span class="photo-vote-count">11</span><ion-icon name="thumb"></ion-icon>
+        </button>
+        <span class="photo-author-name">Mathieu R.</span>
+      </div>
+      </ion-slide>
+
+      <ion-slide style="background-image: url(../assets/img/card-img-3.png)">
+      <div class="activity-photo-info" padding>
+        <button ion-button clear small class="slide-photo-vote-btn">
+          <ion-icon name="thumb"></ion-icon>
+        </button>
+        <span class="photo-author-name">Edouard B.</span>
+      </div>
+      </ion-slide>
+
+      <ion-slide style="background-image: url(../assets/img/card-img-7.png)">
+      <div class="activity-photo-info" padding>
+        <button ion-button clear small class="slide-photo-vote-btn">
+          <ion-icon name="thumb"></ion-icon>
+        </button>
+        <span class="photo-author-name">Michel S.</span>
+      </div>
+      </ion-slide>
+
+    </ion-slides>
+
+  </div>
+
+
+  <div class="activity-photo no-activity-photo hide">
+
+    <ion-grid class="instructions-container">
+    <ion-row>
+      <ion-col col-3>
+        <div class="publish-photo-char" [ngClass]="show ? 'show' : ''">
+
+        </div>
+      </ion-col>
+      <ion-col col-9>
+        <h6>Weeplan a besoin de toi !</h6>
+        <p class="tagline">Publie une photo de cette activité pour gagner des points Weeplan !</p>
+        <button ion-button small clear class="btn-icon-left" (click)="presentActionSheet()"><ion-icon name="addphoto"></ion-icon> Publier une photo</button>
+
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <div class="activity-single">
+
+    <div class="activity-title" padding-horizontal>
       Super Activité encore mieux et Vraiment Cool
     </div>
-    <div class="activity-subtitle">
+    <div class="activity-subtitle" padding-horizontal>
       <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
     </div>
 
-    <ul class="activity-infos">
-      <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
-    </ul>
 
-    <div class="activity-map-link" text-center>
-      <button ion-button small>Afficher l'itinéraire</button>
-    </div>
+    <ion-list class="activity-single-list">
+      <button ion-item text-wrap class="activity-description">
+        Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra aue... <span class="primary">Lire la suite</span> <!-- Il faut réussir à chopper seulement 80 charactères, suivit de points de suspension et du bouton "read more"  -->
+      </button>
+      <ion-item class="activity-openings">
+        <ion-icon name="time"></ion-icon> Ouvert aujourd’hui <span float-right><strong>12:00 - 21:00</strong></span>
+      </ion-item>
+      <ion-item class="activity-price">
+        <ion-icon name="euro"></ion-icon> À partir de <strong>12 €</strong>
+      </ion-item>
+      <ion-item class="activity-map" no-padding>
+        <div class="map-marker-location"></div> <!-- faudra déplacer la carte legerement vers le haut pour que le pointer soit bien placé -->
+        <div id="activity-map" class="map-container-demo"> <!-- map statique - classe .map-container-demo à enlever --></div>
+        <div class="activity-map-card" text-wrap>
+          <ion-icon name="location"></ion-icon> 87 rue de Vaugirard 75006 PARIS<br/>
+          <button ion-button small clear>Afficher l'itinéraire</button>
+        </div>
+      </ion-item>
+      <button ion-item class="activity-share">
+        <ion-icon name="share"></ion-icon> Partager l'activité
+      </button>
 
-    <ul class="activity-infos">
-      <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
-      <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
-    </ul>
-    <p class="activity-description">
-        Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-    </p>
+
+
+  </ion-list>
+
 
 
   </div>
@@ -85,16 +158,3 @@
 
 
 </ion-content>
-
-<div class="footer-bottom-actions">
-
-
-      <div padding-horizontal>
-      <ion-row>
-        <ion-col col-12>
-          <button ion-button outline block>Activité terminée</button>
-        </ion-col>
-      </ion-row>
-    </div>
-
-</div>

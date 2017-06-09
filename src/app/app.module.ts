@@ -21,6 +21,8 @@ import { Map } from '../pages/map/map';
 import { Dashboard } from '../pages/dashboard/dashboard';
 import { Trips } from '../pages/trips/trips';
 import { Tripmodal } from '../pages/tripmodal/tripmodal';
+import { Review } from '../pages/review/review';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { Tripmodal } from '../pages/tripmodal/tripmodal';
     Map,
     Dashboard,
     Trips,
-    Tripmodal
+    Tripmodal,
+    Review
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { Tripmodal } from '../pages/tripmodal/tripmodal';
     Map,
     Dashboard,
     Trips,
-    Tripmodal
+    Tripmodal,
+    Review
   ],
   providers: [
     StatusBar,
