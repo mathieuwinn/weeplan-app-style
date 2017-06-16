@@ -29738,6 +29738,17 @@ ion-menu ion-content ion-list {
   padding-top: 4px;
 }
 
+ion-menu ion-content ion-list.bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+ion-menu ion-content ion-list.bottom .item {
+  font-size: 1.2rem;
+  background-color: #F8F9FB;
+}
+
 ion-menu ion-content ion-list .item {
   font-size: 1.4rem;
   opacity: 0.6;
@@ -31501,6 +31512,11 @@ button.feedback_emotion.feedback_emotion_angry {
 .ion-md-addphoto:before, .ion-ios-addphoto:before {
   font-family: "weeplanionic-icons" !important;
   content: "\45";
+}
+
+.ion-md-feedback:before, .ion-ios-feedback:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\46";
 }
 
 @-webkit-keyframes scaleUp {

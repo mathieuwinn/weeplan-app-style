@@ -245,6 +245,15 @@ ion-menu ion-header {
 
 ion-menu ion-content {
   ion-list {
+
+    &.bottom {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      .item {
+        font-size: 1.2rem;
+        background-color: color($colors, lightbg);}
+    }
     padding-top: 4px;
     .item {
       font-size: 1.4rem;
@@ -1970,6 +1979,10 @@ button.feedback_emotion {
 .ion-md-addphoto:before, .ion-ios-addphoto:before {
   font-family: "weeplanionic-icons" !important;
   content: "\45";
+}
+.ion-md-feedback:before, .ion-ios-feedback:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\46";
 }
 // ScaleUp animation for liking activities
 @keyframes scaleUp {
