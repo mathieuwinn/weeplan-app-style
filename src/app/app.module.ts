@@ -22,6 +22,7 @@ import { Dashboard } from '../pages/dashboard/dashboard';
 import { Trips } from '../pages/trips/trips';
 import { Tripmodal } from '../pages/tripmodal/tripmodal';
 import { Review } from '../pages/review/review';
+import { Feedback } from '../pages/feedback/feedback';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { Review } from '../pages/review/review';
     Dashboard,
     Trips,
     Tripmodal,
-    Review
+    Review,
+    Feedback
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ import { Review } from '../pages/review/review';
     Dashboard,
     Trips,
     Tripmodal,
-    Review
+    Review,
+    Feedback
   ],
   providers: [
     StatusBar,

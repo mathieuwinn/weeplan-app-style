@@ -924,7 +924,8 @@ ion-range {
 
 .custom-select {
   h6 {
-    font-weight: 400;
+    font-weight: 500;
+      font-size: 1.2rem;
   }
 }
 
@@ -1186,8 +1187,16 @@ span.primary {
 
 // Horizontal Slider for publishing activity imgs
 
-.hscroll-container.activity-photo-upload-container {
+.hscroll-container.activity-photo-upload-container  {
   height: 200px;
+}
+
+.hscroll-container.feedback-photo-upload-container  {
+  height: 200px;
+  margin-bottom: 20px;
+  .hscroll-content {
+    width: 760px;
+  }
 }
 
 .activity-photo-upload-card {
@@ -1208,6 +1217,7 @@ span.primary {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center center;
   box-shadow: $card-md-box-shadow;
 
   .remove-photo-btn {
@@ -1736,6 +1746,45 @@ ion-spinner {
   padding-top: 2px;
 }
 
+
+
+// Feedback form
+
+.label[stacked] {
+  color: color($colors, dark);
+  font-weight: 500;
+}
+
+
+button.feedback_emotion {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 4px 8px 4px 0;
+  background: color($colors, medium);
+  background-image: url(../assets/img/feedback-emotions-sprites.png);
+  background-size: 170px 34px;
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  &.selected {
+    transform: scale(1.2);
+    box-shadow: 0 8px 10px rgba(color($colors, primary), 0.2);
+  }
+  &.feedback_emotion_love {
+      background-position: 0 0;
+    }
+    &.feedback_emotion_happy {
+      background-position: -34px 0;
+    }
+    &.feedback_emotion_meh {
+      background-position: -68px 0;
+    }
+    &.feedback_emotion_sad {
+      background-position: -102px 0;
+    }
+    &.feedback_emotion_angry {
+      background-position: -136px 0;
+    }
+}
 
 
 // Weeplan Nunito font

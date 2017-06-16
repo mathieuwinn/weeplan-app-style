@@ -30401,7 +30401,8 @@ ion-range {
 }
 
 .custom-select h6 {
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 ion-header.header-dark {
@@ -30660,6 +30661,15 @@ span.primary {
   height: 200px;
 }
 
+.hscroll-container.feedback-photo-upload-container {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.hscroll-container.feedback-photo-upload-container .hscroll-content {
+  width: 760px;
+}
+
 .activity-photo-upload-card {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30679,6 +30689,7 @@ span.primary {
   background-color: white;
   height: 159px;
   background-size: cover;
+  background-position: center center;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
@@ -31242,6 +31253,50 @@ ion-spinner {
   pointer-events: all;
   padding-bottom: 30px;
   padding-top: 2px;
+}
+
+.label[stacked] {
+  color: #222;
+  font-weight: 500;
+}
+
+button.feedback_emotion {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 4px 8px 4px 0;
+  background: #626262;
+  background-image: url(../assets/img/feedback-emotions-sprites.png);
+  background-size: 170px 34px;
+  transition: -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1), -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+button.feedback_emotion.selected {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  box-shadow: 0 8px 10px rgba(255, 30, 69, 0.2);
+}
+
+button.feedback_emotion.feedback_emotion_love {
+  background-position: 0 0;
+}
+
+button.feedback_emotion.feedback_emotion_happy {
+  background-position: -34px 0;
+}
+
+button.feedback_emotion.feedback_emotion_meh {
+  background-position: -68px 0;
+}
+
+button.feedback_emotion.feedback_emotion_sad {
+  background-position: -102px 0;
+}
+
+button.feedback_emotion.feedback_emotion_angry {
+  background-position: -136px 0;
 }
 
 @font-face {

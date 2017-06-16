@@ -59,6 +59,16 @@
   </ion-row>
   </ion-grid>
 
+
+  <ion-item>
+        <ion-label stacked>Donnez un titre à votre feedback</ion-label>
+        <ion-input type="text" name="title" placeholder="Problème d'affichage des activités,..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Votre commentaire</ion-label>
+        <ion-textarea name="description"></ion-textarea>
+      </ion-item>
+
   <div padding>
     <button ion-button block (click)="presentLoading()">Publier ma photo</button>
     <p class="small" text-center>Ta photo sera publiée après vérification.</p>
