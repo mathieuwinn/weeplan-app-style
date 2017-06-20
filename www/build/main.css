@@ -29694,6 +29694,7 @@ ion-menu ion-header {
   width: 82px;
   background-image: url(../assets/img/profile-pic-default.png);
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -30128,35 +30129,39 @@ ion-card.no-card-image .activity-title {
   width: calc(100% - 40px);
 }
 
-.activity-item.selected {
+.activity-item.selected, .trip-item.selected {
   background-color: #F8F9FB;
 }
 
-.activity-item.selected ion-avatar {
+.activity-item.selected ion-avatar, .trip-item.selected ion-avatar {
   box-shadow: 0 0 0 2px #FF1E45, 0 2px 5px #FF1E45;
 }
 
-.activity-item h2 {
+.activity-item h2, .trip-item h2 {
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.activity-item ion-avatar {
+.activity-item ion-avatar, .trip-item ion-avatar {
   overflow: hidden;
   max-width: 40px;
   max-height: 40px;
   border-radius: 10px;
 }
 
-.activity-item ion-avatar img {
+.activity-item ion-avatar img, .trip-item ion-avatar img {
   position: relative;
   border-radius: 0;
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.activity-item ion-avatar.trip-avatar.trip-avatar-default-blue, .trip-item ion-avatar.trip-avatar.trip-avatar-default-blue {
+  background-color: red;
 }
 
 .navbar-btn-share {
@@ -30449,6 +30454,7 @@ ion-header.header-dark .bar-button-default-ios, ion-header.header-dark .bar-butt
 
 .content-hasphoto {
   margin-top: -56px;
+  height: calc(100% + 56px);
 }
 
 .content-hasphoto.content-ios {
@@ -31199,6 +31205,30 @@ ion-spinner {
 
 .action-sheet-group ion-icon.icon-ios {
   display: none;
+}
+
+.action-sheet-group button.trip-btn {
+  text-indent: 56px;
+  position: relative;
+}
+
+.action-sheet-group button.trip-btn .button-inner:before {
+  position: absolute;
+  content: '';
+  height: 36px;
+  width: 36px;
+  top: 6px;
+  left: 12px;
+  border-radius: 10px;
+  background-color: #626262;
+}
+
+.action-sheet-group button.trip-btn.trip-green .button-inner:before {
+  background-color: #00D392;
+}
+
+.action-sheet-group button.trip-btn.trip-blue .button-inner:before {
+  background-color: #4898EA;
 }
 
 #map {

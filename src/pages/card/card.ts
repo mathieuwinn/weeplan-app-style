@@ -39,17 +39,21 @@ show= false;
 }
       presentActionSheet() {
         let actionSheet = this.actionSheetCtrl.create({
-          title: 'Ajouter une photo',
+          title: 'Ajouter à un trip',
           buttons: [
             {
-              text: 'Prendre une photo',
-              icon: 'camera',
-              handler: () => {
-                console.log('Destructive clicked');
+            text: 'Créer un trip',
+            icon: 'add',
+            handler: () => {
+              console.log('Destructive clicked');
               }
             },{
-              text: 'Accéder à la gallerie',
-              icon: 'library',
+            text: 'Escale à Rennes',
+            handler: () => {
+              console.log('Destructive clicked');
+              }
+            },{
+            text: 'Weekend en amoureux ejhejrhe efjefjhe ',
               handler: () => {
                 console.log('Archive clicked');
               }

@@ -206,6 +206,7 @@ ion-menu ion-header {
   width: 82px;
   background-image: url(../assets/img/profile-pic-default.png);
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10);
   &.profile-pic-menu {
@@ -642,7 +643,7 @@ ion-card {
 // Activity lists
 
 
-.activity-item {
+.activity-item, .trip-item {
 
 
 
@@ -673,6 +674,11 @@ ion-card {
       width:100%;
       height: auto;
       object-fit: contain;
+    }
+    &.trip-avatar {
+      &.trip-avatar-default-blue {
+        background-color: red;
+      }
     }
   }
 
@@ -980,6 +986,7 @@ ion-header {
 
 .content-hasphoto {
   margin-top: -56px;
+  height: calc(100% + 56px);
   &.content-ios {
     margin-top: -68px;
   }
@@ -1687,7 +1694,40 @@ ion-spinner {
       display: none;
     }
   }
+
+// For trips in action sheet (to be discontinued, not doable...)
+  button.trip-btn {
+    text-indent: 56px;
+    position: relative;
+    .button-inner:before {
+      position: absolute;
+      content: '';
+      height: 36px;
+      width: 36px;
+      top: 6px;
+      left: 12px;
+      border-radius: 10px;
+      background-color: color($colors, medium);
+    }
+    &.trip-green .button-inner {
+      &:before {
+        background-color: #00D392;
+      }
+    }
+    &.trip-blue .button-inner {
+      &:before {
+        background-color: #4898EA;
+      }
+    }
+
+  }
+
+
 }
+
+
+
+
 
 
 
