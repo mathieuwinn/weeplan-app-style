@@ -30,7 +30,10 @@
 
 
 
-
+    <ion-item>
+      <ion-label stacked>Nom du trip</ion-label>
+      <ion-input type="text" name="title" placeholder="Weekend entre amis, vacances à la mer..."></ion-input>
+    </ion-item>
 
 <ion-item>
   <ion-label>Budget max.
@@ -69,10 +72,13 @@
 </div>
 
 <div class="custom-select" no-margin padding>
-  <h6>Mode(s) de transport</h6>
-      <button ion-button outline small class="activity-filter-tag">Piéton</button>
-      <button ion-button outline small class="activity-filter-tag active">Voiture</button>
-      <button ion-button outline small class="activity-filter-tag">Vélo</button>
+  <h6>Thème du trip</h6>
+  <button class="trip-theme-btn trip-theme-btn-red" value="trip-theme-red"></button>
+  <button class="trip-theme-btn trip-theme-btn-green" value="trip-theme-green"></button>
+  <button class="trip-theme-btn trip-theme-btn-blue selected" value="trip-theme-blue"></button>
+  <button class="trip-theme-btn trip-theme-btn-violet" value="trip-theme-violet"></button>
+  <button class="trip-theme-btn trip-theme-btn-yellow" value="trip-theme-yellow"></button>
+
 </div>
 
 

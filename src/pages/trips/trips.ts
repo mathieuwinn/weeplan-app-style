@@ -26,7 +26,7 @@ export class Trips {
 
 
     ngOnInit(){
-     //this.openModal();
+     this.openModal();
    }
 
 }

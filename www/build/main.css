@@ -19006,7 +19006,7 @@ ion-segment {
   font-weight: 500;
   line-height: 4rem;
   text-transform: uppercase;
-  color: #FF1E45;
+  color: white;
   background-color: transparent;
   opacity: 0.7;
   transition: 100ms all linear;
@@ -19018,7 +19018,7 @@ ion-segment {
 }
 
 .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
-  border-color: #FF1E45;
+  border-color: white;
   opacity: 1;
 }
 
@@ -29621,6 +29621,10 @@ WEEPLAN IOS
   padding-right: 10px;
 }
 
+.back-button-ios .back-button-text-ios {
+  display: none;
+}
+
 .back-button-icon-ios {
   margin: 0;
   margin-right: 8px;
@@ -30160,8 +30164,24 @@ ion-card.no-card-image .activity-title {
   object-fit: contain;
 }
 
+.activity-item ion-avatar.trip-avatar.trip-avatar-default-red, .trip-item ion-avatar.trip-avatar.trip-avatar-default-red {
+  background-color: #FF1B13;
+}
+
 .activity-item ion-avatar.trip-avatar.trip-avatar-default-blue, .trip-item ion-avatar.trip-avatar.trip-avatar-default-blue {
-  background-color: red;
+  background-color: #4898EA;
+}
+
+.activity-item ion-avatar.trip-avatar.trip-avatar-default-green, .trip-item ion-avatar.trip-avatar.trip-avatar-default-green {
+  background-color: #00D392;
+}
+
+.activity-item ion-avatar.trip-avatar.trip-avatar-default-violet, .trip-item ion-avatar.trip-avatar.trip-avatar-default-violet {
+  background-color: #2B2952;
+}
+
+.activity-item ion-avatar.trip-avatar.trip-avatar-default-yellow, .trip-item ion-avatar.trip-avatar.trip-avatar-default-yellow {
+  background-color: #FEFE14;
 }
 
 .navbar-btn-share {
@@ -30502,7 +30522,8 @@ ion-header.header-dark .bar-button-default-ios, ion-header.header-dark .bar-butt
 
 .activity-photo ion-slides ion-slide {
   background-position: center;
-  background-size: cover;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 .activity-photo ion-slides ion-slide .activity-photo-info {
@@ -31310,6 +31331,75 @@ ion-spinner {
   padding-top: 2px;
 }
 
+button.trip-theme-btn {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 4px 8px 4px 0;
+  background: #f4f4f4;
+  background-size: 170px 34px;
+  transition: -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1), -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+button.trip-theme-btn.selected {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  box-shadow: 0 8px 10px rgba(255, 30, 69, 0.2);
+}
+
+button.trip-theme-btn.trip-theme-btn-red {
+  background-color: #FF1B13;
+}
+
+button.trip-theme-btn.trip-theme-btn-red.selected {
+  box-shadow: 0 0 0 3px #df0800, 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.trip-theme-btn.trip-theme-btn-blue {
+  background-color: #4898EA;
+}
+
+button.trip-theme-btn.trip-theme-btn-blue.selected {
+  box-shadow: 0 0 0 3px #1a7ee5, 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.trip-theme-btn.trip-theme-btn-green {
+  background-color: #00D392;
+}
+
+button.trip-theme-btn.trip-theme-btn-green.selected {
+  box-shadow: 0 0 0 3px #00a06f, 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.trip-theme-btn.trip-theme-btn-violet {
+  background-color: #2B2952;
+}
+
+button.trip-theme-btn.trip-theme-btn-violet.selected {
+  box-shadow: 0 0 0 3px #191830, 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.trip-theme-btn.trip-theme-btn-yellow {
+  background-color: #FEFE14;
+}
+
+button.trip-theme-btn.trip-theme-btn-yellow.selected {
+  box-shadow: 0 0 0 3px #dede01, 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+ion-header.trip-navbar {
+  background-image: linear-gradient(16deg, #000 0%, #444 100%);
+  background-size: cover;
+  background-position: center center;
+}
+
+ion-header.trip-navbar .toolbar-background-md {
+  background-image: none;
+  background: transparent;
+}
+
 .label[stacked] {
   color: #222;
   font-weight: 500;
@@ -31319,7 +31409,7 @@ button.feedback_emotion {
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  margin: 4px 8px 4px 0;
+  margin: 4px 8px 12px 0;
   background: #f4f4f4;
   background-image: url(../assets/img/feedback-emotions-sprites.png);
   background-size: 170px 34px;
@@ -31331,7 +31421,7 @@ button.feedback_emotion {
 button.feedback_emotion.selected {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
-  box-shadow: 0 8px 10px rgba(255, 30, 69, 0.2);
+  box-shadow: 0 4px 6px rgba(255, 30, 69, 0.3);
 }
 
 button.feedback_emotion.feedback_emotion_love {

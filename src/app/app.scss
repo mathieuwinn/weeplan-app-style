@@ -127,6 +127,9 @@ WEEPLAN IOS
 .back-button-ios {
   margin-right: 10px;
   padding-right: 10px;
+  .back-button-text-ios {
+    display: none;
+  }
 }
 .back-button-icon-ios {
   margin: 0;
@@ -676,9 +679,22 @@ ion-card {
       object-fit: contain;
     }
     &.trip-avatar {
-      &.trip-avatar-default-blue {
-        background-color: red;
+      &.trip-avatar-default-red {
+        background-color: #FF1B13;
       }
+      &.trip-avatar-default-blue {
+        background-color: #4898EA;
+      }
+      &.trip-avatar-default-green {
+        background-color: #00D392;
+      }
+      &.trip-avatar-default-violet {
+        background-color: #2B2952;
+      }
+      &.trip-avatar-default-yellow {
+        background-color: #FEFE14;
+      }
+
     }
   }
 
@@ -1035,11 +1051,8 @@ ion-header {
 
     ion-slide {
       background-position: center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
+      background-size: auto 100%;
+      background-repeat: no-repeat;
 
 
       .activity-photo-info {
@@ -1814,6 +1827,72 @@ ion-spinner {
 }
 
 
+// Create/Edit trip form
+
+button.trip-theme-btn {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 4px 8px 4px 0;
+  background: color($colors, light);
+  background-size: 170px 34px;
+  transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+  &.selected {
+    transform: scale(1.2);
+    box-shadow: 0 8px 10px rgba(color($colors, primary), 0.2);
+  }
+
+  &.trip-theme-btn-red {
+    background-color: #FF1B13;
+    &.selected {
+      box-shadow: 0 0 0 3px darken(#FF1B13, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+    }
+  }
+  &.trip-theme-btn-blue {
+    background-color: #4898EA;
+    &.selected {
+      box-shadow: 0 0 0 3px  darken(#4898EA, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+    }
+  }
+  &.trip-theme-btn-green {
+    background-color: #00D392;
+    &.selected {
+      box-shadow: 0 0 0 3px  darken(#00D392, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+    }
+  }
+  &.trip-theme-btn-violet {
+    background-color: #2B2952;
+    &.selected {
+      box-shadow: 0 0 0 3px  darken(#2B2952, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+    }
+  }
+  &.trip-theme-btn-yellow {
+    background-color: #FEFE14;
+    &.selected {
+      box-shadow: 0 0 0 3px  darken(#FEFE14, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+    }
+  }
+
+}
+
+
+// Trip single page
+
+ion-header.trip-navbar {
+  background-image: $black-gradient;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  .toolbar-background-md {
+    background-image: none;
+    background: transparent;
+  }
+
+}
+
+
 
 // Feedback form
 
@@ -1827,14 +1906,14 @@ button.feedback_emotion {
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  margin: 4px 8px 4px 0;
+  margin: 4px 8px 12px 0;
   background: color($colors, light);
   background-image: url(../assets/img/feedback-emotions-sprites.png);
   background-size: 170px 34px;
   transition: transform 400ms cubic-bezier(1, 0, 0, 1);
   &.selected {
     transform: scale(1.2);
-    box-shadow: 0 8px 10px rgba(color($colors, primary), 0.2);
+    box-shadow: 0 4px 6px rgba(color($colors, primary), 0.3);
   }
   &.feedback_emotion_love {
       background-position: 0 0;

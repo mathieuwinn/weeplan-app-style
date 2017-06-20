@@ -34,6 +34,8 @@ $colors: (
 );
 
 $app-gradient:  linear-gradient(16deg, #FE2424 0%, #FE2459 100%);
+$black-gradient:  linear-gradient(16deg, #000 0%, #444 100%);
+
 $app-transparent-gradient: linear-gradient(16deg, rgba(254,36,89,0.9) 0%, rgba(252,106,59,0.42) 100%);
 $footer-toolbar-gradient: linear-gradient(-180deg, rgba(248,249,251,0) 0%, #F8F9FB 50%);
 $footer-card-gradient: linear-gradient(-180deg, rgba(255,255,255,0) 0%, #FFF 50%);
@@ -146,7 +148,8 @@ $alert-md-head-padding: 24px 24px 10px 24px;
 $alert-md-message-padding: 0 24px 16px 24px;
 $alert-md-message-text-color: color($colors, dark);
 
-
+$segment-button-md-text-color-activated: white;
+$segment-button-md-border-color-activated: white;
 
 
 
