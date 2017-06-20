@@ -29979,6 +29979,20 @@ ion-card.activity-card {
   transition-property: transform,opacity,visibility,-webkit-transform;
 }
 
+ion-card.activity-card .card-content {
+  padding: 0;
+  margin-top: -10px;
+}
+
+ion-card.activity-card .card-content ion-item.activity-openings, ion-card.activity-card .card-content ion-item.activity-price, ion-card.activity-card .card-content ion-item.activity-location {
+  height: 26px;
+  min-height: 26px;
+}
+
+ion-card.activity-card .card-content ion-item:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+
 ion-card.activity-card.activity-card_small {
   position: relative;
   left: auto;
@@ -30172,7 +30186,7 @@ ion-card-header {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.3rem;
-  color: #FF1E45;
+  color: #222;
   margin-bottom: 6px;
   overflow-wrap: normal;
   word-wrap: break-word;
@@ -31276,7 +31290,7 @@ button.feedback_emotion {
   width: 34px;
   border-radius: 50%;
   margin: 4px 8px 4px 0;
-  background: #626262;
+  background: #f4f4f4;
   background-image: url(../assets/img/feedback-emotions-sprites.png);
   background-size: 170px 34px;
   transition: -webkit-transform 400ms cubic-bezier(1, 0, 0, 1);

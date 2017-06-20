@@ -44,7 +44,7 @@ export class Cards {
     }
 
     ngOnInit(){
-     this.openModal();
+     //this.openModal();
    }
 
 

@@ -28,7 +28,7 @@
 
 <ion-content padding class="activity-cards-view">
 
-  <div class="notifications-container">
+  <div class="notifications-container hide">
     <div class="message-box message-box-chat">
       <div class="chat-weeplan-container">
         <div class="chat-bubble chat-bubble-weeplan show" (click)="toggleHighlight(1);">
@@ -61,16 +61,31 @@
             <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
           </div>
       </ion-card-header>
+
       <ion-card-content>
-        <ul class="activity-infos">
+        <ion-list class="activity-single-list">
+          <ion-item text-wrap class="activity-description">
+            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra aue... <!-- Il faut réussir à chopper seulement 80 charactères, suivit de points de suspension et du bouton "read more"  -->
+          </ion-item>
+          <ion-item class="activity-openings">
+            <ion-icon name="time"></ion-icon> Ouvert aujourd’hui <strong>12:00 - 21:00</strong>
+          </ion-item>
+          <ion-item class="activity-price">
+            <ion-icon name="euro"></ion-icon> À partir de <strong>12 €</strong>
+          </ion-item>
+          <ion-item class="activity-location">
+            <ion-icon name="location"></ion-icon> 87 rue de Vaugirard 75006 PARIS
+          </ion-item>
+
+
+
+      </ion-list>
+
+        <ul class="activity-infos hide">
           <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
           <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
           <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
         </ul>
-        <p class="activity-description">
-            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-        </p>
 
 
 
@@ -80,35 +95,54 @@
     </ion-card>
 
     <ion-card [ngClass]="{'show': highlightedDiv === 1}" class="activity-card hideRight no-card-image">
-
       <div class="card-like-link">
-        <button ion-button clear (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
+        <button ion-button clear class="btn-like" (click)="toggle()" [ngClass]="active ? 'active' : ''"><ion-icon [name]="active ? 'liked' : 'like'"></ion-icon></button>
+      </div>
+
+      <div class="card-image">
+        <img src="../assets/img/card-img-3.png"/>
       </div>
 
       <ion-card-header>
           <div class="activity-title">
-            Super Activité encore mieux etff puis c'esy tout nanana
+            Danse classique à Pâques
           </div>
           <div class="activity-subtitle">
             <span class="activity-tag">Sport</span><span class="activity-tag">Famille</span>
           </div>
       </ion-card-header>
+
       <ion-card-content>
-        <ul class="activity-infos">
+        <ion-list class="activity-single-list">
+          <ion-item text-wrap class="activity-description">
+            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra aue... <!-- Il faut réussir à chopper seulement 80 charactères, suivit de points de suspension et du bouton "read more"  -->
+          </ion-item>
+          <ion-item class="activity-openings">
+            <ion-icon name="time"></ion-icon> Ouvert aujourd’hui <strong>12:00 - 21:00</strong>
+          </ion-item>
+          <ion-item class="activity-price">
+            <ion-icon name="euro"></ion-icon> À partir de <strong>12 €</strong>
+          </ion-item>
+          <ion-item class="activity-location">
+            <ion-icon name="location"></ion-icon> 87 rue de Vaugirard 75006 PARIS
+          </ion-item>
+
+
+
+      </ion-list>
+
+        <ul class="activity-infos hide">
           <li class="activity-infos__item activity-infos__item_locations"><ion-icon name="location"></ion-icon>87 rue de Vaugirard  75006 PARIS</li>
           <li class="activity-infos__item activity-infos__item_date"><ion-icon name="date"></ion-icon>7PM - 9PM</li>
           <li class="activity-infos__item activity-infos__item_price free"><ion-icon name="euro"></ion-icon>Gratuit</li>
         </ul>
-        <p class="card-description">
-            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-            Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-        </p>
 
 
 
 
 
       </ion-card-content>
+
     </ion-card>
 
   </div>

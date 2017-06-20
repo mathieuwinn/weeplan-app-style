@@ -43,7 +43,7 @@ export class HomePage {
   }
 
 //ngOnInit(){
-//  this.navCtrl.push(Feedback);
+//  this.navCtrl.push(Cards);
 //}
 
 

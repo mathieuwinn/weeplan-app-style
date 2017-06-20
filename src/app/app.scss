@@ -486,6 +486,24 @@ ion-card {
     -webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
     -moz-transition: all 600ms cubic-bezier(1, 0, 0, 1);
     transition-property: transform,opacity,visibility;
+
+    .card-content {
+      padding: 0;
+      margin-top: -10px;
+      ion-item {
+        &.activity-openings, &.activity-price, &.activity-location {
+          height: 26px;
+          min-height: 26px;
+        }
+
+        &:nth-last-child(1) {
+          margin-bottom: 20px;
+        }
+
+      }
+    }
+
+
   }
 
   &.activity-card.activity-card_small {
@@ -688,7 +706,7 @@ ion-card-header {
     font-weight: 600;
     font-size: 2rem;
     line-height: 2.3rem;
-    color: color($colors,primary);
+    color: color($colors, dark);
     margin-bottom: 6px;
     overflow-wrap: normal;
     word-wrap: break-word;
@@ -1770,7 +1788,7 @@ button.feedback_emotion {
   width: 34px;
   border-radius: 50%;
   margin: 4px 8px 4px 0;
-  background: color($colors, medium);
+  background: color($colors, light);
   background-image: url(../assets/img/feedback-emotions-sprites.png);
   background-size: 170px 34px;
   transition: transform 400ms cubic-bezier(1, 0, 0, 1);
