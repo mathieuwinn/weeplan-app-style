@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Publier des photos </ion-title>
+    <ion-title>Laisser un avis</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,7 +15,23 @@
 
 <ion-content>
 
-  <h6 class="section-title" padding-horizontal>Mes photos </h6>
+    <div class="review-stars-container">
+      <button class="review-star active" id="review-star-1"></button>
+      <button class="review-star active" id="review-star-2"></button>
+      <button class="review-star active" id="review-star-3"></button>
+      <button class="review-star" id="review-star-4"></button>
+      <button class="review-star" id="review-star-5"></button>
+    </div>
+
+
+    <ion-item style="margin-bottom:20px;">
+      <ion-label stacked>Ajouter un commentaire</ion-label>
+      <ion-input type="text" name="review-comment" placeholder="Qu'as-tu pensé de l'activité?"></ion-input>
+    </ion-item>
+
+
+
+  <h6 class="section-title" padding-horizontal>Ajouter des photos de l’activité</h6>
   <ion-scroll class="hscroll-container activity-photo-upload-container" scrollX="true">
 
     <div class="hscroll-content" padding>
@@ -45,33 +61,12 @@
   </ion-scroll>
 
 
-  <ion-grid class="instructions-container photo-published-instructions">
-  <ion-row>
-    <ion-col col-3>
-      <div class="published-photo-char" [ngClass]="show ? 'show' : ''">
-
-      </div>
-    </ion-col>
-    <ion-col col-9>
-      <h6>Merci pour ta contribution !</h6>
-      <p class="tagline">Chaque like reçu sur tes photos te fera gagner des points Weeplan !</p>
-    </ion-col>
-  </ion-row>
-  </ion-grid>
 
 
-  <ion-item>
-        <ion-label stacked>Donnez un titre à votre feedback</ion-label>
-        <ion-input type="text" name="title" placeholder="Problème d'affichage des activités,..."></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Votre commentaire</ion-label>
-        <ion-textarea name="description"></ion-textarea>
-      </ion-item>
 
   <div padding>
-    <button ion-button block (click)="presentLoading()">Publier ma photo</button>
-    <p class="small" text-center>Ta photo sera publiée après vérification.</p>
+    <button ion-button block (click)="presentLoading()">Publier mon avis</button>
+    <p class="small" text-center>Ton avis après vérification.</p>
   </div>
 
 </ion-content>

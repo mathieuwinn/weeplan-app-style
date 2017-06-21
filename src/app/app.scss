@@ -1232,6 +1232,27 @@ span.primary {
 
 
 
+// REVIEW PAGE
+
+.review-stars-container {
+  text-align: center;
+}
+
+button.review-star {
+  background-color: transparent;
+  height: 48px;
+  width: 48px;
+  margin: 20px 0 10px 0;
+  background-image: url(../assets/img/review-star-sprites.png);
+  background-size: 96px 48px;
+  background-position: -48px 0;
+  &.active {
+    background-position: 0 0;
+  }
+}
+
+
+
 // Horizontal Slider for publishing activity imgs
 
 .hscroll-container.activity-photo-upload-container  {
@@ -1885,9 +1906,72 @@ ion-header.trip-navbar {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
-  .toolbar-background-md {
+
+
+  &.trip-navbar-green {
+    background-image: linear-gradient(-136deg, #05D98E 0%, #04BC7B 100%);
+    color: #04BC7B;
+  }
+
+  .toolbar-background-md, .toolbar-background-ios {
     background-image: none;
     background: transparent;
+  }
+
+
+  .toolbar-title-ios {
+    color: white;
+  }
+
+  .segment-button { // to changer later with tabs icons
+    max-width: none;
+    width: auto;
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 0.06em;
+
+    &.segment-activated {
+      color: white; // changer here
+      font-weight: 600;
+    }
+
+
+    ion-icon {
+      font-size: 0.8em;
+      text-shadow: 0 0 6px rgba(255,255,255,0.4);
+      animation: pulse 1.2s normal infinite;
+      margin-right: 10px;
+      color: white;
+    }
+
+  }
+
+  .segment-ios .segment-button {
+    height: 2.6em;
+    line-height: 2.7em;
+    color: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.2);
+    margin-bottom: 6px;
+    transform: translateY(-2px);
+    letter-spacing: 0;
+
+
+
+
+    &:first-of-type {
+      border-radius: 12px 0 0 12px;
+    }
+    &:last-of-type {
+      border-radius: 0 12px 12px 0;
+    }
+
+    &.segment-activated {
+      background-color: white;
+      color: currentColor; // changer here
+      border-color: white;
+    }
+  }
+  .bar-button-default-ios {
+    color: white;
   }
 
 }
@@ -2120,6 +2204,14 @@ button.feedback_emotion {
 .ion-md-feedback:before, .ion-ios-feedback:before {
   font-family: "weeplanionic-icons" !important;
   content: "\46";
+}
+.ion-md-notif:before, .ion-ios-notif:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\47";
+}
+.ion-md-star:before, .ion-ios-star:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\48";
 }
 // ScaleUp animation for liking activities
 @keyframes scaleUp {

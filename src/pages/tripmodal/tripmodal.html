@@ -50,27 +50,6 @@
    <ion-datetime displayFormat="DDDD DD/MM/YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate" dayNames="Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche" doneText="Ok" cancelText="Annuler" placeholder="Optionnel"></ion-datetime>
 </ion-item>
 
-<ion-item>
-<ion-label>Type de trip</ion-label>
-<ion-select [(ngModel)]="searchRadius" interface="popover">
-  <ion-option value="type-none" selected>Non spécifié</ion-option>
-  <ion-option value="type-friends">Entre amis</ion-option>
-  <ion-option value="type-family">En famille</ion-option>
-  <ion-option value="type-couple">En couple</ion-option>
-  <ion-option value="type-work">Entre collègues</ion-option>
-  <ion-option value="type-other">Autre</ion-option>
-</ion-select>
-</ion-item>
-
-
-
-<div class="custom-select" no-margin padding>
-  <h6>Mode(s) de transport</h6>
-      <button ion-button outline small class="activity-filter-tag">Piéton</button>
-      <button ion-button outline small class="activity-filter-tag active">Voiture</button>
-      <button ion-button outline small class="activity-filter-tag">Vélo</button>
-</div>
-
 <div class="custom-select" no-margin padding>
   <h6>Thème du trip</h6>
   <button class="trip-theme-btn trip-theme-btn-red" value="trip-theme-red"></button>
@@ -78,7 +57,6 @@
   <button class="trip-theme-btn trip-theme-btn-blue selected" value="trip-theme-blue"></button>
   <button class="trip-theme-btn trip-theme-btn-violet" value="trip-theme-violet"></button>
   <button class="trip-theme-btn trip-theme-btn-yellow" value="trip-theme-yellow"></button>
-
 </div>
 
 
