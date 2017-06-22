@@ -24,6 +24,8 @@ import { Tripmodal } from '../pages/tripmodal/tripmodal';
 import { Review } from '../pages/review/review';
 import { Feedback } from '../pages/feedback/feedback';
 import { Trip } from '../pages/trip/trip';
+import { Addtravellermodal } from '../pages/addtravellermodal/addtravellermodal';
+
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import { Trip } from '../pages/trip/trip';
     Tripmodal,
     Review,
     Feedback,
-    Trip
+    Trip,
+    Addtravellermodal
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import { Trip } from '../pages/trip/trip';
     Tripmodal,
     Review,
     Feedback,
-    Trip
+    Trip,
+    Addtravellermodal
   ],
   providers: [
     StatusBar,

@@ -115,7 +115,7 @@
         <ion-icon name="share"></ion-icon> Partager l'activité
       </button>
       <button ion-item class="activity-review">
-        <ion-icon name="star"></ion-icon> Partager l'activité
+        <ion-icon name="star"></ion-icon> Laisser un avis sur l’activité
       </button>
 
 
@@ -162,7 +162,16 @@
 </ion-content>
 
 <div class="footer-bottom-actions">
+
+
+
+
+
       <div padding-horizontal>
+        <div class="onboarding-bubble" [ngClass]="show ? 'show' : ''">
+          Tu peux regrouper tes activités en les ajoutant à un <strong>trip</strong> afin de mieux t’organiser !
+
+        </div>
           <button ion-button outline block (click)="presentActionSheet()">Ajouter à un trip</button>
     </div>
 

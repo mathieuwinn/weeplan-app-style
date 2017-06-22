@@ -16,99 +16,201 @@
   </ion-navbar>
 
 
-    <ion-segment [(ngModel)]="tripPage" padding-horizontal>
+
+    <div class="weeplan-segment">
+
+
+    <ion-segment [(ngModel)]="tripPage">
       <ion-segment-button value="activities">
         Activités
       </ion-segment-button>
       <ion-segment-button value="travellers">
         <ion-icon name="notif"></ion-icon> Voyageurs
       </ion-segment-button>
+      <ion-segment-button value="budget">Budget</ion-segment-button>
+      <ion-segment-button value="accomodation">Hebergements</ion-segment-button>
+      <ion-segment-button value="transport">Transports</ion-segment-button>
+
     </ion-segment>
+
+    </div>
 
 </ion-header>
 
 
-<ion-content>
+<ion-content class="trip-content-green">
+
+
+  <div [ngSwitch]="tripPage" >
+
+    <div *ngSwitchCase="'activities'">
+
 
 
   <h6 class="section-title" padding-horizontal>3 activités</h6>
 
   <ion-list>
 
-      <button ion-item class="activity-item">
+      <ion-item class="activity-item">
         <ion-avatar item-left>
         <img src="../assets/img/card-img-2.png">
       </ion-avatar>
       <h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
       <p>34 rue Valerian</p>
+      <button ion-button clear icon-only item-right (click)="presentActionSheet()">
+        <ion-icon name="more"></ion-icon>
+      </button>
 
-    </button>
+    </ion-item>
 
-    <button ion-item class="activity-item">
+    <ion-item class="activity-item">
       <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
+      <img src="../assets/img/card-img-2.png">
+    </ion-avatar>
+    <h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+    <p>34 rue Valerian</p>
+    <button ion-button clear icon-only item-right>
+      <ion-icon name="more"></ion-icon>
     </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
+  </ion-item>
+  <ion-item class="activity-item">
+    <ion-avatar item-left>
+    <img src="../assets/img/card-img-2.png">
+  </ion-avatar>
+  <h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+  <p>34 rue Valerian</p>
+  <button ion-button clear icon-only item-right>
+    <ion-icon name="more"></ion-icon>
+  </button>
 
-    </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
-    </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
-    </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
-    </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
-    </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
-    </button>
-    <button ion-item class="activity-item">
-      <ion-avatar item-left>
-        <img src="../assets/img/card-img-3.png">
-      </ion-avatar>
-      <h2>Danse classique à Paques</h2>
-      <p>34 rue Valerian</p>
-
-    </button>
-
+</ion-item>
+<ion-item class="activity-item">
+  <ion-avatar item-left>
+  <img src="../assets/img/card-img-2.png">
+</ion-avatar>
+<h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+<p>34 rue Valerian</p>
+<button ion-button clear icon-only item-right>
+  <ion-icon name="more"></ion-icon>
+</button>
+</ion-item>
+<ion-item class="activity-item">
+  <ion-avatar item-left>
+  <img src="../assets/img/card-img-2.png">
+</ion-avatar>
+<h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+<p>34 rue Valerian</p>
+<button ion-button clear icon-only item-right>
+  <ion-icon name="more"></ion-icon>
+</button>
+</ion-item><ion-item class="activity-item">
+  <ion-avatar item-left>
+  <img src="../assets/img/card-img-2.png">
+</ion-avatar>
+<h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+<p>34 rue Valerian</p>
+<button ion-button clear icon-only item-right>
+  <ion-icon name="more"></ion-icon>
+</button>
+</ion-item><ion-item class="activity-item">
+  <ion-avatar item-left>
+  <img src="../assets/img/card-img-2.png">
+</ion-avatar>
+<h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+<p>34 rue Valerian</p>
+<button ion-button clear icon-only item-right>
+  <ion-icon name="more"></ion-icon>
+</button>
+</ion-item><ion-item class="activity-item">
+  <ion-avatar item-left>
+  <img src="../assets/img/card-img-2.png">
+</ion-avatar>
+<h2>Danse classique à Paques Nua vitae elit libero, a pharetra augue.</h2>
+<p>34 rue Valerian</p>
+<button ion-button clear icon-only item-right>
+  <ion-icon name="more"></ion-icon>
+</button>
+</ion-item>
   </ion-list>
+
+
+</div>
+
+<div *ngSwitchCase="'travellers'">
+  <h6 class="section-title" padding-horizontal>3 voyageurs</h6>
+
+  <ion-list no-margin>
+
+      <ion-item class="people-item">
+        <div class="profile-pic" item-left style="background-image:url('../assets/img/avatar1.jpg')">
+
+        </div>
+      <h2>Mathieu Robert</h2>
+      <p>Créateur du trip</p>
+
+    </ion-item>
+  </ion-list>
+
+  <div padding-horizontal class="add-traveller-container">
+    <button ion-button small  (click)="openModal()">Ajouter un voyageur</button>
+  </div>
+
+  <ion-list no-margin>
+
+      <ion-item class="people-item">
+        <div class="profile-pic profile-pic-female" item-left></div>
+        <h2>Mathieu Robert</h2>
+        <button ion-button clear icon-only item-right>
+          <ion-icon name="edit"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item class="people-item">
+        <div class="profile-pic profile-pic-male" item-left></div>
+        <h2>Mathieu Robert</h2>
+        <p>Famille</p>
+        <button ion-button clear icon-only item-right>
+          <ion-icon name="edit"></ion-icon>
+        </button>
+      </ion-item>
+  </ion-list>
+
+</div>
+
+
+
+  <div *ngSwitchCase="'budget'" padding>
+    <div class="content-comingsoon" padding>
+
+      <img src="../assets/img/comingsoon-budget.png" height="56" >
+      <p>Gère tes dépenses et garde un oeil sur ton budget !</p>
+      <p class="muted">Coming soon...</p>
+
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'accomodation'" padding>
+    <div class="content-comingsoon" padding>
+
+      <img src="../assets/img/comingsoon-accomodation.png" height="56" >
+      <p>Réserve directement ton hôtel, camping, gîte sur Weeplan !</p>
+      <p class="muted">Coming soon...</p>
+
+
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'transport'" padding>
+    <div class="content-comingsoon" padding>
+
+      <img src="../assets/img/comingsoon-transport.png" height="56" >
+      <p>Commande tes billets d’avion ou de train sur Weeplan !</p>
+      <p class="muted">Coming soon...</p>
+
+
+    </div>
+  </div>
+
+</div>
+
 
 </ion-content>

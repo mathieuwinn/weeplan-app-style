@@ -49,11 +49,13 @@ show= false;
               }
             },{
             text: 'Escale à Rennes',
+            cssClass: 'trip trip-violet',
             handler: () => {
               console.log('Destructive clicked');
               }
             },{
-            text: 'Weekend en amoureux ejhejrhe efjefjhe ',
+            text: 'Weekend en amoureux',
+            cssClass: 'trip trip-orange',
               handler: () => {
                 console.log('Archive clicked');
               }

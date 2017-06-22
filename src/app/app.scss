@@ -40,7 +40,6 @@ ion-content {
 
 
 
-
 /*
 Buttons missing css
 */
@@ -120,8 +119,7 @@ WEEPLAN IOS
 */
 
 .toolbar-ios {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.06) !important;
-
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.06);
 }
 
 .back-button-ios {
@@ -135,6 +133,10 @@ WEEPLAN IOS
   margin: 0;
   margin-right: 8px;
   font-size: 2rem;
+}
+
+.bar-button-ios .ion-ios-more {
+  font-size: 1.3em !important;
 }
 
 /*
@@ -151,6 +153,10 @@ WEEPLAN ANDROID
 
 .back-button-icon-md {
   font-size: 2rem;
+}
+
+.bar-button-md .ion-md-more {
+  font-size: 1.5em !important;
 }
 
 // Android navbar {
@@ -212,6 +218,12 @@ ion-menu ion-header {
   background-position: center center;
   background-repeat: no-repeat;
   box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10);
+  &.profile-pic-female {
+    background-image: url(../assets/img/profile-pic-default-female.png);
+  }
+  &.profile-pic-male {
+    background-image: url(../assets/img/profile-pic-default-male.png);
+  }
   &.profile-pic-menu {
     height: 60px;
     width: 60px;
@@ -451,6 +463,47 @@ ion-menu ion-content {
   }
 }
 
+.onboarding-bubble {
+  position: relative;
+  background-color:color($colors,primary);
+  background-image: $app-gradient;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 12px;
+  transform-origin: top;
+  padding: 16px 30px 16px 16px;
+  transition: all 600ms cubic-bezier(1, 0, 0, 1);
+  transition-property: transform,opacity;
+  transform: translateY(100px) scale(0.8);
+  opacity: 0;
+  &:after {
+    position: absolute;
+    content: '';
+    height: 7px;
+    width: 14px;
+    background: url(../assets/img/onboarding-bubble-after.png);
+    background-size: 14px 7px;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  &:before{
+    position: absolute;
+    font-family: "weeplanionic-icons" !important;
+    content: "\6e";
+    right: 14px;
+    top: 10px;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,0.4);
+  }
+  &.show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
 // Alert Boxes
 
 ion-popover:not(.select-popover) {
@@ -467,6 +520,8 @@ ion-popover:not(.select-popover) {
   }
 }
 
+
+// Onboarding Bubble
 
 
 
@@ -643,10 +698,10 @@ ion-card {
 }
 
 
-// Activity lists
+// Activity, trip and people lists
 
 
-.activity-item, .trip-item {
+.activity-item, .trip-item, .people-item {
 
 
 
@@ -664,6 +719,11 @@ ion-card {
     text-overflow: ellipsis;
   }
 
+  .item-button[item-right] {
+    font-size: 1rem;
+      padding: 20px 14px !important;
+      margin-right: -8px;
+    }
 
   ion-avatar{
     overflow: hidden;
@@ -679,24 +739,42 @@ ion-card {
       object-fit: contain;
     }
     &.trip-avatar {
-      &.trip-avatar-default-red {
-        background-color: #FF1B13;
+      &.trip-avatar-theme-red {
+        background-color: color($colors, primary);
       }
-      &.trip-avatar-default-blue {
-        background-color: #4898EA;
+      &.trip-avatar-theme-blue {
+        background-color: color($colors, themeBlue);
       }
-      &.trip-avatar-default-green {
-        background-color: #00D392;
+      &.trip-avatar-theme-green {
+        background-color: color($colors, themeGreen);
       }
-      &.trip-avatar-default-violet {
-        background-color: #2B2952;
+      &.trip-avatar-theme-violet {
+        background-color: color($colors, themeViolet);
       }
-      &.trip-avatar-default-yellow {
-        background-color: #FEFE14;
+      &.trip-avatar-theme-orange {
+        background-color: color($colors, themeOrange);
       }
 
     }
   }
+
+}
+
+.people-item{
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  .profile-pic {
+    max-width: 34px;
+    max-height: 34px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16);
+  }
+
 
 }
 
@@ -1486,7 +1564,7 @@ button.review-star {
 // Weeplan spinner
 
 // Spinner in content, absolute positionning
-.content-loading, .content-nosignal, .content-noactivity {
+.content-loading, .content-nosignal, .content-noactivity, .content-comingsoon {
     text-align: center;
     position: absolute;
     left: 0;
@@ -1498,7 +1576,11 @@ button.review-star {
 
     }
     p {
-      color: color($colors, medium);
+      color: color($colors, dark);
+      &.muted {
+        color: color($colors,medium);
+        opacity: 0.8;
+      }
     }
 
     .ion-md-nosignal, .ion-ios-nosignal {
@@ -1850,6 +1932,30 @@ ion-spinner {
 
 // Create/Edit trip form
 
+.action-sheet-button.action-delete {
+  color: color($colors, danger);
+}
+
+.action-sheet-button.trip {
+  font-weight: 600;
+  &.trip-red {
+    color: color($colors, primary);
+  }
+  &.trip-green {
+    color: color($colors, themeGreen);
+  }
+  &.trip-blue {
+    color: color($colors, themeBlue);
+  }
+  &.trip-violet {
+    color: color($colors, themeViolet);
+  }
+  &.trip-orange {
+    color: color($colors, themeOrange);
+  }
+}
+
+
 button.trip-theme-btn {
   height: 34px;
   width: 34px;
@@ -1864,33 +1970,33 @@ button.trip-theme-btn {
   }
 
   &.trip-theme-btn-red {
-    background-color: #FF1B13;
+    background-color: color($colors, primary);
     &.selected {
-      box-shadow: 0 0 0 3px darken(#FF1B13, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+      box-shadow: 0 0 0 3px darken(color($colors, primary), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-blue {
-    background-color: #4898EA;
+    background-color: color($colors, themeBlue);
     &.selected {
-      box-shadow: 0 0 0 3px  darken(#4898EA, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+      box-shadow: 0 0 0 3px  darken(color($colors, themeBlue), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-green {
-    background-color: #00D392;
+    background-color: color($colors, themeGreen);
     &.selected {
-      box-shadow: 0 0 0 3px  darken(#00D392, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+      box-shadow: 0 0 0 3px  darken(color($colors, themeGreen), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-violet {
-    background-color: #2B2952;
+    background-color: color($colors, themeViolet);
     &.selected {
-      box-shadow: 0 0 0 3px  darken(#2B2952, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+      box-shadow: 0 0 0 3px  darken(color($colors, themeViolet), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
-  &.trip-theme-btn-yellow {
-    background-color: #FEFE14;
+  &.trip-theme-btn-orange {
+    background-color:  color($colors, themeOrange);
     &.selected {
-      box-shadow: 0 0 0 3px  darken(#FEFE14, 10%), 0 8px 10px rgba(0,0,0, 0.2);
+      box-shadow: 0 0 0 3px  darken(color($colors, themeOrange), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
 
@@ -1899,18 +2005,152 @@ button.trip-theme-btn {
 
 // Trip single page
 
+.trip-content-violet {
+  .button-default{
+    background-color: color($colors, themeViolet);
+    box-shadow: 0 3px 10px 0 rgba(color($colors, themeViolet),0.6);
+    &:hover {
+      background-color: color($colors, themeViolet);
+    }
+  }
+  .button-clear{
+    color: color($colors, themeViolet);
+  }
+}
+
+.trip-content-blue {
+  .button-default{
+    background-color: color($colors, themeBlue);
+    box-shadow: 0 3px 10px 0 rgba(color($colors, themeBlue),0.6);
+    &:hover {
+      background-color: color($colors, themeBlue);
+    }
+  }
+  .button-clear{
+    color: color($colors, themeBlue);
+  }
+}
+
+.trip-content-orange {
+  .button-default{
+    background-color: color($colors, themeOrange);
+    box-shadow: 0 3px 10px 0 rgba(color($colors, themeOrange),0.6);
+    &:hover {
+      background-color: color($colors, themeOrange);
+    }
+  }
+  .button-clear{
+    color: color($colors, themeOrange);
+  }
+}
+
+.trip-content-green {
+  .button-default{
+    background-color: color($colors, themeGreen);
+    box-shadow: 0 3px 10px 0 rgba(color($colors, themeGreen),0.6);
+    &:hover {
+      background-color: color($colors, themeGreen);
+    }
+  }
+  .button-clear{
+    color: color($colors, themeGreen);
+  }
+}
+
 ion-header.trip-navbar {
-  background-image: $black-gradient;
+  background-image: $app-gradient;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
 
+  &.header-ios {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.06);
+    .toolbar-ios {
+      box-shadow: none;
+    }
+    &.trip-navbar-short {
+      background-image: none !important;
+      background-color: white;
+    }
+  }
+
+
+  &.trip-navbar-short {
+    &:before {
+      display: none !important;
+    }
+    .toolbar-title-ios {
+      color: color($colors, dark);
+    }
+  }
+
+
+
 
   &.trip-navbar-green {
-    background-image: linear-gradient(-136deg, #05D98E 0%, #04BC7B 100%);
-    color: #04BC7B;
+    background-image: none;
+    background-color: color($colors, themeGreen);
+    &:before {
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 30px;
+      background-image: linear-gradient(-270deg, rgba(color($colors, themeGreen),0) 0%, color($colors, themeGreen) 100%);
+      right: 0px;
+      bottom: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+  }
+
+  &.trip-navbar-blue {
+    background-image: none;
+    background-color: color($colors, themeBlue);
+    &:before {
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 30px;
+      background-image: linear-gradient(-270deg, rgba(color($colors, themeBlue),0) 0%, color($colors, themeBlue) 100%);
+      right: 0px;
+      bottom: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+  }
+
+  &.trip-navbar-violet {
+    background-image: none;
+    background-color: color($colors, themeViolet);
+    &:before {
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 30px;
+      background-image: linear-gradient(-270deg, rgba(color($colors, themeViolet),0) 0%, color($colors, themeViolet) 100%);
+      right: 0px;
+      bottom: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+  }
+
+  &.trip-navbar-orange {
+    background-image: none;
+    background-color: color($colors, themeOrange);
+    &:before {
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 30px;
+      background-image: linear-gradient(-270deg, rgba(color($colors, themeOrange),0) 0%, color($colors, themeOrange) 100%);
+      right: 0px;
+      bottom: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
   }
 
   .toolbar-background-md, .toolbar-background-ios {
@@ -1922,6 +2162,15 @@ ion-header.trip-navbar {
   .toolbar-title-ios {
     color: white;
   }
+
+  .bar-button-default-ios {
+    color: white;
+  }
+
+
+}
+
+/*
 
   .segment-button { // to changer later with tabs icons
     max-width: none;
@@ -1975,6 +2224,111 @@ ion-header.trip-navbar {
   }
 
 }
+
+*/
+
+// Weeplan custom segment menu (with horizontal scrolling for long lists...)
+
+.weeplan-segment {
+  position: relative;
+  height: 46px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  width: 100%;
+  margin-top: -6px;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+      display: none;
+  }
+
+  .segment-ios .segment-button{
+    border-width: 0px;
+    border-radius: 0;
+  }
+
+  .segment-md .segment-button{
+    border-width: 0px;
+    border-radius: 0;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+  }
+
+  ion-segment {
+    display: block;
+    padding: 0;
+    width: auto;
+    white-space:nowrap;
+    margin: 0;
+    height: 46px;
+    list-style-type: none;
+    color: white;
+    .segment-button {
+      line-height: 52px;
+      height: 46px;
+      width: auto !important;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 0 12px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.3rem;
+      &:first-child {
+        margin-left: 12px;
+      }
+      &:last-child {
+        margin-right: 20px;
+      }
+      &.segment-activated {
+        color: white;
+        font-weight: 600;
+        background-color: transparent !important;
+        border-bottom: 2px solid white;
+      }
+      .ion-ios-notif, .ion-md-notif{
+        font-size: 0.8em;
+        text-shadow: 0 0 6px rgba(255,255,255,0.4);
+        animation: pulse 1.2s normal infinite;
+        margin-right: 10px;
+        color: white;
+      }
+    }
+  }
+
+
+}
+
+
+// Travellers Tab
+
+
+.add-traveller-container {
+  text-align: center;
+  margin: 10px 0;
+}
+
+//Add Traveller form
+
+.add-traveller-sex {
+  position: relative;
+  background-color: color($colors, lightbg);
+  .profile-pic {
+    margin: 10px auto;
+  }
+  ion-select {
+    position: absolute;
+    bottom: 0;
+    max-width: 120px;
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+.traveller-delete-btn {
+  margin-top: 20px;
+  color: color($colors, danger);
+}
+
 
 
 
@@ -2212,6 +2566,10 @@ button.feedback_emotion {
 .ion-md-star:before, .ion-ios-star:before {
   font-family: "weeplanionic-icons" !important;
   content: "\48";
+}
+.ion-md-more:before, .ion-ios-more:before {
+  font-family: "weeplanionic-icons" !important;
+  content: "\49";
 }
 // ScaleUp animation for liking activities
 @keyframes scaleUp {
