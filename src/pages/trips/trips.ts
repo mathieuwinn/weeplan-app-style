@@ -17,10 +17,14 @@ import { Tripmodal } from '../tripmodal/tripmodal';
 export class Trips {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+
+
   }
 
   openModal() {
-      let myModal = this.modalCtrl.create(Tripmodal);
+      let myModal = this.modalCtrl.create(Tripmodal, {
+        useClass: 'IonicErrorHandler'
+    });
       myModal.present();
     }
 

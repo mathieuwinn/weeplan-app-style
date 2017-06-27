@@ -42471,6 +42471,69 @@ button[disabled] {
   color: rgba(255, 255, 255, 0.5);
 }
 
+ion-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  contain: strict;
+}
+
+@media (min-height: 500px) {
+  ion-modal ion-backdrop {
+    visibility: visible;
+  }
+}
+
+ion-modal .modal-wrapper {
+  z-index: 10;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 250px;
+  max-height: 90%;
+  opacity: 0;
+  height: auto;
+  max-width: 280px;
+  border-radius: 14px;
+  background-color: #fafafa;
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+}
+
+ion-modal .modal-wrapper,
+ion-modal .modal-wrapper .ion-page,
+ion-modal .modal-wrapper .ion-page .content,
+ion-modal .modal-wrapper .ion-page .content .scroll-content {
+  contain: content;
+  position: relative;
+  top: auto;
+  left: auto;
+}
+
+ion-modal .modal-wrapper .ion-page .content {
+  padding: 8px;
+}
+
+ion-modal .modal-wrapper .ion-page .content .scroll-content {
+  overflow-y: hidden;
+  padding-bottom: 10px;
+}
+
 .btn-icon-left ion-icon {
   margin-right: 10px;
 }
@@ -43105,22 +43168,32 @@ ion-card.no-card-image .activity-title {
 
 .activity-item ion-avatar.trip-avatar.trip-avatar-theme-red, .trip-item ion-avatar.trip-avatar.trip-avatar-theme-red, .people-item ion-avatar.trip-avatar.trip-avatar-theme-red {
   background-color: #FF1E45;
+  background-image: url(../assets/img/trip-theme-btn-red.png);
+  background-size: 40px 40px;
 }
 
 .activity-item ion-avatar.trip-avatar.trip-avatar-theme-blue, .trip-item ion-avatar.trip-avatar.trip-avatar-theme-blue, .people-item ion-avatar.trip-avatar.trip-avatar-theme-blue {
   background-color: #2196F3;
+  background-image: url(../assets/img/trip-theme-btn-blue.png);
+  background-size: 40px 40px;
 }
 
 .activity-item ion-avatar.trip-avatar.trip-avatar-theme-green, .trip-item ion-avatar.trip-avatar.trip-avatar-theme-green, .people-item ion-avatar.trip-avatar.trip-avatar-theme-green {
   background-color: #00CE85;
+  background-image: url(../assets/img/trip-theme-btn-green.png);
+  background-size: 40px 40px;
 }
 
 .activity-item ion-avatar.trip-avatar.trip-avatar-theme-violet, .trip-item ion-avatar.trip-avatar.trip-avatar-theme-violet, .people-item ion-avatar.trip-avatar.trip-avatar-theme-violet {
   background-color: #673AB7;
+  background-image: url(../assets/img/trip-theme-btn-violet.png);
+  background-size: 40px 40px;
 }
 
 .activity-item ion-avatar.trip-avatar.trip-avatar-theme-orange, .trip-item ion-avatar.trip-avatar.trip-avatar-theme-orange, .people-item ion-avatar.trip-avatar.trip-avatar-theme-orange {
   background-color: #FFA000;
+  background-image: url(../assets/img/trip-theme-btn-orange.png);
+  background-size: 40px 40px;
 }
 
 .people-item h2 {
@@ -43917,7 +43990,7 @@ button.review-star.active {
   z-index: 122;
 }
 
-.content-loading, .content-nosignal, .content-noactivity, .content-comingsoon {
+.content-loading, .content-nosignal, .content-noactivity, .content-comingsoon, .content-moreactivities {
   text-align: center;
   position: absolute;
   left: 0;
@@ -43927,21 +44000,27 @@ button.review-star.active {
   margin: auto;
 }
 
-.content-loading p, .content-nosignal p, .content-noactivity p, .content-comingsoon p {
+.content-loading.content-moreactivities, .content-nosignal.content-moreactivities, .content-noactivity.content-moreactivities, .content-comingsoon.content-moreactivities, .content-moreactivities.content-moreactivities {
+  position: relative;
+  top: auto;
+  margin-top: 0px;
+}
+
+.content-loading p, .content-nosignal p, .content-noactivity p, .content-comingsoon p, .content-moreactivities p {
   color: #222;
 }
 
-.content-loading p.muted, .content-nosignal p.muted, .content-noactivity p.muted, .content-comingsoon p.muted {
+.content-loading p.muted, .content-nosignal p.muted, .content-noactivity p.muted, .content-comingsoon p.muted, .content-moreactivities p.muted {
   color: #626262;
   opacity: 0.8;
 }
 
-.content-loading .ion-md-nosignal, .content-loading .ion-ios-nosignal, .content-nosignal .ion-md-nosignal, .content-nosignal .ion-ios-nosignal, .content-noactivity .ion-md-nosignal, .content-noactivity .ion-ios-nosignal, .content-comingsoon .ion-md-nosignal, .content-comingsoon .ion-ios-nosignal {
+.content-loading .ion-md-nosignal, .content-loading .ion-ios-nosignal, .content-nosignal .ion-md-nosignal, .content-nosignal .ion-ios-nosignal, .content-noactivity .ion-md-nosignal, .content-noactivity .ion-ios-nosignal, .content-comingsoon .ion-md-nosignal, .content-comingsoon .ion-ios-nosignal, .content-moreactivities .ion-md-nosignal, .content-moreactivities .ion-ios-nosignal {
   font-size: 3em;
   color: #FF1E45;
 }
 
-.content-loading .noactivity-img, .content-nosignal .noactivity-img, .content-noactivity .noactivity-img, .content-comingsoon .noactivity-img {
+.content-loading .noactivity-img, .content-nosignal .noactivity-img, .content-noactivity .noactivity-img, .content-comingsoon .noactivity-img, .content-moreactivities .noactivity-img {
   height: 144px;
   width: 144px;
   margin: auto;
@@ -44355,6 +44434,8 @@ button.trip-theme-btn.selected {
 
 button.trip-theme-btn.trip-theme-btn-red {
   background-color: #FF1E45;
+  background-image: url(../assets/img/trip-theme-btn-red.png);
+  background-size: 34px 34px;
 }
 
 button.trip-theme-btn.trip-theme-btn-red.selected {
@@ -44363,6 +44444,8 @@ button.trip-theme-btn.trip-theme-btn-red.selected {
 
 button.trip-theme-btn.trip-theme-btn-blue {
   background-color: #2196F3;
+  background-image: url(../assets/img/trip-theme-btn-blue.png);
+  background-size: 34px 34px;
 }
 
 button.trip-theme-btn.trip-theme-btn-blue.selected {
@@ -44371,6 +44454,8 @@ button.trip-theme-btn.trip-theme-btn-blue.selected {
 
 button.trip-theme-btn.trip-theme-btn-green {
   background-color: #00CE85;
+  background-image: url(../assets/img/trip-theme-btn-green.png);
+  background-size: 34px 34px;
 }
 
 button.trip-theme-btn.trip-theme-btn-green.selected {
@@ -44379,6 +44464,8 @@ button.trip-theme-btn.trip-theme-btn-green.selected {
 
 button.trip-theme-btn.trip-theme-btn-violet {
   background-color: #673AB7;
+  background-image: url(../assets/img/trip-theme-btn-violet.png);
+  background-size: 34px 34px;
 }
 
 button.trip-theme-btn.trip-theme-btn-violet.selected {
@@ -44387,6 +44474,8 @@ button.trip-theme-btn.trip-theme-btn-violet.selected {
 
 button.trip-theme-btn.trip-theme-btn-orange {
   background-color: #FFA000;
+  background-image: url(../assets/img/trip-theme-btn-orange.png);
+  background-size: 34px 34px;
 }
 
 button.trip-theme-btn.trip-theme-btn-orange.selected {
@@ -44472,9 +44561,34 @@ ion-header.trip-navbar.trip-navbar-short .toolbar-title-ios {
   color: #222;
 }
 
+ion-header.trip-navbar.trip-navbar-red {
+  background-image: none;
+  background-color: #FF1E45;
+  background-image: url(../assets/img/pattern-theme-red.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 180px 120px;
+}
+
+ion-header.trip-navbar.trip-navbar-red:before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  background-image: linear-gradient(-270deg, rgba(255, 30, 69, 0) 0%, #FF1E45 100%);
+  right: 0px;
+  bottom: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
 ion-header.trip-navbar.trip-navbar-green {
   background-image: none;
   background-color: #00CE85;
+  background-image: url(../assets/img/pattern-theme-green.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 180px 120px;
 }
 
 ion-header.trip-navbar.trip-navbar-green:before {
@@ -44492,6 +44606,10 @@ ion-header.trip-navbar.trip-navbar-green:before {
 ion-header.trip-navbar.trip-navbar-blue {
   background-image: none;
   background-color: #2196F3;
+  background-image: url(../assets/img/pattern-theme-blue.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 180px 120px;
 }
 
 ion-header.trip-navbar.trip-navbar-blue:before {
@@ -44509,6 +44627,10 @@ ion-header.trip-navbar.trip-navbar-blue:before {
 ion-header.trip-navbar.trip-navbar-violet {
   background-image: none;
   background-color: #673AB7;
+  background-image: url(../assets/img/pattern-theme-violet.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 180px 120px;
 }
 
 ion-header.trip-navbar.trip-navbar-violet:before {
@@ -44526,6 +44648,10 @@ ion-header.trip-navbar.trip-navbar-violet:before {
 ion-header.trip-navbar.trip-navbar-orange {
   background-image: none;
   background-color: #FFA000;
+  background-image: url(../assets/img/pattern-theme-orange.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 180px 120px;
 }
 
 ion-header.trip-navbar.trip-navbar-orange:before {

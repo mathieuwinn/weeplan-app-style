@@ -105,6 +105,66 @@ button[disabled]{
   }
 }
 
+
+
+ion-modal{
+  @media (min-height: 500px) {
+    ion-backdrop {
+      visibility: visible;
+    }
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-overlay;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  contain: strict;
+  .modal-wrapper {
+    &,
+    .ion-page,
+    .ion-page .content,
+    .ion-page .content .scroll-content {
+      contain: content;
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+
+    z-index: $z-index-overlay-wrapper;
+    display: flex;
+    overflow: hidden;
+
+    flex-direction: column;
+
+    min-width: $alert-min-width;
+    max-height: $alert-max-height;
+
+    opacity: 0;
+
+    height: auto;
+    max-width: $alert-md-max-width;
+    border-radius: $alert-md-border-radius;
+    background-color: $alert-md-background-color;
+    box-shadow: $alert-md-box-shadow;
+
+    .ion-page .content  {
+      padding: 8px;
+      .scroll-content {
+        overflow-y: hidden;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
 .btn-icon-left {
   ion-icon {
     margin-right: 10px;
@@ -741,18 +801,28 @@ ion-card {
     &.trip-avatar {
       &.trip-avatar-theme-red {
         background-color: color($colors, primary);
+        background-image: url(../assets/img/trip-theme-btn-red.png);
+        background-size: 40px 40px;
       }
       &.trip-avatar-theme-blue {
         background-color: color($colors, themeBlue);
+        background-image: url(../assets/img/trip-theme-btn-blue.png);
+        background-size: 40px 40px;
       }
       &.trip-avatar-theme-green {
         background-color: color($colors, themeGreen);
+        background-image: url(../assets/img/trip-theme-btn-green.png);
+        background-size: 40px 40px;
       }
       &.trip-avatar-theme-violet {
         background-color: color($colors, themeViolet);
+        background-image: url(../assets/img/trip-theme-btn-violet.png);
+        background-size: 40px 40px;
       }
       &.trip-avatar-theme-orange {
         background-color: color($colors, themeOrange);
+        background-image: url(../assets/img/trip-theme-btn-orange.png);
+        background-size: 40px 40px;
       }
 
     }
@@ -1564,7 +1634,7 @@ button.review-star {
 // Weeplan spinner
 
 // Spinner in content, absolute positionning
-.content-loading, .content-nosignal, .content-noactivity, .content-comingsoon {
+.content-loading, .content-nosignal, .content-noactivity, .content-comingsoon, .content-moreactivities {
     text-align: center;
     position: absolute;
     left: 0;
@@ -1572,6 +1642,14 @@ button.review-star {
     top: 26%;
     max-width: 260px;
     margin: auto;
+
+
+    &.content-moreactivities {
+      position: relative;
+      top: auto;
+      margin-top: 0px;
+    }
+
     h4 {
 
     }
@@ -1971,30 +2049,40 @@ button.trip-theme-btn {
 
   &.trip-theme-btn-red {
     background-color: color($colors, primary);
+    background-image: url(../assets/img/trip-theme-btn-red.png);
+    background-size: 34px 34px;
     &.selected {
       box-shadow: 0 0 0 3px darken(color($colors, primary), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-blue {
     background-color: color($colors, themeBlue);
+    background-image: url(../assets/img/trip-theme-btn-blue.png);
+    background-size: 34px 34px;
     &.selected {
       box-shadow: 0 0 0 3px  darken(color($colors, themeBlue), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-green {
     background-color: color($colors, themeGreen);
+    background-image: url(../assets/img/trip-theme-btn-green.png);
+    background-size: 34px 34px;
     &.selected {
       box-shadow: 0 0 0 3px  darken(color($colors, themeGreen), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-violet {
     background-color: color($colors, themeViolet);
+    background-image: url(../assets/img/trip-theme-btn-violet.png);
+    background-size: 34px 34px;
     &.selected {
       box-shadow: 0 0 0 3px  darken(color($colors, themeViolet), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
   }
   &.trip-theme-btn-orange {
     background-color:  color($colors, themeOrange);
+    background-image: url(../assets/img/trip-theme-btn-orange.png);
+    background-size: 34px 34px;
     &.selected {
       box-shadow: 0 0 0 3px  darken(color($colors, themeOrange), 10%), 0 8px 10px rgba(0,0,0, 0.2);
     }
@@ -2086,12 +2174,36 @@ ion-header.trip-navbar {
     }
   }
 
+  &.trip-navbar-red {
+    background-image: none;
+    background-color: color($colors, primary);
+    background-image: url(../assets/img/pattern-theme-red.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 180px 120px;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 30px;
+      background-image: linear-gradient(-270deg, rgba(color($colors, primary),0) 0%, color($colors, primary) 100%);
+      right: 0px;
+      bottom: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+  }
+
 
 
 
   &.trip-navbar-green {
     background-image: none;
     background-color: color($colors, themeGreen);
+    background-image: url(../assets/img/pattern-theme-green.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 180px 120px;
     &:before {
       content: "";
       position: absolute;
@@ -2108,6 +2220,10 @@ ion-header.trip-navbar {
   &.trip-navbar-blue {
     background-image: none;
     background-color: color($colors, themeBlue);
+    background-image: url(../assets/img/pattern-theme-blue.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 180px 120px;
     &:before {
       content: "";
       position: absolute;
@@ -2124,6 +2240,10 @@ ion-header.trip-navbar {
   &.trip-navbar-violet {
     background-image: none;
     background-color: color($colors, themeViolet);
+    background-image: url(../assets/img/pattern-theme-violet.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 180px 120px;
     &:before {
       content: "";
       position: absolute;
@@ -2140,6 +2260,10 @@ ion-header.trip-navbar {
   &.trip-navbar-orange {
     background-image: none;
     background-color: color($colors, themeOrange);
+    background-image: url(../assets/img/pattern-theme-orange.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 180px 120px;
     &:before {
       content: "";
       position: absolute;

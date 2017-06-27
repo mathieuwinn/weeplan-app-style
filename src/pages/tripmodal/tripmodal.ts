@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,11 +14,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Tripmodal {
 
+@ViewChild('focusInput') input;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tripmodal');
+    setTimeout(() => {
+      this.input.setFocus();
+    },200);
   }
+
 
 }
